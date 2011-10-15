@@ -68,9 +68,9 @@
 #pragma mark -
 #pragma mark NSSplitView Overwrite
 
-- (CGFloat)dividerThickness {
-    return 1.0f;
-}
+//- (CGFloat)dividerThickness {
+//    return 1.0f;
+//}
 
 - (NSColor *)dividerColor {
     return [NSColor darkGrayColor];
