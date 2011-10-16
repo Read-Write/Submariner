@@ -11,7 +11,6 @@
 @class SBPreferencesController;
 @class SBDatabaseController;
 
-// test
 @interface SBAppDelegate : NSObject <NSApplicationDelegate> {
 @private
     NSPersistentStoreCoordinator *__persistentStoreCoordinator;

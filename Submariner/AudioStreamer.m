@@ -1333,6 +1333,7 @@ cleanup:
 			if (seekByteOffset == 0)
 			{
 				fileLength = [[httpHeaders objectForKey:@"Content-Length"] integerValue];
+
 			}
 		}
 
@@ -1641,8 +1642,9 @@ cleanup:
 			
 			if (audioDataByteCount)
 			{
+            
 				fileLength = dataOffset + audioDataByteCount;
-			}
+            }
 		}
 		else if (inPropertyID == kAudioFileStreamProperty_AudioDataByteCount)
 		{
@@ -1734,6 +1736,10 @@ cleanup:
 	numberPackets:(UInt32)inNumberPackets
 	packetDescriptions:(AudioStreamPacketDescription *)inPacketDescriptions;
 {
+//    NSLog(@"processedPacketsCount : %llu", processedPacketsCount);
+//    NSLog(@"processedPacketsSizeTotal : %llu", processedPacketsSizeTotal);
+//    NSLog(@"lastProgress : %f", lastProgress);
+    
 	@synchronized(self)
 	{
 		if ([self isFinishing])

@@ -235,15 +235,15 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     // setup player and play
 	if (remotePlayer == nil) {
         remotePlayer = [[AudioStreamer alloc] initWithURL:[self.currentTrack streamURL] saveLocation:location];
-		
-		[remotePlayer setGain:[self volume]];
-		[remotePlayer performSelector:@selector(start) withObject:nil afterDelay:0.0];
-		
-		// observer remote player to know stop status
+        // observer remote player to know stop status
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(streamerStatusChangedNotification:) 
 													 name:ASStatusChangedNotification 
 												   object:remotePlayer];
+        
+		[remotePlayer setGain:[self volume]];
+		[remotePlayer performSelector:@selector(start) withObject:nil afterDelay:0.0];
+    
         return;
     }
     if ([remotePlayer isPlaying]) {
@@ -343,7 +343,7 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         [localPlayer performSelectorOnMainThread:@selector(pause) withObject:nil waitUntilDone:YES];
         
         // stop remote player
-        // [remotePlayer performSelectorOnMainThread:@selector(stop) withObject:nil waitUntilDone:YES];
+        [remotePlayer performSelectorOnMainThread:@selector(stop) withObject:nil waitUntilDone:NO];
         
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:ASStatusChangedNotification object:remotePlayer];
@@ -438,12 +438,31 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 #pragma mark Remote Player Notification 
 
 - (void)streamerStatusChangedNotification:(NSNotification *)notification {
-	
+    
+    if([[notification object] stopReason] == AS_STOPPING_EOF) {
+        NSLog(@"AS_STOPPING_EOF");
+        
+    } else if([[notification object] stopReason] == AS_STOPPING_USER_ACTION) {
+        NSLog(@"AS_STOPPING_USER_ACTION");       
+        
+    } else if([[notification object] stopReason] == AS_STOPPING_ERROR) {
+        NSLog(@"AS_STOPPING_ERROR");
+        
+    } else if([[notification object] stopReason] == AS_STOPPING_TEMPORARILY) {
+        NSLog(@"AS_STOPPING_TEMPORARILY");     
+        
+    }
+    
     if([[notification object] state] == AS_STOPPED) {
 		
+        NSLog(@"AS_STOPPED");
+        
         // check streaming stop reason to manage cache
         if(isCaching) {
             if([[notification object] stopReason] == AS_STOPPING_EOF) {
+                NSLog(@"AS_STOPPING_EOF");
+
+                
                 if([[NSUserDefaults standardUserDefaults] boolForKey:@"enableCacheStreaming"] == YES) {
                     NSManagedObjectContext *moc = self.currentTrack.managedObjectContext;
                     SBLibrary *library = [moc fetchEntityNammed:@"Library" withPredicate:nil error:nil];
@@ -460,15 +479,16 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
                 }
                 
             } else if([[notification object] stopReason] == AS_STOPPING_TEMPORARILY) {
+                NSLog(@"AS_STOPPING_TEMPORARILY");
                 
             } else if([[notification object] stopReason] == AS_STOPPING_ERROR) {
-                
+                NSLog(@"AS_STOPPING_ERROR");
                 // clean temp cache file if caching
                 NSFileManager *fm = [NSFileManager defaultManager];
                 [fm removeItemAtPath:[[notification object] saveLocation] error:nil];
                 
             } else if([[notification object] stopReason] == AS_STOPPING_USER_ACTION) {
-                
+                NSLog(@"AS_STOPPING_USER_ACTION");
                 // ???
                 NSFileManager *fm = [NSFileManager defaultManager];
                 [fm removeItemAtPath:[[notification object] saveLocation] error:nil];
@@ -476,6 +496,36 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         }
         // play next track
         [self next];
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_INITIALIZED");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_STARTING_FILE_THREAD");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_WAITING_FOR_DATA");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_FLUSHING_EOF");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_WAITING_FOR_QUEUE_TO_START");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_PLAYING");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_BUFFERING");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_PLAYING");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_STOPPING");
+        
+    } else if([[notification object] state] == AS_INITIALIZED) {
+        NSLog(@"AS_PAUSED");
+        
     }
 }
 

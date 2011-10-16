@@ -620,6 +620,7 @@
         
         if(currentTimeString)
             [progressTextField setStringValue:currentTimeString];
+        
         if(remainingTimeString)
             [durationTextField setStringValue:remainingTimeString];
         

@@ -87,7 +87,7 @@
 		4C87ED9F139CD97B0064DE2E /* SBMainSplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED90139CD97B0064DE2E /* SBMainSplitViewDelegate.m */; };
 		4C87EDA0139CD97B0064DE2E /* SBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED92139CD97B0064DE2E /* SBWindow.m */; };
 		4C87EDA1139CD97B0064DE2E /* SBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED94139CD97B0064DE2E /* SBSplitView.m */; };
-		4C87EDA2139CD97B0064DE2E /* SBVolumeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED96139CD97B0064DE2E /* SBVolumeSliderCell.m */; };
+		4C87EDA2139CD97B0064DE2E /* RWVolumeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED96139CD97B0064DE2E /* RWVolumeSliderCell.m */; };
 		4C87EDA3139CD97B0064DE2E /* SBPlayerSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED98139CD97B0064DE2E /* SBPlayerSliderCell.m */; };
 		4C87EDA4139CD97B0064DE2E /* SBBottomLeftBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED9A139CD97B0064DE2E /* SBBottomLeftBorderView.m */; };
 		4C87EDA5139CD97B0064DE2E /* SBBottomMiddleBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87ED9C139CD97B0064DE2E /* SBBottomMiddleBorderView.m */; };
@@ -164,6 +164,9 @@
 		4C87EE60139CE4680064DE2E /* SBTracklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87EE53139CE4680064DE2E /* SBTracklist.m */; };
 		4C90218F142C8AA800EDA210 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C90218E142C8AA800EDA210 /* libz.dylib */; };
 		4CAD75C813AA597E00E7455C /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD75C713AA597E00E7455C /* CoreServices.framework */; };
+		4CB1E42F144B1F00006F33FA /* RWStreamingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */; };
+		4CB1E430144B1F00006F33FA /* RWStreamingSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */; };
+		4CB1E435144B1F5A006F33FA /* RWVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E434144B1F5A006F33FA /* RWVolumeSlider.m */; };
 		4CB4D8CC13A6253100F706EC /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8CB13A6253100F706EC /* MAAttachedWindow.m */; };
 		4CB4D8E113A6634E00F706EC /* SBBottomBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8E013A6634E00F706EC /* SBBottomBorderView.m */; };
 		4CB4D8E813A6645A00F706EC /* SBTopBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8E713A6645A00F706EC /* SBTopBorderView.m */; };
@@ -415,8 +418,8 @@
 		4C87ED92139CD97B0064DE2E /* SBWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBWindow.m; sourceTree = "<group>"; };
 		4C87ED93139CD97B0064DE2E /* SBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSplitView.h; sourceTree = "<group>"; };
 		4C87ED94139CD97B0064DE2E /* SBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSplitView.m; sourceTree = "<group>"; };
-		4C87ED95139CD97B0064DE2E /* SBVolumeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVolumeSliderCell.h; sourceTree = "<group>"; };
-		4C87ED96139CD97B0064DE2E /* SBVolumeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVolumeSliderCell.m; sourceTree = "<group>"; };
+		4C87ED95139CD97B0064DE2E /* RWVolumeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVolumeSliderCell.h; sourceTree = "<group>"; };
+		4C87ED96139CD97B0064DE2E /* RWVolumeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVolumeSliderCell.m; sourceTree = "<group>"; };
 		4C87ED97139CD97B0064DE2E /* SBPlayerSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPlayerSliderCell.h; sourceTree = "<group>"; };
 		4C87ED98139CD97B0064DE2E /* SBPlayerSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPlayerSliderCell.m; sourceTree = "<group>"; };
 		4C87ED99139CD97B0064DE2E /* SBBottomLeftBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBottomLeftBorderView.h; sourceTree = "<group>"; };
@@ -532,6 +535,12 @@
 		4C87EE53139CE4680064DE2E /* SBTracklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTracklist.m; sourceTree = "<group>"; };
 		4C90218E142C8AA800EDA210 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4CAD75C713AA597E00E7455C /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		4CB1E42B144B1F00006F33FA /* RWStreamingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStreamingSlider.h; sourceTree = "<group>"; };
+		4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStreamingSlider.m; sourceTree = "<group>"; };
+		4CB1E42D144B1F00006F33FA /* RWStreamingSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStreamingSliderCell.h; sourceTree = "<group>"; };
+		4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStreamingSliderCell.m; sourceTree = "<group>"; };
+		4CB1E433144B1F5A006F33FA /* RWVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVolumeSlider.h; sourceTree = "<group>"; };
+		4CB1E434144B1F5A006F33FA /* RWVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVolumeSlider.m; sourceTree = "<group>"; };
 		4CB4D8CA13A6253100F706EC /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		4CB4D8CB13A6253100F706EC /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
 		4CB4D8DF13A6634D00F706EC /* SBBottomBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBottomBorderView.h; sourceTree = "<group>"; };
@@ -751,9 +760,11 @@
 		4C87ED83139CD8CD0064DE2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C1D412E13A8F367002D77F3 /* SplitView Delegates */,
+				4CB1E432144B1F1B006F33FA /* Volume Slider */,
+				4CB1E431144B1F02006F33FA /* Streaming Slider */,
 				4CEF83351449B649005E28EE /* SBArtistTableView.h */,
 				4CEF83361449B649005E28EE /* SBArtistTableView.m */,
-				4C1D412E13A8F367002D77F3 /* SplitView Delegates */,
 				4CC18E7413B9128400AA4FDB /* SBImageBrowserBackgroundLayer.h */,
 				4CC18E7513B9128400AA4FDB /* SBImageBrowserBackgroundLayer.m */,
 				4CC18E7C13B9145400AA4FDB /* SBImageBrowserCell.h */,
@@ -787,8 +798,6 @@
 				4C87ED92139CD97B0064DE2E /* SBWindow.m */,
 				4C87ED93139CD97B0064DE2E /* SBSplitView.h */,
 				4C87ED94139CD97B0064DE2E /* SBSplitView.m */,
-				4C87ED95139CD97B0064DE2E /* SBVolumeSliderCell.h */,
-				4C87ED96139CD97B0064DE2E /* SBVolumeSliderCell.m */,
 				4C87ED97139CD97B0064DE2E /* SBPlayerSliderCell.h */,
 				4C87ED98139CD97B0064DE2E /* SBPlayerSliderCell.m */,
 				4CB4D8FE13A69FA800F706EC /* SBPlayerControlView.h */,
@@ -1083,6 +1092,28 @@
 				4C87EE2C139CE44C0064DE2E /* _SBTracklist.m */,
 			);
 			name = Abstract;
+			sourceTree = "<group>";
+		};
+		4CB1E431144B1F02006F33FA /* Streaming Slider */ = {
+			isa = PBXGroup;
+			children = (
+				4CB1E42B144B1F00006F33FA /* RWStreamingSlider.h */,
+				4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */,
+				4CB1E42D144B1F00006F33FA /* RWStreamingSliderCell.h */,
+				4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */,
+			);
+			name = "Streaming Slider";
+			sourceTree = "<group>";
+		};
+		4CB1E432144B1F1B006F33FA /* Volume Slider */ = {
+			isa = PBXGroup;
+			children = (
+				4CB1E433144B1F5A006F33FA /* RWVolumeSlider.h */,
+				4CB1E434144B1F5A006F33FA /* RWVolumeSlider.m */,
+				4C87ED95139CD97B0064DE2E /* RWVolumeSliderCell.h */,
+				4C87ED96139CD97B0064DE2E /* RWVolumeSliderCell.m */,
+			);
+			name = "Volume Slider";
 			sourceTree = "<group>";
 		};
 		4CEF82D41448F839005E28EE /* Subprojects */ = {
@@ -1391,7 +1422,7 @@
 				4C87ED9F139CD97B0064DE2E /* SBMainSplitViewDelegate.m in Sources */,
 				4C87EDA0139CD97B0064DE2E /* SBWindow.m in Sources */,
 				4C87EDA1139CD97B0064DE2E /* SBSplitView.m in Sources */,
-				4C87EDA2139CD97B0064DE2E /* SBVolumeSliderCell.m in Sources */,
+				4C87EDA2139CD97B0064DE2E /* RWVolumeSliderCell.m in Sources */,
 				4C87EDA3139CD97B0064DE2E /* SBPlayerSliderCell.m in Sources */,
 				4C87EDA4139CD97B0064DE2E /* SBBottomLeftBorderView.m in Sources */,
 				4C87EDA5139CD97B0064DE2E /* SBBottomMiddleBorderView.m in Sources */,
@@ -1512,6 +1543,9 @@
 				4C56868514050B9A00BE3478 /* SBPodcastItemView.m in Sources */,
 				4C56868814050C1100BE3478 /* SBPodcastViewItem.m in Sources */,
 				4CEF83371449B649005E28EE /* SBArtistTableView.m in Sources */,
+				4CB1E42F144B1F00006F33FA /* RWStreamingSlider.m in Sources */,
+				4CB1E430144B1F00006F33FA /* RWStreamingSliderCell.m in Sources */,
+				4CB1E435144B1F5A006F33FA /* RWVolumeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -62,8 +62,6 @@
 
 - (void)loadView {
     [super loadView];
-    NSLog(@"activitiesController : %@", activitiesController);
-	NSLog(@"downloadActivities : %@", downloadActivities);
 }
 
 

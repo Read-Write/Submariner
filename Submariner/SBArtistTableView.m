@@ -52,7 +52,7 @@
             } else {
                 [[NSColor colorWithCalibratedRed:0.5020 green:0.5518 blue:0.6759 alpha:1.0000] set];
             }
-            NSFrameRect(bottomLineRect);
+            //NSFrameRect(bottomLineRect);
             //NSRectFill(bottomLineRect);
             
             NSRect topLineRect = NSMakeRect(aRowRect.origin.x, 
