@@ -1,0 +1,12 @@
+Release Note :
+
+Version 1.1 :
+- Add zoom setting for album browser views.
+- Improve Tracklist which becomes a Mini-Player.
+- Improve global design, navigation and frame persistence.
+- Improve player progress bar stability.
+- Fix bug in "Import Audio Files" feature when "Link" option is choosed.
+
+
+Version 1.0 :
+- Initial release.
