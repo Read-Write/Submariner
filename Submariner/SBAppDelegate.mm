@@ -231,13 +231,15 @@
 - (IBAction)zoomDatabaseWindow:(id)sender {
     
     NSWindow *window = [databaseController window];
+//    
+//    NSRect rect = NSMakeRect([window frame].origin.x+[window frame].size.width/2,
+//                             [window frame].origin.y+[window frame].size.height/2,
+//                             10,
+//                             10);    
+//    
+//    [window zoomOnFromRect:rect];
     
-    NSRect rect = NSMakeRect([window frame].origin.x+[window frame].size.width/2,
-                             [window frame].origin.y+[window frame].size.height/2,
-                             10,
-                             10);    
-    
-    [window zoomOnFromRect:rect];
+    [window makeKeyAndOrderFront:sender];
 }
 
 

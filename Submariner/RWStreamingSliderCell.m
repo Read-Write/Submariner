@@ -103,7 +103,7 @@
     NSRect knobRect = NSMakeRect(1, aRect.origin.y+6, knobWidth-2, aRect.size.height-12);
     NSRect bufferRect = NSMakeRect(knobRect.origin.x, knobRect.origin.y, bufferWidth-2, knobRect.size.height);
     
-    BOOL atStart = (knobWidth < 100) ? YES : NO;
+    //BOOL atStart = (knobWidth < 100) ? YES : NO;
     BOOL atEnd = ([self trackRect].size.width - knobWidth < knobRect.size.height) ? YES : NO;
     
     if(!atEnd) {

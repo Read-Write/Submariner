@@ -1736,11 +1736,7 @@ cleanup:
 	numberPackets:(UInt32)inNumberPackets
 	packetDescriptions:(AudioStreamPacketDescription *)inPacketDescriptions;
 {
-//    NSLog(@"processedPacketsCount : %llu", processedPacketsCount);
-//    NSLog(@"processedPacketsSizeTotal : %llu", processedPacketsSizeTotal);
-//    NSLog(@"lastProgress : %f", lastProgress);
-    
-	@synchronized(self)
+    @synchronized(self)
 	{
 		if ([self isFinishing])
 		{

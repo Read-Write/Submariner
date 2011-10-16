@@ -219,11 +219,14 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 
 - (void)playLocalTrackPath:(NSString *)path {
+    NSLog(@"path : %@", path);
     
     localPlayer = [[NSSound alloc] initWithContentsOfFile:path byReference:NO];
     [localPlayer setDelegate:self];
     [localPlayer setVolume:[self volume]];
     [localPlayer play];
+    
+    NSLog(@"localPlayer : %@", localPlayer);
 }
 
 - (void)playRemoteTrackURL:(NSURL *)url saveLocation:(NSString *)location {

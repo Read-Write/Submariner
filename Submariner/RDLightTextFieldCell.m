@@ -17,21 +17,35 @@ static NSShadow *kShadow = nil;
 + (void)initialize
 {
     kShadow = [[NSShadow alloc] init];
-    [kShadow setShadowColor:[NSColor colorWithCalibratedWhite:1.0f alpha:1.0f]];
+    [kShadow setShadowColor:baseColor];
     [kShadow setShadowBlurRadius:0.f];
     [kShadow setShadowOffset:NSMakeSize(0.f, -1.f)];
 }
+
+
+@synthesize shadowColor;
+@synthesize shadowRadius;
+
 
 - (id)init {
     self = [super init];
     if (self) {
         [self setBackgroundStyle:NSBackgroundStyleRaised];
+        shadowColor = [baseColor retain];
+        shadowRadius = 0.0f;
     }
     return self;
 }
 
+- (void)dealloc {
+    [shadowColor release];
+    [super dealloc];
+}
+
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
+    [kShadow setShadowColor:shadowColor];
+    [kShadow setShadowBlurRadius:shadowRadius];
     [kShadow set];
     [super drawInteriorWithFrame:cellFrame inView:controlView];
 }

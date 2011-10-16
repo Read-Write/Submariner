@@ -136,6 +136,8 @@
     [resourceSortDescriptors release];
     [mainSplitViewDelegate release];
     [library release];
+    [progressUpdateTimer release];
+    
     [super dealloc];
 }
 
@@ -183,9 +185,6 @@
     [customWindow setTitleBarView:titleView];
     
     // setup splitviews
-    [mainSplitView setPosition:LEFT_VIEW_MINIMUM_WIDTH ofDividerAtIndex:0];
-    [titleSplitView setPosition:LEFT_VIEW_MINIMUM_WIDTH ofDividerAtIndex:0];
-    
     mainSplitViewDelegate = [[SBMainSplitViewDelegate alloc] init];
     
     [mainSplitViewDelegate setPriority:LEFT_VIEW_PRIORITY forViewAtIndex:LEFT_VIEW_INDEX];
@@ -249,11 +248,11 @@
                 
     
     // player timer
-    progressUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+    progressUpdateTimer = [[NSTimer scheduledTimerWithTimeInterval:0.01
                                                            target:self
                                                          selector:@selector(updateProgress:)
                                                          userInfo:nil
-                                                          repeats:YES];
+                                                          repeats:YES] retain];
     
     [resourcesController addObserver:self 
                           forKeyPath:@"content" 
@@ -366,7 +365,7 @@
         attachedWindow = [[MAAttachedWindow alloc] initWithView:[tracklistController view] 
                                                 attachedToPoint:tracklistPoint 
                                                        inWindow:[toggleButton window] 
-                                                         onSide:MAPositionTopRight
+                                                         onSide:MAPositionTop
                                                      atDistance:10.0f];
         
         [attachedWindow setBorderColor:[NSColor clearColor]];
@@ -380,9 +379,12 @@
         [attachedWindow setArrowHeight:14.0f];
         [attachedWindow setDelegate:self];
         
-       if([[self window] isVisible])
+        if([[self window] isKeyWindow]) {
 		    [[self window] addChildWindow:attachedWindow ordered:NSWindowAbove];
-		
+		} else {
+            [attachedWindow setHasArrow:NO];
+        }
+        
         [attachedWindow orderFront:sender];
     } else {
         
@@ -1351,7 +1353,7 @@
 
     if(attachedWindow && [notification object] == attachedWindow) {
         [[self window] removeChildWindow:attachedWindow];
-        [attachedWindow setArrowHeight:0.0f];
+        [attachedWindow setHasArrow:NO];
     }
 }
 

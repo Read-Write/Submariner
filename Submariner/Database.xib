@@ -900,7 +900,7 @@
 							<reference key="NSNextKeyView" ref="759631912"/>
 							<bool key="NSIsVertical">YES</bool>
 							<int key="NSDividerStyle">2</int>
-							<string key="NSAutosaveName">DatabaseSplitView</string>
+							<string key="NSAutosaveName">MainSplitView</string>
 						</object>
 					</object>
 					<string key="NSFrameSize">{691, 412}</string>
@@ -1379,7 +1379,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomView" id="417575337">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1399,6 +1399,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 										<object class="NSPSMatrix" key="NSDrawMatrix"/>
 										<string key="NSFrame">{{116, 12}, {16, 16}}</string>
 										<reference key="NSSuperview" ref="133013630"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="838270636"/>
 										<int key="NSpiFlags">28938</int>
 										<double key="NSMaxValue">100</double>
@@ -1406,6 +1407,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 								</object>
 								<string key="NSFrameSize">{145, 40}</string>
 								<reference key="NSSuperview" ref="525111030"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="321316470"/>
 								<string key="NSClassName">NSView</string>
 							</object>
@@ -1424,10 +1426,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 												<int key="NSvFlags">274</int>
 												<string key="NSFrameSize">{543, 40}</string>
 												<reference key="NSSuperview" ref="87024154"/>
+												<reference key="NSWindow"/>
+												<reference key="NSNextKeyView"/>
 											</object>
 										</object>
 										<string key="NSFrame">{{1, 0}, {543, 40}}</string>
 										<reference key="NSSuperview" ref="838270636"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="707802662"/>
 										<string key="NSOffsets">{0, 0}</string>
 										<object class="NSTextFieldCell" key="NSTitleCell">
@@ -1450,18 +1455,23 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 								</object>
 								<string key="NSFrame">{{146, 0}, {544, 40}}</string>
 								<reference key="NSSuperview" ref="525111030"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="87024154"/>
 								<string key="NSClassName">NSView</string>
 							</object>
 						</object>
 						<string key="NSFrameSize">{690, 40}</string>
 						<reference key="NSSuperview" ref="417575337"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="133013630"/>
 						<bool key="NSIsVertical">YES</bool>
 						<int key="NSDividerStyle">2</int>
+						<string key="NSAutosaveName">MainTitleSplitView</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{690, 40}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="525111030"/>
 				<string key="NSClassName">SBTitlebarView</string>
 			</object>

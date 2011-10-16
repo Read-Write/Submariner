@@ -220,7 +220,7 @@ using namespace TagLib;
                 [newArtist setPath:artistPath];
                 
             } else {
-                [newTrack setPath:path];
+                [newTrack setPath:aPath];
             }
             
 //            // work with the cover

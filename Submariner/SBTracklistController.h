@@ -23,6 +23,12 @@
 
 @property (readwrite, retain) SBDatabaseController *databaseController;
 
+- (IBAction)playPause:(id)sender;
+- (IBAction)nextTrack:(id)sender;
+- (IBAction)previousTrack:(id)sender;
+- (IBAction)shuffle:(id)sender;
+- (IBAction)repeat:(id)sender;
+
 - (IBAction)trackDoubleClick:(id)sender;
 - (IBAction)cleanTracklist:(id)sender;
 - (IBAction)removeTrack:(id)sender;

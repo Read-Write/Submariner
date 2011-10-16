@@ -447,7 +447,19 @@
     
     // Draw background.
     [_MABackgroundColor set];
-    [bgPath fill];
+    NSGradient *gradient = [[[NSGradient alloc] initWithColorsAndLocations:
+                             [NSColor colorWithDeviceWhite:0.85 alpha:1.0], 0.0,
+                             [NSColor colorWithDeviceWhite:0.60 alpha:1.0], 0.2,
+                             [NSColor lightGrayColor], 0.8,
+                             [NSColor colorWithDeviceWhite:0.60 alpha:1.0], 1.0,
+                             nil] autorelease];
+    
+    [bgPath setClip];
+    [gradient drawInBezierPath:bgPath angle:-90];
+    
+    NSRect topHighlightRect = NSMakeRect(0.0, NSMaxY([bgPath bounds])-1, NSWidth([bgPath bounds]), 1.0);
+    [[NSColor colorWithDeviceWhite:0.9 alpha:1.0] setFill];
+    NSRectFill(topHighlightRect);
     
     // Draw border if appropriate.
     if (borderWidth > 0) {

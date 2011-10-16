@@ -8,10 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define baseColor [NSColor colorWithCalibratedWhite:1.0f alpha:1.0f]
 
 @interface RDLightTextFieldCell : NSTextFieldCell {
 @private
-
+    NSColor *shadowColor;
+    CGFloat  shadowRadius;
 }
+
+@property (readwrite, retain) NSColor *shadowColor;
+@property (readwrite) CGFloat shadowRadius;
 
 @end

@@ -39,6 +39,7 @@
     [defaults setObject:[NSNumber numberWithInt:NO]     forKey:@"autoRefreshChat"];
     [defaults setObject:[NSNumber numberWithInt:NO]     forKey:@"autoRefreshNowPlaying"];
     [defaults setObject:[NSNumber numberWithFloat:0.75] forKey:@"coverSize"];
+    [defaults setObject:[NSNumber numberWithInteger:320] forKey:@"maxBitRate"];
     
 	[userDefaults registerDefaults:defaults];
 }

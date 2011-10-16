@@ -12,6 +12,7 @@
 #import "SBSubsonicParsingOperation.h"
 #import "SBSubsonicDownloadOperation.h"
 #import "SBImageBrowserBackgroundLayer.h"
+#import "RDLightTextFieldCell.h"
 #import "SBPlayer.h"
 #import "SBTableView.h"
 #import "SBServer.h"
@@ -28,7 +29,7 @@
 // main split view constant
 #define LEFT_VIEW_INDEX 0
 #define LEFT_VIEW_PRIORITY 2
-#define LEFT_VIEW_MINIMUM_WIDTH 200.0
+#define LEFT_VIEW_MINIMUM_WIDTH 175.0
 
 #define MAIN_VIEW_INDEX 1
 #define MAIN_VIEW_PRIORITY 0
@@ -90,7 +91,7 @@
 - (void)loadView {
     [super loadView];
         
-    [artistSplitView setPosition:LEFT_VIEW_MINIMUM_WIDTH ofDividerAtIndex:0];
+    //[artistSplitView setPosition:LEFT_VIEW_MINIMUM_WIDTH ofDividerAtIndex:0];
     
     [splitViewDelegate setPriority:LEFT_VIEW_PRIORITY forViewAtIndex:LEFT_VIEW_INDEX];
 	[splitViewDelegate setMinimumLength:LEFT_VIEW_MINIMUM_WIDTH forViewAtIndex:LEFT_VIEW_INDEX];
@@ -361,9 +362,9 @@
     if(tableView == artistsTableView) {
         if(row != -1) {
             SBIndex *index = [[artistsController arrangedObjects] objectAtIndex:row];
-            if(index && ![index isKindOfClass:[SBGroup class]])
+            if(index && [index isKindOfClass:[SBArtist class]])
                 return 22.0f;
-            if(index && [index isKindOfClass:[SBGroup class]])
+            else if(index && [index isKindOfClass:[SBGroup class]])
                 return 20.0f;
         }
     }
@@ -384,6 +385,28 @@
     }
 }
 
+- (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    if(tableView == artistsTableView) {
+        if(row > -1) {
+            SBIndex *index = [[artistsController arrangedObjects] objectAtIndex:row];
+            if(index && ![index isKindOfClass:[SBGroup class]]) {
+                
+                RDLightTextFieldCell *myCell = (RDLightTextFieldCell *)cell;
+                if(row == [tableView selectedRow]) {
+                    [cell setFont:[NSFont boldSystemFontOfSize:12.0]];
+                    [myCell setTextColor:[NSColor whiteColor]];
+                    [myCell setShadowColor:[NSColor blackColor]];
+                    [myCell setShadowRadius:0.3f];
+                } else {
+                    [cell setFont:[NSFont systemFontOfSize:12.0]];
+                    [myCell setTextColor:[NSColor colorWithDeviceWhite:0.1 alpha:1.0]];
+                    [myCell setShadowColor:baseColor];
+                    [myCell setShadowRadius:0.0f];
+                }
+            }
+        }
+    }
+}
 
 
 

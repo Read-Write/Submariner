@@ -48,7 +48,7 @@
     
     [playlistTableView setTarget:self];
     [playlistTableView setDoubleAction:@selector(trackDoubleClick:)];
-    [playlistTableView registerForDraggedTypes:[NSArray arrayWithObject:SBTracklistTableViewDataType]];
+    [playlistTableView registerForDraggedTypes:[NSArray arrayWithObjects:SBTracklistTableViewDataType, SBLibraryTableViewDataType, nil]];
     
     // observer playlist change
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -81,6 +81,45 @@
 
 #pragma mark -
 #pragma mark IBActions
+
+- (IBAction)playPause:(id)sender {
+    if([[SBPlayer sharedInstance] isPlaying] || [[SBPlayer sharedInstance] isPaused]) {
+        // player is already running
+        [[SBPlayer sharedInstance] playPause];
+    }
+}
+
+- (IBAction)nextTrack:(id)sender {
+    [[SBPlayer sharedInstance] next];
+}
+
+- (IBAction)previousTrack:(id)sender {
+    [[SBPlayer sharedInstance] previous];
+}
+
+- (IBAction)shuffle:(id)sender {
+    if([sender state] == NSOnState) {
+        [[SBPlayer sharedInstance] setIsShuffle:YES];
+        
+    } else if([sender state] == NSOffState) {
+        [[SBPlayer sharedInstance] setIsShuffle:YES];
+    }
+}
+
+- (IBAction)repeat:(id)sender {
+    
+    if([sender state] == NSOnState) {
+        [[SBPlayer sharedInstance] setRepeatMode:SBPlayerRepeatAll];
+        [sender setAlternateImage:[NSImage imageNamed:@"repeat_on"]];
+    } 
+    if([sender state] == NSOffState) {
+        [[SBPlayer sharedInstance] setRepeatMode:SBPlayerRepeatNo];
+    } 
+    if([sender state] == NSMixedState) {
+        [[SBPlayer sharedInstance] setRepeatMode:SBPlayerRepeatOne];
+        [sender setAlternateImage:[NSImage imageNamed:@"repeat_one_on"]];
+    }
+}
 
 - (IBAction)trackDoubleClick:(id)sender {
     NSInteger selectedRow = [playlistTableView selectedRow];
@@ -209,7 +248,7 @@
     
     if(op == NSTableViewDropAbove) {
         // internal drop track
-        if ([[[info draggingPasteboard] types] containsObject:SBTracklistTableViewDataType] ) {
+        if ([[[info draggingPasteboard] types] containsObject:SBTracklistTableViewDataType] || [[[info draggingPasteboard] types] containsObject:SBLibraryTableViewDataType] ) {
             return NSDragOperationMove;
         }
     }
@@ -243,12 +282,27 @@
         
         // add reversed track at index
         for(SBTrack *track in reversedArray) {
-            NSLog(@"row : %ld", row);
+            //NSLog(@"row : %ld", row);
             if(row > [[[SBPlayer sharedInstance] playlist] count])
                 row--;
             
             [[[SBPlayer sharedInstance] playlist] insertObject:track atIndex:row];
         }
+        [playlistTableView reloadData];
+        
+    } else if([[pboard types] containsObject:SBLibraryTableViewDataType]) {
+        
+        NSData *data = [[info draggingPasteboard] dataForType:SBLibraryTableViewDataType];
+        NSArray *tracksURIs = [NSKeyedUnarchiver unarchiveObjectWithData:data]; 
+        
+        // also add new track IDs to the array
+        [tracksURIs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            SBTrack *track = (SBTrack *)[self.managedObjectContext objectWithID:[[self.managedObjectContext persistentStoreCoordinator] managedObjectIDForURIRepresentation:obj]]; 
+            
+            [[[SBPlayer sharedInstance] playlist] addObject:track];
+        }];
+        
+        
         [playlistTableView reloadData];
     }
     

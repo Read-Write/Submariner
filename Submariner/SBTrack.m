@@ -61,6 +61,7 @@
     [parameters setValue:self.server.password forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
+    [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"maxBitRate"] forKey:@"maxBitRate"];
     [parameters setValue:self.id forKey:@"id"];
     
     finalURL = [NSURL URLWithString:[self.server.url stringByAppendingPathComponent:@"rest/stream.view"]];

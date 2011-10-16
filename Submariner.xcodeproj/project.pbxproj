@@ -167,6 +167,8 @@
 		4CB1E42F144B1F00006F33FA /* RWStreamingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */; };
 		4CB1E430144B1F00006F33FA /* RWStreamingSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */; };
 		4CB1E435144B1F5A006F33FA /* RWVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E434144B1F5A006F33FA /* RWVolumeSlider.m */; };
+		4CB1E451144B3B50006F33FA /* RDLightTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E44E144B3B50006F33FA /* RDLightTextFieldCell.m */; };
+		4CB1E452144B3B50006F33FA /* RDDarkTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E450144B3B50006F33FA /* RDDarkTextFieldCell.m */; };
 		4CB4D8CC13A6253100F706EC /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8CB13A6253100F706EC /* MAAttachedWindow.m */; };
 		4CB4D8E113A6634E00F706EC /* SBBottomBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8E013A6634E00F706EC /* SBBottomBorderView.m */; };
 		4CB4D8E813A6645A00F706EC /* SBTopBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4D8E713A6645A00F706EC /* SBTopBorderView.m */; };
@@ -541,6 +543,10 @@
 		4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStreamingSliderCell.m; sourceTree = "<group>"; };
 		4CB1E433144B1F5A006F33FA /* RWVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWVolumeSlider.h; sourceTree = "<group>"; };
 		4CB1E434144B1F5A006F33FA /* RWVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWVolumeSlider.m; sourceTree = "<group>"; };
+		4CB1E44D144B3B50006F33FA /* RDLightTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLightTextFieldCell.h; sourceTree = "<group>"; };
+		4CB1E44E144B3B50006F33FA /* RDLightTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLightTextFieldCell.m; sourceTree = "<group>"; };
+		4CB1E44F144B3B50006F33FA /* RDDarkTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDDarkTextFieldCell.h; sourceTree = "<group>"; };
+		4CB1E450144B3B50006F33FA /* RDDarkTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDDarkTextFieldCell.m; sourceTree = "<group>"; };
 		4CB4D8CA13A6253100F706EC /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		4CB4D8CB13A6253100F706EC /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
 		4CB4D8DF13A6634D00F706EC /* SBBottomBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBottomBorderView.h; sourceTree = "<group>"; };
@@ -760,6 +766,7 @@
 		4C87ED83139CD8CD0064DE2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CB1E436144B3B2D006F33FA /* Shadowed Text Cell */,
 				4C1D412E13A8F367002D77F3 /* SplitView Delegates */,
 				4CB1E432144B1F1B006F33FA /* Volume Slider */,
 				4CB1E431144B1F02006F33FA /* Streaming Slider */,
@@ -1114,6 +1121,17 @@
 				4C87ED96139CD97B0064DE2E /* RWVolumeSliderCell.m */,
 			);
 			name = "Volume Slider";
+			sourceTree = "<group>";
+		};
+		4CB1E436144B3B2D006F33FA /* Shadowed Text Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4CB1E44D144B3B50006F33FA /* RDLightTextFieldCell.h */,
+				4CB1E44E144B3B50006F33FA /* RDLightTextFieldCell.m */,
+				4CB1E44F144B3B50006F33FA /* RDDarkTextFieldCell.h */,
+				4CB1E450144B3B50006F33FA /* RDDarkTextFieldCell.m */,
+			);
+			name = "Shadowed Text Cell";
 			sourceTree = "<group>";
 		};
 		4CEF82D41448F839005E28EE /* Subprojects */ = {
@@ -1546,6 +1564,8 @@
 				4CB1E42F144B1F00006F33FA /* RWStreamingSlider.m in Sources */,
 				4CB1E430144B1F00006F33FA /* RWStreamingSliderCell.m in Sources */,
 				4CB1E435144B1F5A006F33FA /* RWVolumeSlider.m in Sources */,
+				4CB1E451144B3B50006F33FA /* RDLightTextFieldCell.m in Sources */,
+				4CB1E452144B3B50006F33FA /* RDDarkTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1606,7 +1626,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1626,7 +1646,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
