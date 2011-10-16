@@ -29,17 +29,18 @@
 	[defaults setObject:@"submariner" forKey:@"clientIdentifier"];
     [defaults setObject:@"1.5.0" forKey:@"apiVersion"];
     
-    [defaults setObject:[NSNumber numberWithInt:1]      forKey:@"playerBehavior"];
-	[defaults setObject:[NSNumber numberWithFloat:0.5f] forKey:@"playerVolume"];
-    [defaults setObject:[NSNumber numberWithInt:30]     forKey:@"requestTimeout"];
-    [defaults setObject:[NSNumber numberWithInt:30]     forKey:@"refreshChatInterval"];
-    [defaults setObject:[NSNumber numberWithInt:YES]    forKey:@"jumpInDock"];
-    [defaults setObject:[NSNumber numberWithInt:YES]    forKey:@"dockBadges"];
-    [defaults setObject:[NSNumber numberWithInt:YES]    forKey:@"enableCacheStreaming"];
-    [defaults setObject:[NSNumber numberWithInt:NO]     forKey:@"autoRefreshChat"];
-    [defaults setObject:[NSNumber numberWithInt:NO]     forKey:@"autoRefreshNowPlaying"];
-    [defaults setObject:[NSNumber numberWithFloat:0.75] forKey:@"coverSize"];
-    [defaults setObject:[NSNumber numberWithInteger:320] forKey:@"maxBitRate"];
+    [defaults setObject:[NSNumber numberWithInt:1]          forKey:@"playerBehavior"];
+	[defaults setObject:[NSNumber numberWithFloat:0.5f]     forKey:@"playerVolume"];
+    [defaults setObject:[NSNumber numberWithInt:30]         forKey:@"requestTimeout"];
+    [defaults setObject:[NSNumber numberWithInt:30]         forKey:@"refreshChatInterval"];
+    [defaults setObject:[NSNumber numberWithInt:YES]        forKey:@"jumpInDock"];
+    [defaults setObject:[NSNumber numberWithInt:YES]        forKey:@"dockBadges"];
+    [defaults setObject:[NSNumber numberWithInt:YES]        forKey:@"enableCacheStreaming"];
+    [defaults setObject:[NSNumber numberWithInt:NO]         forKey:@"autoRefreshChat"];
+    [defaults setObject:[NSNumber numberWithInt:NO]         forKey:@"autoRefreshNowPlaying"];
+    [defaults setObject:[NSNumber numberWithFloat:0.75]     forKey:@"coverSize"];
+    [defaults setObject:[NSNumber numberWithInteger:0]      forKey:@"maxBitRate"];
+    [defaults setObject:[NSNumber numberWithInteger:300]    forKey:@"MaxCoverSize"];
     
 	[userDefaults registerDefaults:defaults];
 }

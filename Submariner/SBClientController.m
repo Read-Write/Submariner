@@ -267,7 +267,8 @@
 
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:parameters];
     [params setValue:coverID forKey:@"id"];
-        
+     [params setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"MaxCoverSize"] forKey:@"size"];
+    
     NSURL *url = [NSURL URLWithString:server.url command:@"rest/getCoverArt.view" parameters:params];
     
     [[LRResty authenticatedClientWithUsername:server.username password:server.password] get:[url absoluteString] withBlock:^(LRRestyResponse *response) {
