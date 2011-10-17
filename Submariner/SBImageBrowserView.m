@@ -63,6 +63,17 @@
 	[self setBackgroundLayer:backgroundLayer];
 	backgroundLayer.owner = self;
     
+    // shadow
+    NSShadow *unselectedShadow = [[[NSShadow alloc] init] autorelease];
+    [unselectedShadow setShadowColor:[NSColor lightGrayColor]];
+    [unselectedShadow setShadowBlurRadius:0.0f];
+    [unselectedShadow setShadowOffset:NSMakeSize(0.f, -1.f)];
+    
+    NSShadow *selectedShadow = [[[NSShadow alloc] init] autorelease];
+    [selectedShadow setShadowColor:[NSColor darkGrayColor]];
+    [selectedShadow setShadowBlurRadius:0.0f];
+    [selectedShadow setShadowOffset:NSMakeSize(0.f, -1.f)];
+    
     // create a centered paragraph style
 	NSMutableParagraphStyle *paraphStyle = [[[NSMutableParagraphStyle alloc] init] autorelease];
 	[paraphStyle setLineBreakMode:NSLineBreakByTruncatingTail];
@@ -70,13 +81,13 @@
 	
 	NSMutableDictionary *attributes = [[[NSMutableDictionary alloc] init] autorelease];	
 	[attributes setObject:[NSFont systemFontOfSize:11] forKey:NSFontAttributeName]; 
-	//[attributes setObject:paraphStyle forKey:NSParagraphStyleAttributeName];	
 	[attributes setObject:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
+    [attributes setObject:unselectedShadow forKey:NSShadowAttributeName];
 	[self setValue:attributes forKey:IKImageBrowserCellsTitleAttributesKey];
-	
+	    
 	attributes = [[[NSMutableDictionary alloc] init] autorelease];	
 	[attributes setObject:[NSFont boldSystemFontOfSize:11] forKey:NSFontAttributeName]; 
-	//[attributes setObject:paraphStyle forKey:NSParagraphStyleAttributeName];	
+	[attributes setObject:selectedShadow forKey:NSShadowAttributeName];
 	[attributes setObject:[NSColor whiteColor] forKey:NSForegroundColorAttributeName];
 	
 	[self setValue:attributes forKey:IKImageBrowserCellsHighlightedTitleAttributesKey];	
