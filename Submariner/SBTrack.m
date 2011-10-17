@@ -197,5 +197,14 @@
     return nil;
 }
 
+- (BOOL)isVideo {
+    BOOL ret = NO;
+    
+    if([self.contentType rangeOfString:@"video"].location != NSNotFound)
+        ret = YES;
+    
+    return ret;
+    
+}
 
 @end

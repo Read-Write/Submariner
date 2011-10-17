@@ -165,7 +165,6 @@
     NSString *query = [sender stringValue];
     
     if(query && [query length] > 0) {
-        NSLog(@"search:");
         [self setViewControllerAtIndex:3];
         [server searchWithQuery:query];
     }
@@ -187,7 +186,7 @@
                                            otherButton:nil
                              informativeTextWithFormat:[attr valueForKey:@"message"]];
         
-        [alert runModal];
+        [alert performSelectorOnMainThread:@selector(runModal) withObject:nil waitUntilDone:NO];
     }
 }
 

@@ -20,4 +20,6 @@
 - (NSURL *)streamURL;
 - (NSURL *)downloadURL;
 
+- (BOOL)isVideo;
+
 @end

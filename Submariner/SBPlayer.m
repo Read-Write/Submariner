@@ -147,6 +147,7 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     // stop player
     [self stop];
     
+    NSLog(@"isVideo : %@", [track isVideo] ? @"YES" : @"NO");
     
     // clean previous playing track
     if(self.currentTrack != nil) {

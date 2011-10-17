@@ -19,7 +19,7 @@
 #import "NSURL+Parameters.h"
 #import "NSOperationQueue+Shared.h"
 #import "NSManagedObjectContext+Fetch.h"
-
+#import "NSString+Hex.h"
 
 
 
@@ -95,7 +95,7 @@ NSString *SBSubsonicDownloadFinished    = @"SBSubsonicDownloadFinished";
     // prepare download URL
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setValue:track.server.username forKey:@"u"];
-    [parameters setValue:track.server.password forKey:@"p"];
+    [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:track.server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
     [parameters setValue:track.id forKey:@"id"];
@@ -188,7 +188,7 @@ NSString *SBSubsonicDownloadFinished    = @"SBSubsonicDownloadFinished";
     [download release];
     
     // Inform the user.
-    [NSApp presentError:error];
+    [NSApp performSelectorOnMainThread:@selector(presentError:) withObject:error waitUntilDone:NO];
     [self finish];
 }
 

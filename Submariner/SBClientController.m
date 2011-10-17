@@ -216,9 +216,6 @@
 
 - (void)connectToServer:(SBServer *)aServer {
     // setup parameters
-    
-    NSLog(@"hex : %@", [NSString stringToHex:server.password]);
-    
     [parameters setValue:server.username forKey:@"u"];
     [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
