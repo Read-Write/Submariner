@@ -97,8 +97,11 @@
     NSBezierPath *knobPath = nil;
     NSBezierPath *bufferPath = nil;
         
-    CGFloat knobWidth = aRect.origin.x + [self knobThickness];
+    CGFloat knobWidth = [self floatValue] * [self trackRect].size.width / 100;
     CGFloat bufferWidth = [self bufferWidth];
+    
+    if(knobWidth < aRect.size.height-14)
+        knobWidth = aRect.size.height-14;
     
     NSRect knobRect = NSMakeRect(1, aRect.origin.y+6, knobWidth-2, aRect.size.height-12);
     NSRect bufferRect = NSMakeRect(knobRect.origin.x, knobRect.origin.y, bufferWidth-2, knobRect.size.height);

@@ -32,20 +32,35 @@
 	[bar setSelectedItemIdentifier:@"Player"];
 	[self.window center];
     
-    // create download popup
-//    NSString *downloadLocation = [[[NSUserDefaults standardUserDefaults] valueForKey:@"downloadLocation"] stringByResolvingSymlinksInPath];
-//    NSImage *fileIcon = [[NSWorkspace sharedWorkspace] iconForFile:downloadLocation];
-//    NSString *downloadLocationName = [downloadLocation lastPathComponent];
-//    
-//    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:downloadLocationName action:nil keyEquivalent:@""];
-//    [item setOnStateImage:fileIcon];
-//    
-//    [downloadLocationPopUp insertItemWithTitle:downloadLocationName atIndex:0];
-//    [downloadLocationPopUp selectItemAtIndex:0];
     NSInteger selectedBehavior = [[NSUserDefaults standardUserDefaults] integerForKey:@"playerBehavior"];
     [playerBehaviorMatrix selectCellAtRow:selectedBehavior column:0];
+    
+    [[NSUserDefaults standardUserDefaults] addObserver:self
+                                            forKeyPath:@"maxBitRate" 
+                                               options:NSKeyValueObservingOptionNew 
+                                               context:nil];
 }
 
+- (void)dealloc {
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:@"maxBitRate"];
+    [super dealloc];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if(object == [NSUserDefaults standardUserDefaults] && [keyPath isEqualToString:@"maxBitRate"]) {
+        NSInteger newTag = [[change valueForKey:NSKeyValueChangeNewKey] integerValue];
+        if(newTag < 320 && newTag > 0) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Submariner limitation"
+                                             defaultButton:@"OK"
+                                           alternateButton:nil
+                                               otherButton:nil
+                                 informativeTextWithFormat:@"Submariner is not able to caculate the progression time below 320 kbit/s bitrate efficiently depending of the transcoded source bitrate. You could not seek into the timeline and time information will be unreliable. However, Subamriner will stream, play and cache download your track properly with the desired bitrate."];
+            
+            [alert setAlertStyle:NSInformationalAlertStyle];
+            [alert runModal];
+        }
+    }
+}
 
 
 -(NSView *)viewForTag:(NSInteger)tag {

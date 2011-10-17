@@ -1,0 +1,28 @@
+Contents of /Users/nark/Development/Me/Cocoa/Submariner/Submariner/SoundCloudAPI/Outsourced/OAuth2Client/Sources/OAuth2Client_Prefix.pch
+2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
+-x
+objective-c
+-arch
+x86_64
+-fmessage-length=0
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-category=id
+-fdiagnostics-parseable-fixits
+-std=c99
+-fpascal-strings
+-Os
+-fasm-blocks
+-gdwarf-2
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-iquote
+-iquote
+-I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release/include
+-F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release
+-ferror-limit=10
+-working-directory=/Users/nark/Development/Me/Cocoa/Submariner/Submariner/SoundCloudAPI/Outsourced/OAuth2Client
+-Xclang
+-detailed-preprocessing-record
+-DNX_BLOCKS_AVAILABLE=1
+-DNS_BLOCK_ASSERTIONS=1

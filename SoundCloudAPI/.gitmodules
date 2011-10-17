@@ -1,0 +1,6 @@
+[submodule "Outsourced/OAuth2Client"]
+	path = Outsourced/OAuth2Client
+	url = git://github.com/nxtbgthng/OAuth2Client.git
+[submodule "TestApps/Support/JSONKit"]
+	path = TestApps/Support/JSONKit
+	url = git://github.com/johnezang/JSONKit.git

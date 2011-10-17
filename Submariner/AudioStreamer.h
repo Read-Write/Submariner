@@ -184,13 +184,16 @@ extern NSString * const ASStatusChangedNotification;
 
 - (id)initWithURL:(NSURL *)aURL;
 - (id)initWithURL:(NSURL *)aURL saveLocation:(NSString *)aSaveLocation;
+
 - (void)start;
 - (void)stop;
 - (void)pause;
+
 - (BOOL)isPlaying;
 - (BOOL)isPaused;
 - (BOOL)isWaiting;
 - (BOOL)isIdle;
+
 - (void)seekToTime:(double)newSeekTime;
 - (double)calculatedBitRate;
 - (void)setGain:(Float32)gain;

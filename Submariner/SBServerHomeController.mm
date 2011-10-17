@@ -80,11 +80,21 @@
     
     // scope bar
     NSArray *items = [NSArray arrayWithObjects:
-					  [NSDictionary dictionaryWithObjectsAndKeys: @"RandomItem", ITEM_IDENTIFIER, @"Random", ITEM_NAME, nil], 
-					  [NSDictionary dictionaryWithObjectsAndKeys: @"NewestItem", ITEM_IDENTIFIER, @"Newest", ITEM_NAME, nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys: @"HighestItem", ITEM_IDENTIFIER, @"Highest", ITEM_NAME, nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys: @"FrequentItem", ITEM_IDENTIFIER, @"Frequent", ITEM_NAME, nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys: @"RecentItem", ITEM_IDENTIFIER, @"Recent", ITEM_NAME, nil],
+					  [NSDictionary dictionaryWithObjectsAndKeys: 
+                       @"RandomItem", ITEM_IDENTIFIER, 
+                       @"Random", ITEM_NAME, nil], 
+					  [NSDictionary dictionaryWithObjectsAndKeys: 
+                       @"NewestItem", ITEM_IDENTIFIER, 
+                       @"Newest", ITEM_NAME, nil],
+                      [NSDictionary dictionaryWithObjectsAndKeys: 
+                       @"HighestItem", ITEM_IDENTIFIER, 
+                       @"Highest", ITEM_NAME, nil],
+                      [NSDictionary dictionaryWithObjectsAndKeys: 
+                       @"FrequentItem", ITEM_IDENTIFIER, 
+                       @"Frequent", ITEM_NAME, nil],
+                      [NSDictionary dictionaryWithObjectsAndKeys: 
+                       @"RecentItem", ITEM_IDENTIFIER, 
+                       @"Recent", ITEM_NAME, nil],
 					  nil];
 	
 	[scopeGroups addObject:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -515,6 +525,7 @@
 - (void)scopeBar:(MGScopeBar *)theScopeBar selectedStateChanged:(BOOL)selected forItem:(NSString *)identifier inGroup:(int)groupNumber {
     
     [albumsBrowserView setSelectionIndexes:nil byExtendingSelection:NO];
+    NSLog(@"selectedStateChanged");
     
     if([identifier isEqualToString:@"RandomItem"]) {
         [self.server getAlbumListForType:SBSubsonicRequestGetAlbumListRandom];

@@ -230,7 +230,7 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 }
 
 - (void)playRemoteTrackURL:(NSURL *)url saveLocation:(NSString *)location {
-
+    
     // register location to app delegate to remove it when app quit
     if(location)
         [[[SBAppDelegate sharedInstance] tmpPaths] addObject:location];
@@ -238,6 +238,9 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     // setup player and play
 	if (remotePlayer == nil) {
         remotePlayer = [[AudioStreamer alloc] initWithURL:[self.currentTrack streamURL] saveLocation:location];
+        NSUInteger maxBitRate = [[NSUserDefaults standardUserDefaults] integerForKey:@"maxBitRate"];
+        [remotePlayer setBitRate:(UInt32)maxBitRate];
+        
         // observer remote player to know stop status
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(streamerStatusChangedNotification:) 

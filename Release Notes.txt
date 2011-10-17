@@ -3,6 +3,7 @@ Release Note :
 Version 1.1 :
 - Add zoom setting for album browser views.
 - Add Max Bit Rate setting.
+- Add Max Cover Size setting.
 - Improve Tracklist which becomes a Mini-Player.
 - Improve global design, navigation and frame persistence.
 - Improve player progress bar stability.

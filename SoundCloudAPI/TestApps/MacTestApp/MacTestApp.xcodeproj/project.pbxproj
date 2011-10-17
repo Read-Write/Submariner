@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9410407F1282F53A00E9E6CE /* OAuth2Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9410406B1282F50A00E9E6CE /* OAuth2Client.framework */; };
+		941040831282F54C00E9E6CE /* OAuth2Client.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9410406B1282F50A00E9E6CE /* OAuth2Client.framework */; };
+		941040841282F54C00E9E6CE /* SoundCloudAPI.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 941040741282F51700E9E6CE /* SoundCloudAPI.framework */; };
+		945360BD123FBBB900BD668A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		945360BE123FBBB900BD668A /* SCTest_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D32351680F2A0F4400BE4212 /* SCTest_AppDelegate.m */; };
+		945360BF123FBBB900BD668A /* SCParameterTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D32352C70F2A193200BE4212 /* SCParameterTableDataSource.m */; };
+		945360C0123FBBCA00BD668A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		945360C1123FBBCA00BD668A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		945360C2123FBBCA00BD668A /* 1375_sleep_90_bpm_nylon2.wav in Resources */ = {isa = PBXBuildFile; fileRef = D375FD910F3B0A7200954DE4 /* 1375_sleep_90_bpm_nylon2.wav */; };
+		945360C3123FBBCA00BD668A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D35526200F4D7C450074030D /* LICENSE */; };
+		945360C4123FBBCA00BD668A /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = D35526210F4D7C450074030D /* NOTICE */; };
+		94536119123FBC6A00BD668A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E572B50F2F28B800DE180F /* Security.framework */; };
+		9453611A123FBC6A00BD668A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		94F5B68912830466000D7CD1 /* SoundCloudAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941040741282F51700E9E6CE /* SoundCloudAPI.framework */; };
+		99D8A8BE1385388F00E3073C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D8A8A41385388F00E3073C /* JSONKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		941040681282F50A00E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = OAuth2Client;
+		};
+		9410406A1282F50A00E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 942FFCD612315E0A00E6C65E;
+			remoteInfo = OAuth2Client.framework;
+		};
+		941040711282F51700E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = SoundCloudAPI;
+		};
+		941040731282F51700E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94535F86123FAFDF00BD668A;
+			remoteInfo = SoundCloudAPI.framework;
+		};
+		9410407B1282F52B00E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 94535F85123FAFDF00BD668A;
+			remoteInfo = SoundCloudAPI.framework;
+		};
+		9410407D1282F52E00E9E6CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 942FFCD512315E0A00E6C65E;
+			remoteInfo = OAuth2Client.framework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		945360CB123FBBF700BD668A /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				941040831282F54C00E9E6CE /* OAuth2Client.framework in Copy Frameworks */,
+				941040841282F54C00E9E6CE /* SoundCloudAPI.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* MacTestApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacTestApp_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = ../../Outsourced/OAuth2Client/OAuth2Client.xcodeproj; sourceTree = SOURCE_ROOT; };
+		945360A8123FBB6F00BD668A /* MacTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoundCloudAPI.xcodeproj; path = ../../SoundCloudAPI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		94DA528B1240BD0F00F7AC3B /* SoundCloudAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D8A8A31385388F00E3073C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		99D8A8A41385388F00E3073C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D32351680F2A0F4400BE4212 /* SCTest_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTest_AppDelegate.m; sourceTree = "<group>"; };
+		D32351690F2A0F4400BE4212 /* SCTest_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTest_AppDelegate.h; sourceTree = "<group>"; };
+		D32352C60F2A193200BE4212 /* SCParameterTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCParameterTableDataSource.h; sourceTree = "<group>"; };
+		D32352C70F2A193200BE4212 /* SCParameterTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCParameterTableDataSource.m; sourceTree = "<group>"; };
+		D35526200F4D7C450074030D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D35526210F4D7C450074030D /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		D375FD910F3B0A7200954DE4 /* 1375_sleep_90_bpm_nylon2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1375_sleep_90_bpm_nylon2.wav; sourceTree = "<group>"; };
+		D3E572B50F2F28B800DE180F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945360A6123FBB6F00BD668A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9410407F1282F53A00E9E6CE /* OAuth2Client.framework in Frameworks */,
+				94F5B68912830466000D7CD1 /* SoundCloudAPI.framework in Frameworks */,
+				94536119123FBC6A00BD668A /* Security.framework in Frameworks */,
+				9453611A123FBC6A00BD668A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D32351690F2A0F4400BE4212 /* SCTest_AppDelegate.h */,
+				D32351680F2A0F4400BE4212 /* SCTest_AppDelegate.m */,
+				D32352C60F2A193200BE4212 /* SCParameterTableDataSource.h */,
+				D32352C70F2A193200BE4212 /* SCParameterTableDataSource.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3E572B50F2F28B800DE180F /* Security.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945360A8123FBB6F00BD668A /* MacTestApp.app */,
+				94DA528B1240BD0F00F7AC3B /* SoundCloudAPI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* MacTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				D32353D40F2A353A00BE4212 /* Outsourced */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = MacTestApp;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* MacTestApp_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D35526200F4D7C450074030D /* LICENSE */,
+				D35526210F4D7C450074030D /* NOTICE */,
+				D375FD910F3B0A7200954DE4 /* 1375_sleep_90_bpm_nylon2.wav */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		941040641282F50A00E9E6CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9410406B1282F50A00E9E6CE /* OAuth2Client.framework */,
+				941040691282F50A00E9E6CE /* libOAuth2Client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9410406D1282F51700E9E6CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				941040741282F51700E9E6CE /* SoundCloudAPI.framework */,
+				941040721282F51700E9E6CE /* libSoundCloudAPI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99D8A87B1385388F00E3073C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				99D8A8A31385388F00E3073C /* JSONKit.h */,
+				99D8A8A41385388F00E3073C /* JSONKit.m */,
+			);
+			name = JSONKit;
+			path = ../Support/JSONKit;
+			sourceTree = "<group>";
+		};
+		D32353D40F2A353A00BE4212 /* Outsourced */ = {
+			isa = PBXGroup;
+			children = (
+				99D8A87B1385388F00E3073C /* JSONKit */,
+				94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */,
+				945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */,
+			);
+			name = Outsourced;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945360A7123FBB6F00BD668A /* MacTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945360AD123FBB7000BD668A /* Build configuration list for PBXNativeTarget "MacTestApp" */;
+			buildPhases = (
+				945360CB123FBBF700BD668A /* Copy Frameworks */,
+				945360A4123FBB6F00BD668A /* Resources */,
+				945360A5123FBB6F00BD668A /* Sources */,
+				945360A6123FBB6F00BD668A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9410407C1282F52B00E9E6CE /* PBXTargetDependency */,
+				9410407E1282F52E00E9E6CE /* PBXTargetDependency */,
+			);
+			name = MacTestApp;
+			productName = MacTestApp;
+			productReference = 945360A8123FBB6F00BD668A /* MacTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacTestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MacTestApp */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 941040641282F50A00E9E6CE /* Products */;
+					ProjectRef = 94536073123FBA2900BD668A /* OAuth2Client.xcodeproj */;
+				},
+				{
+					ProductGroup = 9410406D1282F51700E9E6CE /* Products */;
+					ProjectRef = 945A5185123FAF5A00A6F2EB /* SoundCloudAPI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				945360A7123FBB6F00BD668A /* MacTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		941040691282F50A00E9E6CE /* libOAuth2Client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuth2Client.a;
+			remoteRef = 941040681282F50A00E9E6CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9410406B1282F50A00E9E6CE /* OAuth2Client.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2Client.framework;
+			remoteRef = 9410406A1282F50A00E9E6CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		941040721282F51700E9E6CE /* libSoundCloudAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSoundCloudAPI.a;
+			remoteRef = 941040711282F51700E9E6CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		941040741282F51700E9E6CE /* SoundCloudAPI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SoundCloudAPI.framework;
+			remoteRef = 941040731282F51700E9E6CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945360A4123FBB6F00BD668A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945360C0123FBBCA00BD668A /* InfoPlist.strings in Resources */,
+				945360C1123FBBCA00BD668A /* MainMenu.xib in Resources */,
+				945360C2123FBBCA00BD668A /* 1375_sleep_90_bpm_nylon2.wav in Resources */,
+				945360C3123FBBCA00BD668A /* LICENSE in Resources */,
+				945360C4123FBBCA00BD668A /* NOTICE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945360A5123FBB6F00BD668A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945360BD123FBBB900BD668A /* main.m in Sources */,
+				945360BE123FBBB900BD668A /* SCTest_AppDelegate.m in Sources */,
+				945360BF123FBBB900BD668A /* SCParameterTableDataSource.m in Sources */,
+				99D8A8BE1385388F00E3073C /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9410407C1282F52B00E9E6CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SoundCloudAPI.framework;
+			targetProxy = 9410407B1282F52B00E9E6CE /* PBXContainerItemProxy */;
+		};
+		9410407E1282F52E00E9E6CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2Client.framework;
+			targetProxy = 9410407D1282F52E00E9E6CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		945360AB123FBB6F00BD668A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(CONFIGURATION_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MacTestApp_Prefix.pch;
+				HEADER_SEARCH_PATHS = ../../Sources/SoundCloudAPI;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = MacTestApp;
+			};
+			name = Debug;
+		};
+		945360AC123FBB6F00BD668A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(CONFIGURATION_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/Frameworks\"";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MacTestApp_Prefix.pch;
+				HEADER_SEARCH_PATHS = ../../Sources/SoundCloudAPI;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = MacTestApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/Frameworks/";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/Frameworks/";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945360AD123FBB7000BD668A /* Build configuration list for PBXNativeTarget "MacTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945360AB123FBB6F00BD668A /* Debug */,
+				945360AC123FBB6F00BD668A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
