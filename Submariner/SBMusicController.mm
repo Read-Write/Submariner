@@ -43,6 +43,8 @@
 @synthesize artistSortDescriptor;
 @synthesize trackSortDescriptor;
 @synthesize databaseController;
+@dynamic artistCellSelectedAttributes;
+@dynamic artistCellUnselectedAttributes;
 
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)context {
@@ -112,6 +114,46 @@
     }
 }
 
+
+- (NSDictionary *)artistCellSelectedAttributes {
+    if(artistCellSelectedAttributes == nil) {
+        NSShadow *shadow = [[NSShadow alloc] init];
+        [shadow setShadowColor:[NSColor blackColor]];
+        [shadow setShadowBlurRadius:0.12f];
+        [shadow setShadowOffset:NSMakeSize(0.f, -1.f)];
+        
+        NSFont *font = [NSFont boldSystemFontOfSize:12.0f];
+        
+        artistCellSelectedAttributes = [[NSMutableDictionary dictionary] retain];
+        [artistCellSelectedAttributes setValue:shadow forKey:NSShadowAttributeName];
+        [artistCellSelectedAttributes setValue:[NSColor whiteColor] forKey:NSForegroundColorAttributeName];
+        [artistCellSelectedAttributes setValue:font forKey:NSFontAttributeName];
+        [shadow release];
+        
+        return artistCellSelectedAttributes;
+    }
+    return artistCellSelectedAttributes;
+}
+
+- (NSDictionary *)artistCellUnselectedAttributes {
+    if(artistCellUnselectedAttributes == nil) {
+        NSShadow *shadow = [[NSShadow alloc] init];
+        [shadow setShadowColor:[NSColor whiteColor]];
+        [shadow setShadowBlurRadius:0.0f];
+        [shadow setShadowOffset:NSMakeSize(0.f, -1.f)];
+        
+        NSFont *font = [NSFont systemFontOfSize:12.0f];
+        
+        artistCellUnselectedAttributes = [[NSMutableDictionary dictionary] retain];
+        [artistCellUnselectedAttributes setValue:shadow forKey:NSShadowAttributeName];
+        [artistCellUnselectedAttributes setValue:[NSColor darkGrayColor] forKey:NSForegroundColorAttributeName];
+        [artistCellUnselectedAttributes setValue:font forKey:NSFontAttributeName];
+        [shadow release];
+        
+        return artistCellUnselectedAttributes;
+    }
+    return artistCellUnselectedAttributes;
+}
 
 
 
@@ -536,20 +578,13 @@
     if(tableView == artistsTableView) {
         if(row > -1) {
             SBIndex *index = [[artistsController arrangedObjects] objectAtIndex:row];
-            if(index && ![index isKindOfClass:[SBGroup class]]) {
+            if(index && [index isKindOfClass:[SBArtist class]]) {
                 
-                RDLightTextFieldCell *myCell = (RDLightTextFieldCell *)cell;
-                if(row == [tableView selectedRow]) {
-                    [cell setFont:[NSFont boldSystemFontOfSize:12.0]];
-                    [myCell setTextColor:[NSColor whiteColor]];
-                    [myCell setShadowColor:[NSColor blackColor]];
-                    [myCell setShadowRadius:0.3f];
-                } else {
-                    [cell setFont:[NSFont systemFontOfSize:12.0]];
-                    [myCell setTextColor:[NSColor colorWithDeviceWhite:0.1 alpha:1.0]];
-                    [myCell setShadowColor:baseColor];
-                    [myCell setShadowRadius:0.0f];
-                }
+                NSDictionary *attr = (row == [tableView selectedRow]) ? self.artistCellSelectedAttributes : self.artistCellUnselectedAttributes;
+                NSAttributedString *newString = [[NSAttributedString alloc] initWithString:index.itemName attributes:attr];
+                
+                [cell setAttributedStringValue:newString];
+                [newString release];
             }
         }
     }

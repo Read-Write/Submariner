@@ -36,11 +36,13 @@
 
 - (void)dealloc
 {
-  [connectionError release];
-  [URLConnection release];
-  [URLResponse release];
-  [URLRequest release];
-  [super dealloc];
+    [connectionError release];
+    [URLConnection release];
+    [URLResponse release];
+    [URLRequest release];
+    [responseData release];
+    
+    [super dealloc];
 }
 
 - (void)start 

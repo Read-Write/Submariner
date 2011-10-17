@@ -28,11 +28,16 @@
     SBDatabaseController *databaseController;
     NSArray *artistSortDescriptor;
     NSArray *trackSortDescriptor;
+    
+    NSDictionary *artistCellSelectedAttributes;
+    NSDictionary *artistCellUnselectedAttributes;
 }
-
+@property (readonly, retain) NSDictionary *artistCellSelectedAttributes;
+@property (readonly, retain) NSDictionary *artistCellUnselectedAttributes;
 @property (readwrite, retain) SBDatabaseController *databaseController;
 @property (readwrite, retain) NSArray *artistSortDescriptor;
 @property (readwrite, retain) NSArray *trackSortDescriptor;
+
 
 - (IBAction)trackDoubleClick:(id)sender;
 - (IBAction)albumDoubleClick:(id)sender;

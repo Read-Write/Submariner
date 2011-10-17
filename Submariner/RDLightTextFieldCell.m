@@ -44,10 +44,12 @@ static NSShadow *kShadow = nil;
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
+    [NSGraphicsContext saveGraphicsState];
     [kShadow setShadowColor:shadowColor];
     [kShadow setShadowBlurRadius:shadowRadius];
     [kShadow set];
     [super drawInteriorWithFrame:cellFrame inView:controlView];
+    [NSGraphicsContext restoreGraphicsState];
 }
 
 @end
