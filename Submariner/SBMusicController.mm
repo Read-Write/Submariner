@@ -560,19 +560,19 @@
 	return ret;
 }
 
-//- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-//    
-//    if(tableView == artistsTableView) {
-//        if(row != -1) {
-//            SBIndex *index = [[artistsController arrangedObjects] objectAtIndex:row];
-//            if(index && ![index isKindOfClass:[SBGroup class]])
-//                return 22.0f;
-//            if(index && [index isKindOfClass:[SBGroup class]])
-//                return 20.0f;
-//        }
-//    }
-//    return 17.0f;
-//}
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    
+    if(tableView == artistsTableView) {
+        if(row != -1) {
+            SBIndex *index = [[artistsController arrangedObjects] objectAtIndex:row];
+            if(index && ![index isKindOfClass:[SBGroup class]])
+                return 22.0f;
+            if(index && [index isKindOfClass:[SBGroup class]])
+                return 20.0f;
+        }
+    }
+    return 17.0f;
+}
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     if(tableView == artistsTableView) {
