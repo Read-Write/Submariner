@@ -23,6 +23,7 @@
 
 #import "NSManagedObjectContext+Fetch.h"
 #import "NSURL+Parameters.h"
+#import "NSString+Hex.h"
 #import "NSOperationQueue+Shared.h"
 #import <LRResty/LRResty.h>
 
@@ -215,8 +216,11 @@
 
 - (void)connectToServer:(SBServer *)aServer {
     // setup parameters
+    
+    NSLog(@"hex : %@", [NSString stringToHex:server.password]);
+    
     [parameters setValue:server.username forKey:@"u"];
-    [parameters setValue:server.password forKey:@"p"];
+    [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
     
@@ -306,7 +310,7 @@
     
     // setup parameters
     [parameters setValue:server.username forKey:@"u"];
-    [parameters setValue:server.password forKey:@"p"];
+    [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
     

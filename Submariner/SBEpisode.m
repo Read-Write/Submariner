@@ -1,5 +1,6 @@
 #import "SBEpisode.h"
 #import "NSString+Time.h"
+#import "NSString+Hex.h"
 #import "SBServer.h"
 #import "SBPodcast.h"
 
@@ -31,7 +32,7 @@
     // the default URL parameters
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setValue:self.server.username forKey:@"u"];
-    [parameters setValue:self.server.password forKey:@"p"];
+    [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:self.server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
     [parameters setValue:self.streamID forKey:@"id"];
@@ -82,7 +83,7 @@
     // the default URL parameters
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setValue:self.server.username forKey:@"u"];
-    [parameters setValue:self.server.password forKey:@"p"];
+    [parameters setValue:[@"enc:" stringByAppendingString:[NSString stringToHex:self.server.password]] forKey:@"p"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"apiVersion"] forKey:@"v"];
     [parameters setValue:[[NSUserDefaults standardUserDefaults] stringForKey:@"clientIdentifier"] forKey:@"c"];
     [parameters setValue:self.streamID forKey:@"id"];

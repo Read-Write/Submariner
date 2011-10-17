@@ -193,6 +193,7 @@
 		4CE3B7E013FA733F006A4F69 /* on.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B7DE13FA733F006A4F69 /* on.tiff */; };
 		4CEB4A4413C0FDAE00A92617 /* unmute.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4313C0FDAE00A92617 /* unmute.png */; };
 		4CEB4A4B13C1AA7000A92617 /* users.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4A13C1AA7000A92617 /* users.PNG */; };
+		4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8E1E144CE2A400332417 /* NSString+Hex.m */; };
 		4CED9B4913BDD1BF00003152 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED9B4813BDD1BF00003152 /* OpenGL.framework */; };
 		4CEF83241448FB76005E28EE /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEF83231448FB76005E28EE /* LRResty.framework */; };
 		4CEF83251448FB7C005E28EE /* LRResty.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEF83231448FB76005E28EE /* LRResty.framework */; };
@@ -587,6 +588,8 @@
 		4CE3B7DE13FA733F006A4F69 /* on.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = on.tiff; sourceTree = "<group>"; };
 		4CEB4A4313C0FDAE00A92617 /* unmute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unmute.png; sourceTree = "<group>"; };
 		4CEB4A4A13C1AA7000A92617 /* users.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.PNG; sourceTree = "<group>"; };
+		4CED8E1D144CE2A400332417 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hex.h"; sourceTree = "<group>"; };
+		4CED8E1E144CE2A400332417 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
 		4CED9B4813BDD1BF00003152 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LRResty.xcodeproj; path = LRResty/LRResty.xcodeproj; sourceTree = "<group>"; };
 		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = LRResty/build/Release/LRResty.framework; sourceTree = "<group>"; };
@@ -909,6 +912,8 @@
 				4CFAFC55139FFE1700E82B57 /* NSURL+Parameters.m */,
 				4C7AA2A4139D9B440050BE95 /* NSString+Time.h */,
 				4C7AA2A5139D9B440050BE95 /* NSString+Time.m */,
+				4CED8E1D144CE2A400332417 /* NSString+Hex.h */,
+				4CED8E1E144CE2A400332417 /* NSString+Hex.m */,
 				4C7AA26B139D66200050BE95 /* NSBezierPath+MCAdditions.h */,
 				4C7AA26C139D66200050BE95 /* NSBezierPath+MCAdditions.m */,
 				4C7AA26D139D66200050BE95 /* NSShadow+MCAdditions.h */,
@@ -1566,6 +1571,7 @@
 				4CB1E435144B1F5A006F33FA /* RWVolumeSlider.m in Sources */,
 				4CB1E451144B3B50006F33FA /* RDLightTextFieldCell.m in Sources */,
 				4CB1E452144B3B50006F33FA /* RDDarkTextFieldCell.m in Sources */,
+				4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
