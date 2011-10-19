@@ -10,6 +10,7 @@
 #import <LRResty/LRResty.h>
 
 #import "SBAppDelegate.h"
+#import "SBMovieWindowController.h"
 #import "SBPlayer.h"
 #import "SBTrack.h"
 #import "SBServer.h"
@@ -33,6 +34,8 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 @interface SBPlayer (Private)
 - (void)playLocalTrackPath:(NSString *)path;
 - (void)playRemoteTrackURL:(NSURL *)url saveLocation:(NSString *)location;
+- (void)playMovieWithAttributes:(NSDictionary *)attr;
+
 - (void)unplayAllTracks;
 - (SBTrack *)getRandomTrackExceptingTrack:(SBTrack *)_track;
 - (SBTrack *)nextTrack;
@@ -168,6 +171,11 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         localPlayer = nil;
     }
     
+    if(moviePlayer) {
+        [moviePlayer release];
+        moviePlayer = nil;
+    }
+    
     if([self.currentTrack.isLocal boolValue] ) {
         
 #if DEBUG 
@@ -187,7 +195,12 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 #if DEBUG 
             NSLog(@"play with SFBAudioEngine (locally)");
 #endif
-            [self playLocalTrackPath:self.currentTrack.localTrack.path];
+            if([self.currentTrack.localTrack isVideo]) {
+                [[SBMovieWindowController sharedInstance] showWindow];
+                [self playMovieWithAttributes:[self.currentTrack.localTrack movieAttributes]];
+            } else {
+                [self playLocalTrackPath:self.currentTrack.localTrack.path];
+            }
             
         } else {
 #if DEBUG   
@@ -200,13 +213,23 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
                 
                 if([[NSFileManager defaultManager] createFileAtPath:location contents:nil attributes:nil]) {
                     
-                    [self playRemoteTrackURL:[self.currentTrack streamURL] saveLocation:location];
-                    isCaching = YES;
+                    if([self.currentTrack isVideo]) {
+                        [[SBMovieWindowController sharedInstance] showWindow];
+                        [self playMovieWithAttributes:[self.currentTrack movieAttributes]];
+                    } else {
+                        [self playRemoteTrackURL:[self.currentTrack streamURL] saveLocation:location];
+                        isCaching = YES;
+                    }
                 }
                 
             } else {
-                [self playRemoteTrackURL:[self.currentTrack streamURL] saveLocation:nil];
-                isCaching = NO;
+                if([self.currentTrack isVideo]) {
+                    [[SBMovieWindowController sharedInstance] showWindow];
+                    [self playMovieWithAttributes:[self.currentTrack movieAttributes]];
+                } else {
+                    [self playRemoteTrackURL:[self.currentTrack streamURL] saveLocation:nil];
+                    isCaching = YES;
+                }
             }
         }
         
@@ -269,6 +292,18 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
                                                object:remotePlayer];
 }
 
+- (void)playMovieWithAttributes:(NSDictionary *)attr {
+    NSLog(@"playMovieWithAttributes");
+    
+    NSError *error = nil;
+    
+    moviePlayer = [[QTMovie alloc] initWithAttributes:attr error:&error];
+    
+	if (!moviePlayer || error)
+		NSLog(@"Couldn't init movie: %@", [error localizedDescription]);
+	else
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadStateDidChange:) name:QTMovieLoadStateDidChangeNotification object:moviePlayer];
+}
 
 - (void)playPause {
     
@@ -283,12 +318,23 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         }
     } else {
         // stop audio streamer
-        if(self.isPaused == YES) {
-            [remotePlayer start];
-            self.isPaused = NO;
+        if([self.currentTrack isVideo]) {
+            if(self.isPaused == YES) {
+                [[SBMovieWindowController sharedInstance] playMovie:moviePlayer];
+                self.isPaused = NO;
+            } else {
+                [[SBMovieWindowController sharedInstance] pause];
+                self.isPaused = YES;
+            }
+            
         } else {
-            [remotePlayer pause];
-            self.isPaused = YES;
+            if(self.isPaused == YES) {
+                [remotePlayer start];
+                self.isPaused = NO;
+            } else {
+                [remotePlayer pause];
+                self.isPaused = YES;
+            }
         }
     }
 }
@@ -352,6 +398,9 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         // stop remote player
         [remotePlayer performSelectorOnMainThread:@selector(stop) withObject:nil waitUntilDone:NO];
         
+        // stop movie player
+        [moviePlayer stop];
+        [[SBMovieWindowController sharedInstance] close];
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:ASStatusChangedNotification object:remotePlayer];
         
@@ -443,6 +492,27 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 #pragma mark -
 #pragma mark Remote Player Notification 
+
+- (void)loadStateDidChange:(NSNotification *)notif
+{
+	QTMovieLoadState state = [[moviePlayer attributeForKey:QTMovieLoadStateAttribute] integerValue];
+	if (state == QTMovieLoadStateError) {
+		NSLog(@"error: %@", [[moviePlayer attributeForKey:QTMovieLoadStateErrorAttribute] localizedDescription]);
+        
+        NSError *error = [moviePlayer attributeForKey:QTMovieLoadStateErrorAttribute];
+        if(error)
+            [NSApp presentError:error];
+        
+        [[SBMovieWindowController sharedInstance] close];
+	
+    } else if (state >= QTMovieLoadStatePlayable) {
+        [[SBMovieWindowController sharedInstance] playMovie:moviePlayer];
+        
+    } else if (state >= QTMovieLoadStateComplete) {
+        // moviePlayer.movieFormatRepresentation <-- data for cache streaming video !!!        
+
+    }
+}
 
 - (void)streamerStatusChangedNotification:(NSNotification *)notification {
     

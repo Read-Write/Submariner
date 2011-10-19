@@ -1,0 +1,611 @@
+TOrganicUI
+v3
+r1
+cCheck dependencies
+cSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI
+cSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current A
+cSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources Versions/Current/Resources
+cSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers Versions/Current/Headers
+cProcessInfoPlistFile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist
+cProcessPCH /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI normal x86_64
+cCpHeader Classes/OrganicUI.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+cCpHeader Classes/NSColor+CGColor.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+cCpHeader Classes/ORController.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h
+cCpHeader Classes/ORTitleBar.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+cCpHeader Classes/ORWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+cCpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+cCpHeader Classes/ORNavigator.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+cCpHeader Classes/ORGameWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+cCpHeader Classes/CATextLayer+autosize.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+cCpHeader Classes/ORTransition.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+cCopyStringsFile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+cTouch /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework
+
+N/Developer/SDKs/MacOSX10.7.sdk
+c000000004E1106D400000000000000EE
+t1309738708
+s238
+
+N/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004E1106CD0000000000007B2C
+t1309738701
+s31532
+
+N/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004E1106CE0000000000002470
+t1309738702
+s9328
+
+N/System/Library/Frameworks/Quartz.framework/Quartz
+c000000004E786E970000000000006560
+t1316515479
+s25952
+
+N/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004E8D9DBB00000000004374E0
+t1317903803
+s4420832
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.h
+c000000004D1662540000000000000136
+t1293312596
+s310
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m
+c000000004D1662540000000000000B7F
+t1293312596
+s2943
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.h
+c000000004D16625400000000000001B7
+t1293312596
+s439
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m
+c000000004D1662540000000000000D5A
+t1293312596
+s3418
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.h
+c000000004D166254000000000000010D
+t1293312596
+s269
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m
+c000000004D1662540000000000000242
+t1293312596
+s578
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.h
+c000000004D1662540000000000000180
+t1293312596
+s384
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m
+c000000004D16625400000000000003A7
+t1293312596
+s935
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.h
+c000000004D16625400000000000000CA
+t1293312596
+s202
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m
+c000000004D16625400000000000000EF
+t1293312596
+s239
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.h
+c000000004D16625400000000000002AF
+t1293312596
+s687
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m
+c000000004D166254000000000000107B
+t1293312596
+s4219
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.h
+c000000004D1662540000000000000296
+t1293312596
+s662
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m
+c000000004D16625400000000000017DB
+t1293312596
+s6107
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.h
+c000000004D1662540000000000000236
+t1293312596
+s566
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m
+c000000004D16625400000000000004CE
+t1293312596
+s1230
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.h
+c000000004D166254000000000000034B
+t1293312596
+s843
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m
+c000000004D1662540000000000000D06
+t1293312596
+s3334
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/OrganicUI.h
+c000000004D1662540000000000000142
+t1293312596
+s322
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI-Prefix.pch
+c000000004D1662540000000000000095
+t1293312596
+s149
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o
+t2
+s0
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/OrganicUI.LinkFileList
+c000000004E9D3A7900000000000004B4
+t1318926969
+s1204
+
+N/Users/nark/Downloads/iaefai-OrganicUI-1068e09/en.lproj/InfoPlist.strings
+c000000004D166254000000000000002D
+t1293312596
+s45
+
+N/var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth
+t2
+s0
+
+NOrganicUI-Info.plist
+c000000004D16625400000000000003FF
+t1293312596
+s1023
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m
+r0
+
+CBuild AST from /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m
+r0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies99f1f6f8714db441^47e601f9714db441^---0#1#0#--18"Check dependencies
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.396024
+e340619770.565375
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m778265fa714db441^bdc890fa714db441^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m0000000000000000^2323"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.325565
+e340619770.383931
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m537953fa714db441^ac5262fa714db441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m0000000000000000^2343"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.178559
+e340619770.394671
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.mc3d52dfa714db441^fb0765fa714db441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m0000000000000000^2298"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.178900
+e340619770.409049
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.mc0ed2dfa714db441^7a566afa714db441^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m0000000000000000^2283"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORController.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.177655
+e340619770.296926
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m18ed2dfa714db441^03224cfa714db441^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m0000000000000000^2283"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.385264
+e340619770.556256
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m12bf62fa714db441^07b68efa714db441^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m0000000000000000^2278"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.179289
+e340619770.324156
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.mda022efa714db441^420553fa714db441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m0000000000000000^2273"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.425986
+e340619770.570648
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.me5266efa714db441^9c1492fa714db441^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m0000000000000000^2283"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORTransition.o
+
+CCompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619770.298206
+e340619770.516084
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m3e794cfa714db441^c72b84fa714db441^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m0000000000000000^2263"CompileC OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -include /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.d -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.m -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/ORWindow.o
+
+CCopyStringsFile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+s340619770.805967
+e340619770.810460
+r1
+xCopyStringsFile
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings
+xen.lproj/InfoPlist.strings
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Copy en.lproj/InfoPlist.strings9160cefa714db441^c879cffa714db441^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/en.lproj/InfoPlist.strings0000000000000000^414"CopyStringsFile OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/en.lproj -- en.lproj/InfoPlist.strings
+
+CCpHeader Classes/CATextLayer+autosize.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+s340619770.743053
+e340619770.746328
+r1
+xCpHeader
+xClasses/CATextLayer+autosize.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h1347befa714db441^280fbffa714db441^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h00f4d886deffdf42^451"CpHeader Classes/CATextLayer+autosize.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/CATextLayer+autosize.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+s340619770.740123
+e340619770.743407
+r1
+xCpHeader
+xClasses/NSBezierPath+JDAdditions.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h5586bdfa714db441^fd4fbefa714db441^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h00f4d886deffdf42^463"CpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSBezierPath+JDAdditions.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/NSColor+CGColor.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+s340619770.734381
+e340619770.738746
+r1
+xCpHeader
+xClasses/NSColor+CGColor.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.hba13bcfa714db441^bd1dbdfa714db441^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h00f4d886deffdf42^436"CpHeader Classes/NSColor+CGColor.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/NSColor+CGColor.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORController.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h
+s340619770.734777
+e340619770.739204
+r1
+xCpHeader
+xClasses/ORController.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h2c28bcfa714db441^8a3cbdfa714db441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h00f4d886deffdf42^427"CpHeader Classes/ORController.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORController.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORController.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORGameWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+s340619770.741619
+e340619770.745427
+r1
+xCpHeader
+xClasses/ORGameWindow.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h96e7bdfa714db441^fad3befa714db441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h00f4d886deffdf42^427"CpHeader Classes/ORGameWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORGameWindow.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORNavigator.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+s340619770.740413
+e340619770.744525
+r1
+xCpHeader
+xClasses/ORNavigator.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h0ea2bdfa714db441^ae9bbefa714db441^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h00f4d886deffdf42^424"CpHeader Classes/ORNavigator.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORNavigator.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORNavigator.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORTitleBar.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+s340619770.734885
+e340619770.740494
+r1
+xCpHeader
+xClasses/ORTitleBar.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.hec2ebcfa714db441^8e90bdfa714db441^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h00f4d886deffdf42^421"CpHeader Classes/ORTitleBar.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTitleBar.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORTransition.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+s340619770.744563
+e340619770.773888
+r1
+xCpHeader
+xClasses/ORTransition.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.hcdabbefa714db441^fa29c6fa714db441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h00f4d886deffdf42^427"CpHeader Classes/ORTransition.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORTransition.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORTransition.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/ORWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+s340619770.739899
+e340619770.741958
+r1
+xCpHeader
+xClasses/ORWindow.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h467abdfa714db441^b3f0bdfa714db441^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h00f4d886deffdf42^415"CpHeader Classes/ORWindow.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/ORWindow.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/ORWindow.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CCpHeader Classes/OrganicUI.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+s340619770.734370
+e340619770.739053
+r1
+xCpHeader
+xClasses/OrganicUI.h
+xOrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h3c11bcfa714db441^1937bdfa714db441^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h00f4d886deffdf42^418"CpHeader Classes/OrganicUI.h OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers/OrganicUI.h    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/nark/Downloads/iaefai-OrganicUI-1068e09/Classes/OrganicUI.h /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Headers
+
+CLd /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI normal x86_64
+s340619770.577445
+e340619770.726048
+r1
+xLd
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI
+xnormal
+xx86_64
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Link /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUIbde493fa714db441^5dddb9fa714db441^---0#0#0#--912"Ld OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI normal x86_64    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/clang -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.7.sdk -L/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -filelist /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/Objects-normal/x86_64/OrganicUI.LinkFileList -install_name "@executable_path/../Frameworks/OrganicUI.framework/Versions/A/OrganicUI" -mmacosx-version-min=10.6 -framework Cocoa -framework Quartz -framework QuartzCore -framework ApplicationServices -single_module -compatibility_version 1 -current_version 1 -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/OrganicUI
+
+CProcessInfoPlistFile /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist
+s340619769.085412
+e340619769.088588
+r1
+xProcessInfoPlistFile
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist
+xOrganicUI-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process OrganicUI-Info.plist71e815f9714db441^71ad16f9714db441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI-Info.plist0000000000000000^370"ProcessInfoPlistFile OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    builtin-infoPlistUtility OrganicUI-Info.plist -expandbuildsettings -platform macosx -o /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/A/Resources/Info.plist
+
+CProcessPCH /Users/nark/Downloads/iaefai-OrganicUI-1068e09/DerivedData/OrganicUI/Index/PrecompiledHeaders/OrganicUI-Prefix-csizdfluxfzniyakkbcnkhhlplaf_ast/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s340619769.096654
+e340619770.148686
+r1
+xProcessPCH
+x/var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth
+xOrganicUI-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile OrganicUI-Prefix.pch0bd218f9714db441^96ea26fa714db441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI-Prefix.pch0000000000000000^2262"ProcessPCH /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -DDEBUG -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/OrganicUI.build/Debug/OrganicUI.build/DerivedSources -F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI-Prefix.pch -o /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/66/dmj32msn7tq87wg8vx8s06580000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-eeafwjlrichripalhwvngwhrlahh/OrganicUI-Prefix.pch.d
+
+CSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers Versions/Current/Headers
+s340619769.072482
+e340619769.076555
+r1
+xSymLink
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers
+xVersions/Current/Headers
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Process /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers5f9a12f9714db441^209813f9714db441^---0#0#0#--263"SymLink OrganicUI/Debug/OrganicUI.framework/Headers Versions/Current/Headers    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    /bin/ln -sf Versions/Current/Headers /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Headers
+
+CSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI
+s340619769.014923
+e340619769.065833
+r1
+xSymLink
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI
+xVersions/Current/OrganicUI
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Process /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI0ed908f9714db441^8ae611f9714db441^---0#0#0#--271"SymLink OrganicUI/Debug/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    /bin/ln -sf Versions/Current/OrganicUI /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/OrganicUI
+
+CSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources Versions/Current/Resources
+s340619769.014943
+e340619769.065799
+r1
+xSymLink
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources
+xVersions/Current/Resources
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Process /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources056d06f9714db441^86e311f9714db441^---0#0#0#--271"SymLink OrganicUI/Debug/OrganicUI.framework/Resources Versions/Current/Resources    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    /bin/ln -sf Versions/Current/Resources /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Resources
+
+CSymLink /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current A
+s340619769.014935
+e340619769.065839
+r1
+xSymLink
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current
+xA
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Process /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current3fe508f9714db441^c9e711f9714db441^---0#0#0#--235"SymLink OrganicUI/Debug/OrganicUI.framework/Versions/Current A    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    /bin/ln -sf A /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework/Versions/Current
+
+CTouch /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework
+s340619770.817898
+e340619770.824997
+r1
+xTouch
+x/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Touch /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.frameworkc171d1fa714db441^2732d3fa714db441^---0#0#0#--201"Touch OrganicUI/Debug/OrganicUI.framework    cd /Users/nark/Downloads/iaefai-OrganicUI-1068e09    /usr/bin/touch -c /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/OrganicUI.framework
+

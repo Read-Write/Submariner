@@ -1,0 +1,30 @@
+Contents of /Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI-Prefix.pch
+2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
+-x
+objective-c
+-arch
+x86_64
+-fmessage-length=0
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-category=id
+-fdiagnostics-parseable-fixits
+-std=gnu99
+-fpascal-strings
+-O0
+-DDEBUG
+-isysroot
+/Developer/SDKs/MacOSX10.7.sdk
+-fasm-blocks
+-mmacosx-version-min=10.6
+-gdwarf-2
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-iquote
+-iquote
+-I/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug/include
+-F/Users/nark/Downloads/iaefai-OrganicUI-1068e09/OrganicUI/Debug
+-ferror-limit=10
+-working-directory=/Users/nark/Downloads/iaefai-OrganicUI-1068e09
+-Xclang
+-detailed-preprocessing-record

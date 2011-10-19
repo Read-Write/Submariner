@@ -8,6 +8,7 @@
     NSImage *playingImage;
     NSImage *coverImage;
     NSImage *onlineImage;
+    NSDictionary *movieAttributes;
 }
 
 @property (readonly) NSString *durationString;
@@ -16,6 +17,7 @@
 @property (readonly) NSImage *playingImage;
 @property (readonly) NSImage *coverImage;
 @property (readonly) NSImage *onlineImage;
+@property (readonly) NSDictionary *movieAttributes;
 
 - (NSURL *)streamURL;
 - (NSURL *)downloadURL;

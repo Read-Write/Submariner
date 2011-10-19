@@ -194,6 +194,10 @@
 		4CEB4A4413C0FDAE00A92617 /* unmute.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4313C0FDAE00A92617 /* unmute.png */; };
 		4CEB4A4B13C1AA7000A92617 /* users.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4A13C1AA7000A92617 /* users.PNG */; };
 		4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8E1E144CE2A400332417 /* NSString+Hex.m */; };
+		4CED8E41144D725D00332417 /* OrganicUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED8E40144D725D00332417 /* OrganicUI.framework */; };
+		4CED8E42144D726500332417 /* OrganicUI.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED8E40144D725D00332417 /* OrganicUI.framework */; };
+		4CED8E4C144D773C00332417 /* SBMovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8E4B144D773C00332417 /* SBMovieWindowController.m */; };
+		4CED8F48144E289700332417 /* MovieWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CED8F47144E289700332417 /* MovieWindow.xib */; };
 		4CED9B4913BDD1BF00003152 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED9B4813BDD1BF00003152 /* OpenGL.framework */; };
 		4CEF83241448FB76005E28EE /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEF83231448FB76005E28EE /* LRResty.framework */; };
 		4CEF83251448FB7C005E28EE /* LRResty.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEF83231448FB76005E28EE /* LRResty.framework */; };
@@ -231,6 +235,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4CED8E3E144D724D00332417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8566A60C12BD5C92004FA3C1;
+			remoteInfo = OrganicUI;
+		};
 		4CEF82E11448F86E005E28EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
@@ -284,6 +295,7 @@
 			files = (
 				4C7FFC2F13B0C736004F02AB /* taglib.framework in Copy Frameworks */,
 				4CEF83251448FB7C005E28EE /* LRResty.framework in Copy Frameworks */,
+				4CED8E42144D726500332417 /* OrganicUI.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +602,12 @@
 		4CEB4A4A13C1AA7000A92617 /* users.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.PNG; sourceTree = "<group>"; };
 		4CED8E1D144CE2A400332417 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hex.h"; sourceTree = "<group>"; };
 		4CED8E1E144CE2A400332417 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
+		4CED8E20144D6CDC00332417 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OrganicUI.xcodeproj; path = OrganicUI/OrganicUI.xcodeproj; sourceTree = "<group>"; };
+		4CED8E40144D725D00332417 /* OrganicUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OrganicUI.framework; path = OrganicUI/OrganicUI/Debug/OrganicUI.framework; sourceTree = "<group>"; };
+		4CED8E4A144D773C00332417 /* SBMovieWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMovieWindowController.h; sourceTree = "<group>"; };
+		4CED8E4B144D773C00332417 /* SBMovieWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMovieWindowController.m; sourceTree = "<group>"; };
+		4CED8F47144E289700332417 /* MovieWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieWindow.xib; sourceTree = "<group>"; };
 		4CED9B4813BDD1BF00003152 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LRResty.xcodeproj; path = LRResty/LRResty.xcodeproj; sourceTree = "<group>"; };
 		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = LRResty/build/Release/LRResty.framework; sourceTree = "<group>"; };
@@ -660,15 +678,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7FFC3113B0CB80004F02AB /* QTKit.framework in Frameworks */,
 				4C90218F142C8AA800EDA210 /* libz.dylib in Frameworks */,
 				4CEF83241448FB76005E28EE /* LRResty.framework in Frameworks */,
 				4CED9B4913BDD1BF00003152 /* OpenGL.framework in Frameworks */,
-				4C7FFC3113B0CB80004F02AB /* QTKit.framework in Frameworks */,
 				4C7FFC2E13B0C5E5004F02AB /* taglib.framework in Frameworks */,
 				4CAD75C813AA597E00E7455C /* CoreServices.framework in Frameworks */,
 				4C4DE62413A200AD006A1EC1 /* Carbon.framework in Frameworks */,
 				4C4DE62513A200AD006A1EC1 /* Security.framework in Frameworks */,
 				4CFAFC6613A0150300E82B57 /* AudioToolbox.framework in Frameworks */,
+				4CED8E41144D725D00332417 /* OrganicUI.framework in Frameworks */,
 				4C7AA247139D619F0050BE95 /* Quartz.framework in Frameworks */,
 				4C87ED64139CD8BE0064DE2E /* Cocoa.framework in Frameworks */,
 			);
@@ -709,6 +728,8 @@
 		4C87ED62139CD8BE0064DE2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CED8E40144D725D00332417 /* OrganicUI.framework */,
+				4CED8E20144D6CDC00332417 /* QTKit.framework */,
 				4C90218E142C8AA800EDA210 /* libz.dylib */,
 				4CEF83231448FB76005E28EE /* LRResty.framework */,
 				4CED9B4813BDD1BF00003152 /* OpenGL.framework */,
@@ -880,6 +901,7 @@
 				4CC6B56714041F7E003AEAC0 /* ServerPodcasts.xib */,
 				4C1A69BA13A6AEE10054A3EF /* ServerUsers.xib */,
 				4CCF7FEE13B673C900954C6E /* ServerSearch.xib */,
+				4CED8F47144E289700332417 /* MovieWindow.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -1139,9 +1161,18 @@
 			name = "Shadowed Text Cell";
 			sourceTree = "<group>";
 		};
+		4CED8E38144D724D00332417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CED8E3F144D724D00332417 /* OrganicUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4CEF82D41448F839005E28EE /* Subprojects */ = {
 			isa = PBXGroup;
 			children = (
+				4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */,
 				4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */,
 			);
 			name = Subprojects;
@@ -1218,6 +1249,8 @@
 				4C4113AC13A3BD680069CC33 /* SBAddServerPlaylistController.m */,
 				4C4A1E8513B4E6A0000BA93D /* SBMergeArtistsController.h */,
 				4C4A1E8613B4E6A0000BA93D /* SBMergeArtistsController.m */,
+				4CED8E4A144D773C00332417 /* SBMovieWindowController.h */,
+				4CED8E4B144D773C00332417 /* SBMovieWindowController.m */,
 			);
 			name = "Window Controllers";
 			sourceTree = "<group>";
@@ -1303,6 +1336,10 @@
 					ProductGroup = 4CEF82D61448F86E005E28EE /* Products */;
 					ProjectRef = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
 				},
+				{
+					ProductGroup = 4CED8E38144D724D00332417 /* Products */;
+					ProjectRef = 4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1312,6 +1349,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		4CED8E3F144D724D00332417 /* OrganicUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OrganicUI.framework;
+			remoteRef = 4CED8E3E144D724D00332417 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		4CEF82E21448F86E005E28EE /* libLRResty.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1428,6 +1472,7 @@
 				4CC6B5631404195D003AEAC0 /* Podcast.icns in Resources */,
 				4CC6B56914041F7E003AEAC0 /* ServerPodcasts.xib in Resources */,
 				4C69DBD5140655DE00F016A7 /* pending.tiff in Resources */,
+				4CED8F48144E289700332417 /* MovieWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,6 +1617,7 @@
 				4CB1E451144B3B50006F33FA /* RDLightTextFieldCell.m in Sources */,
 				4CB1E452144B3B50006F33FA /* RDDarkTextFieldCell.m in Sources */,
 				4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */,
+				4CED8E4C144D773C00332417 /* SBMovieWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1669,6 +1715,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/LRResty/build/Release\"",
 					"\"$(SRCROOT)/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release\"",
+					"\"$(SRCROOT)/OrganicUI/OrganicUI/Debug\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1698,6 +1745,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/LRResty/build/Release\"",
 					"\"$(SRCROOT)/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release\"",
+					"\"$(SRCROOT)/OrganicUI/OrganicUI/Debug\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -7,6 +7,10 @@
 #import "NSString+Time.h"
 #import "NSString+Hex.h"
 
+#import <QTKit/QTKit.h>
+
+
+
 @implementation SBTrack
 
 
@@ -16,7 +20,7 @@
 @synthesize playingImage;
 @synthesize coverImage;
 @synthesize onlineImage;
-
+@dynamic movieAttributes;
 
 
 
@@ -199,12 +203,22 @@
 
 - (BOOL)isVideo {
     BOOL ret = NO;
+    NSLog(@"self.contentType : %@", self.contentType);
     
     if([self.contentType rangeOfString:@"video"].location != NSNotFound)
         ret = YES;
     
-    return ret;
+    if([self.contentType rangeOfString:@"octet-stream"].location != NSNotFound)
+        ret = YES;
     
+    return ret;
+}
+
+- (NSDictionary *)movieAttributes {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            [self streamURL], QTMovieURLAttribute,
+            [NSNumber numberWithBool:YES], QTMovieOpenForPlaybackAttribute,
+            nil];
 }
 
 @end

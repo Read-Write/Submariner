@@ -908,7 +908,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="729088396"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{625, 400}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<string key="NSFrameAutosaveName">Submariner</string>
@@ -1270,7 +1270,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					<string key="NSFrameSize">{400, 266}</string>
 					<reference key="NSNextKeyView" ref="1006125825"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{400, 288}</string>
 				<string key="NSMaxSize">{600, 288}</string>
 				<string key="NSFrameAutosaveName">Edit Server Window</string>
@@ -1372,14 +1372,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					<string key="NSFrameSize">{412, 124}</string>
 					<reference key="NSNextKeyView" ref="136775079"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{412, 146}</string>
 				<string key="NSMaxSize">{600, 146}</string>
 				<string key="NSFrameAutosaveName">Add Server Playlist</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomView" id="417575337">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1399,7 +1399,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 										<object class="NSPSMatrix" key="NSDrawMatrix"/>
 										<string key="NSFrame">{{116, 12}, {16, 16}}</string>
 										<reference key="NSSuperview" ref="133013630"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="838270636"/>
 										<int key="NSpiFlags">28938</int>
 										<double key="NSMaxValue">100</double>
@@ -1407,7 +1406,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 								</object>
 								<string key="NSFrameSize">{145, 40}</string>
 								<reference key="NSSuperview" ref="525111030"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="321316470"/>
 								<string key="NSClassName">NSView</string>
 							</object>
@@ -1426,13 +1424,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 												<int key="NSvFlags">274</int>
 												<string key="NSFrameSize">{543, 40}</string>
 												<reference key="NSSuperview" ref="87024154"/>
-												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView"/>
 											</object>
 										</object>
 										<string key="NSFrame">{{1, 0}, {543, 40}}</string>
 										<reference key="NSSuperview" ref="838270636"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="707802662"/>
 										<string key="NSOffsets">{0, 0}</string>
 										<object class="NSTextFieldCell" key="NSTitleCell">
@@ -1455,14 +1450,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 								</object>
 								<string key="NSFrame">{{146, 0}, {544, 40}}</string>
 								<reference key="NSSuperview" ref="525111030"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="87024154"/>
 								<string key="NSClassName">NSView</string>
 							</object>
 						</object>
 						<string key="NSFrameSize">{690, 40}</string>
 						<reference key="NSSuperview" ref="417575337"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="133013630"/>
 						<bool key="NSIsVertical">YES</bool>
 						<int key="NSDividerStyle">2</int>
@@ -1470,8 +1463,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					</object>
 				</object>
 				<string key="NSFrameSize">{690, 40}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="525111030"/>
 				<string key="NSClassName">SBTitlebarView</string>
 			</object>
@@ -1482,14 +1473,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">window</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="1005"/>
-					</object>
-					<int key="connectionID">3</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">titleBarView</string>
@@ -2113,6 +2096,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 						<reference key="destination" ref="639995606"/>
 					</object>
 					<int key="connectionID">345</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">window</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1005"/>
+					</object>
+					<int key="connectionID">350</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3425,7 +3416,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">345</int>
+			<int key="maxID">352</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

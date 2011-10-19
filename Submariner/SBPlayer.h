@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <QTKit/QTKit.h>
 
 
 // notifications
@@ -34,6 +34,7 @@ enum SBPlayerRepeatMode {
 @private
     AudioStreamer *remotePlayer;
     NSSound       *localPlayer;
+    QTMovie       *moviePlayer;
     
     NSMutableArray *playlist;
     SBTrack *currentTrack;
