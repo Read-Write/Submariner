@@ -163,6 +163,15 @@
 		4C87EE5F139CE4680064DE2E /* SBTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87EE51139CE4680064DE2E /* SBTrack.m */; };
 		4C87EE60139CE4680064DE2E /* SBTracklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C87EE53139CE4680064DE2E /* SBTracklist.m */; };
 		4C90218F142C8AA800EDA210 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C90218E142C8AA800EDA210 /* libz.dylib */; };
+		4C9DE9B61451760200632936 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9DE9B51451760200632936 /* DDHotKeyCenter.m */; };
+		4C9DE9D91451879E00632936 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */; };
+		4C9DE9DA145187CB00632936 /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */; };
+		4CAA0E2A145571F600574FDD /* icon-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E29145571F600574FDD /* icon-mini.png */; };
+		4CAA0E47145599E100574FDD /* Forward-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E43145599E100574FDD /* Forward-mini.png */; };
+		4CAA0E48145599E100574FDD /* Pause-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E44145599E100574FDD /* Pause-mini.png */; };
+		4CAA0E49145599E100574FDD /* Play-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E45145599E100574FDD /* Play-mini.png */; };
+		4CAA0E4A145599E100574FDD /* Rewind-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E46145599E100574FDD /* Rewind-mini.png */; };
+		4CAA0E4C14559BA200574FDD /* icon-mini-activated.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA0E4B14559BA200574FDD /* icon-mini-activated.png */; };
 		4CAD75C813AA597E00E7455C /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD75C713AA597E00E7455C /* CoreServices.framework */; };
 		4CB1E42F144B1F00006F33FA /* RWStreamingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */; };
 		4CB1E430144B1F00006F33FA /* RWStreamingSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1E42E144B1F00006F33FA /* RWStreamingSliderCell.m */; };
@@ -194,8 +203,6 @@
 		4CEB4A4413C0FDAE00A92617 /* unmute.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4313C0FDAE00A92617 /* unmute.png */; };
 		4CEB4A4B13C1AA7000A92617 /* users.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4A4A13C1AA7000A92617 /* users.PNG */; };
 		4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8E1E144CE2A400332417 /* NSString+Hex.m */; };
-		4CED8E41144D725D00332417 /* OrganicUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED8E40144D725D00332417 /* OrganicUI.framework */; };
-		4CED8E42144D726500332417 /* OrganicUI.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED8E40144D725D00332417 /* OrganicUI.framework */; };
 		4CED8E4C144D773C00332417 /* SBMovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8E4B144D773C00332417 /* SBMovieWindowController.m */; };
 		4CED8F48144E289700332417 /* MovieWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CED8F47144E289700332417 /* MovieWindow.xib */; };
 		4CED9B4913BDD1BF00003152 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED9B4813BDD1BF00003152 /* OpenGL.framework */; };
@@ -295,7 +302,7 @@
 			files = (
 				4C7FFC2F13B0C736004F02AB /* taglib.framework in Copy Frameworks */,
 				4CEF83251448FB7C005E28EE /* LRResty.framework in Copy Frameworks */,
-				4CED8E42144D726500332417 /* OrganicUI.framework in Copy Frameworks */,
+				4C9DE9DA145187CB00632936 /* ShortcutRecorder.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +556,16 @@
 		4C87EE52139CE4680064DE2E /* SBTracklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTracklist.h; sourceTree = "<group>"; };
 		4C87EE53139CE4680064DE2E /* SBTracklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTracklist.m; sourceTree = "<group>"; };
 		4C90218E142C8AA800EDA210 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4C9DE9A91451749D00632936 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		4C9DE9B41451760200632936 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyCenter.h; path = ../DDHotKey/DDHotKeyCenter.h; sourceTree = "<group>"; };
+		4C9DE9B51451760200632936 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyCenter.m; path = ../DDHotKey/DDHotKeyCenter.m; sourceTree = "<group>"; };
+		4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug/ShortcutRecorder.framework; sourceTree = "<group>"; };
+		4CAA0E29145571F600574FDD /* icon-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mini.png"; sourceTree = "<group>"; };
+		4CAA0E43145599E100574FDD /* Forward-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-mini.png"; sourceTree = "<group>"; };
+		4CAA0E44145599E100574FDD /* Pause-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause-mini.png"; sourceTree = "<group>"; };
+		4CAA0E45145599E100574FDD /* Play-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play-mini.png"; sourceTree = "<group>"; };
+		4CAA0E46145599E100574FDD /* Rewind-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rewind-mini.png"; sourceTree = "<group>"; };
+		4CAA0E4B14559BA200574FDD /* icon-mini-activated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mini-activated.png"; sourceTree = "<group>"; };
 		4CAD75C713AA597E00E7455C /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		4CB1E42B144B1F00006F33FA /* RWStreamingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStreamingSlider.h; sourceTree = "<group>"; };
 		4CB1E42C144B1F00006F33FA /* RWStreamingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWStreamingSlider.m; sourceTree = "<group>"; };
@@ -604,13 +621,12 @@
 		4CED8E1E144CE2A400332417 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
 		4CED8E20144D6CDC00332417 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OrganicUI.xcodeproj; path = OrganicUI/OrganicUI.xcodeproj; sourceTree = "<group>"; };
-		4CED8E40144D725D00332417 /* OrganicUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OrganicUI.framework; path = OrganicUI/OrganicUI/Debug/OrganicUI.framework; sourceTree = "<group>"; };
 		4CED8E4A144D773C00332417 /* SBMovieWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMovieWindowController.h; sourceTree = "<group>"; };
 		4CED8E4B144D773C00332417 /* SBMovieWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMovieWindowController.m; sourceTree = "<group>"; };
 		4CED8F47144E289700332417 /* MovieWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieWindow.xib; sourceTree = "<group>"; };
 		4CED9B4813BDD1BF00003152 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LRResty.xcodeproj; path = LRResty/LRResty.xcodeproj; sourceTree = "<group>"; };
-		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = LRResty/build/Release/LRResty.framework; sourceTree = "<group>"; };
+		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = LRResty/DerivedData/LRResty/Build/Products/Release/LRResty.framework; sourceTree = "<group>"; };
 		4CEF83351449B649005E28EE /* SBArtistTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBArtistTableView.h; sourceTree = "<group>"; };
 		4CEF83361449B649005E28EE /* SBArtistTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBArtistTableView.m; sourceTree = "<group>"; };
 		4CFAFC29139EF08800E82B57 /* SBServerHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBServerHomeController.h; sourceTree = "<group>"; };
@@ -678,18 +694,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4DE62413A200AD006A1EC1 /* Carbon.framework in Frameworks */,
 				4C7FFC3113B0CB80004F02AB /* QTKit.framework in Frameworks */,
 				4C90218F142C8AA800EDA210 /* libz.dylib in Frameworks */,
 				4CEF83241448FB76005E28EE /* LRResty.framework in Frameworks */,
 				4CED9B4913BDD1BF00003152 /* OpenGL.framework in Frameworks */,
 				4C7FFC2E13B0C5E5004F02AB /* taglib.framework in Frameworks */,
 				4CAD75C813AA597E00E7455C /* CoreServices.framework in Frameworks */,
-				4C4DE62413A200AD006A1EC1 /* Carbon.framework in Frameworks */,
 				4C4DE62513A200AD006A1EC1 /* Security.framework in Frameworks */,
 				4CFAFC6613A0150300E82B57 /* AudioToolbox.framework in Frameworks */,
-				4CED8E41144D725D00332417 /* OrganicUI.framework in Frameworks */,
 				4C7AA247139D619F0050BE95 /* Quartz.framework in Frameworks */,
 				4C87ED64139CD8BE0064DE2E /* Cocoa.framework in Frameworks */,
+				4C9DE9D91451879E00632936 /* ShortcutRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,9 +744,10 @@
 		4C87ED62139CD8BE0064DE2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CED8E40144D725D00332417 /* OrganicUI.framework */,
-				4CED8E20144D6CDC00332417 /* QTKit.framework */,
 				4C90218E142C8AA800EDA210 /* libz.dylib */,
+				4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */,
+				4C9DE9A91451749D00632936 /* Carbon.framework */,
+				4CED8E20144D6CDC00332417 /* QTKit.framework */,
 				4CEF83231448FB76005E28EE /* LRResty.framework */,
 				4CED9B4813BDD1BF00003152 /* OpenGL.framework */,
 				4C7FFC3013B0CB7F004F02AB /* QTKit.framework */,
@@ -926,6 +943,8 @@
 		4C87EDAC139CD9E90064DE2E /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				4C9DE9B41451760200632936 /* DDHotKeyCenter.h */,
+				4C9DE9B51451760200632936 /* DDHotKeyCenter.m */,
 				4C4DE61F13A1733D006A1EC1 /* EMKeychainItem.h */,
 				4C4DE62013A1733D006A1EC1 /* EMKeychainItem.m */,
 				4C1A69B413A6AC4F0054A3EF /* NSWindow-Zoom.h */,
@@ -977,6 +996,12 @@
 		4C87EDC2139CDCA70064DE2E /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				4CAA0E4B14559BA200574FDD /* icon-mini-activated.png */,
+				4CAA0E43145599E100574FDD /* Forward-mini.png */,
+				4CAA0E44145599E100574FDD /* Pause-mini.png */,
+				4CAA0E45145599E100574FDD /* Play-mini.png */,
+				4CAA0E46145599E100574FDD /* Rewind-mini.png */,
+				4CAA0E29145571F600574FDD /* icon-mini.png */,
 				4CC6B5621404195D003AEAC0 /* Podcast.icns */,
 				4C69DBD4140655DE00F016A7 /* pending.tiff */,
 				4CE3B7DD13FA733F006A4F69 /* off.tiff */,
@@ -1473,6 +1498,12 @@
 				4CC6B56914041F7E003AEAC0 /* ServerPodcasts.xib in Resources */,
 				4C69DBD5140655DE00F016A7 /* pending.tiff in Resources */,
 				4CED8F48144E289700332417 /* MovieWindow.xib in Resources */,
+				4CAA0E2A145571F600574FDD /* icon-mini.png in Resources */,
+				4CAA0E47145599E100574FDD /* Forward-mini.png in Resources */,
+				4CAA0E48145599E100574FDD /* Pause-mini.png in Resources */,
+				4CAA0E49145599E100574FDD /* Play-mini.png in Resources */,
+				4CAA0E4A145599E100574FDD /* Rewind-mini.png in Resources */,
+				4CAA0E4C14559BA200574FDD /* icon-mini-activated.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1618,6 +1649,7 @@
 				4CB1E452144B3B50006F33FA /* RDDarkTextFieldCell.m in Sources */,
 				4CED8E1F144CE2A400332417 /* NSString+Hex.m in Sources */,
 				4CED8E4C144D773C00332417 /* SBMovieWindowController.m in Sources */,
+				4C9DE9B61451760200632936 /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1708,7 +1740,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ARC_MIGRATION = donothing;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1716,6 +1748,7 @@
 					"\"$(SRCROOT)/LRResty/build/Release\"",
 					"\"$(SRCROOT)/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release\"",
 					"\"$(SRCROOT)/OrganicUI/OrganicUI/Debug\"",
+					"\"$(SRCROOT)/ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1725,7 +1758,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;
@@ -1737,7 +1769,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ARC_MIGRATION = donothing;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1746,6 +1778,7 @@
 					"\"$(SRCROOT)/LRResty/build/Release\"",
 					"\"$(SRCROOT)/SoundCloudAPI/DerivedData/SoundCloudAPI/Build/Products/Release\"",
 					"\"$(SRCROOT)/OrganicUI/OrganicUI/Debug\"",
+					"\"$(SRCROOT)/ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1754,7 +1787,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;

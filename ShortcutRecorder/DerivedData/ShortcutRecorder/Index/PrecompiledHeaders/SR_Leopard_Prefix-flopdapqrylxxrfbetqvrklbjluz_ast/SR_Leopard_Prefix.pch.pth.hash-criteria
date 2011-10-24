@@ -1,0 +1,32 @@
+Contents of /Users/nark/Development/Me/Cocoa/Submariner/Submariner/ShortcutRecorder/Plugin/SR_Leopard_Prefix.pch
+3.0 (tags/Apple/clang-211.10.1) (based on LLVM 3.0svn)
+i386-apple-darwin11.2.0
+-x
+objective-c
+-arch
+i386
+-fmessage-length=0
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-category=id
+-fdiagnostics-parseable-fixits
+-std=gnu99
+-fobjc-gc
+-fpascal-strings
+-O0
+-isysroot
+/Developer/SDKs/MacOSX10.7.sdk
+-fasm-blocks
+-mmacosx-version-min=10.7
+-gdwarf-2
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug/include
+-F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug
+-F/Developer/Library/Frameworks
+-F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug
+-ferror-limit=10
+-working-directory=/Users/nark/Development/Me/Cocoa/Submariner/Submariner/ShortcutRecorder
+-Xclang
+-detailed-preprocessing-record
+SDK_PRODUCT_BUILD_VERSION=11C63

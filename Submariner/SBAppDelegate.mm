@@ -11,9 +11,27 @@
 #import "SBDatabaseController.h"
 #import "SBTrack.h"
 #import "SBPlayer.h"
+#import "SBArtist.h"
+#import "SBLibrary.h"
+#import "SBAlbum.h"
 // Additions
 #import "NSManagedObjectContext+Fetch.h"
 #import "NSWindow-Zoom.h"
+#import "DDHotKeyCenter.h"
+
+
+
+
+
+@interface SBAppDelegate (Private)
+
+- (void)registeredHotKeyWithCode:(NSInteger)code andFlags:(NSUInteger)flags;
+- (void)activateStatusMenu;
+
+@end
+
+
+
 
 
 
@@ -21,9 +39,8 @@
 @implementation SBAppDelegate
 
 
-
 @synthesize tmpPaths;
-
+@synthesize hotKeyCenter;
 
 
 
@@ -51,6 +68,7 @@
     self = [super init];
     if (self) {
         tmpPaths = [[NSMutableArray alloc] init];
+        hotKeyCenter = [[DDHotKeyCenter alloc] init];
     }
     return self;
 }
@@ -58,7 +76,126 @@
 
 - (void)dealloc {
     [tmpPaths release];
+    [hotKeyCenter release];
+    [statusItem release];
     [super dealloc];
+}
+
+
+
+
+#pragma mark -
+#pragma mark NSStatusItem Methods
+
+- (void)activateStatusMenu
+{
+    NSStatusBar *bar = [NSStatusBar systemStatusBar];
+    
+    statusItem = [[bar statusItemWithLength:NSVariableStatusItemLength] retain];
+    
+    [statusItem setImage:[NSImage imageNamed:@"icon-mini"]];
+    [statusItem setLength:22.0f];
+    [statusItem setHighlightMode:YES];
+    [statusItem setMenu:statusMenu];
+}
+
+- (void)registeredHotKeyWithCode:(NSInteger)code andFlags:(NSUInteger)flags {
+    
+    [hotKeyCenter registerHotKeyWithKeyCode:code modifierFlags:flags task:^(NSEvent *) {
+        
+        [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+        [statusItem popUpStatusItemMenu:[statusItem menu]];
+    }];
+    
+}
+
+
+
+#pragma mark -
+#pragma mark NSMenuDelegate Methods
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    
+    [statusItem setImage:[NSImage imageNamed:@"icon-mini-activated"]];
+    
+    [menu removeAllItems];
+    
+    NSMenuItem *item = nil;
+    
+    // play/pause item
+    SBPlayer *player = [SBPlayer sharedInstance];
+    
+    if(player.isPlaying) {
+        item = [menu addItemWithTitle:@"Pause" action:@selector(playPause:) keyEquivalent:@""];
+        [item setImage:[NSImage imageNamed:@"Pause-mini"]];
+    } else {
+        item = [menu addItemWithTitle:@"Play" action:@selector(playPause:) keyEquivalent:@""];
+        [item setImage:[NSImage imageNamed:@"Play-mini"]];
+    }
+    
+    // previous item
+    item = [menu addItemWithTitle:@"Previous" action:@selector(previousTrack:) keyEquivalent:@""];
+    [item setImage:[NSImage imageNamed:@"Rewind-mini"]];
+    
+    // next item
+    item = [menu addItemWithTitle:@"Next" action:@selector(nextTrack:) keyEquivalent:@""];
+    [item setImage:[NSImage imageNamed:@"Forward-mini"]];
+    
+    // separator if needed
+    if([[SBPlayer sharedInstance] playlist] && [[[SBPlayer sharedInstance] playlist] count] > 0)
+        [menu addItem:[NSMenuItem separatorItem]];
+    
+    // current tracklist
+    for(SBTrack *track in [[SBPlayer sharedInstance] playlist]) {
+        NSString *trackTitle = [NSString stringWithFormat:@"%@. %@ (%@)", track.trackNumber, track.itemName, track.durationString];
+        item = [[NSMenuItem alloc] initWithTitle:trackTitle action:@selector(playTrackForMenuItem:) keyEquivalent:@""];
+        [item setRepresentedObject:track];
+        [menu addItem:item];
+        [item release];
+    }
+    
+    // library
+    [menu addItem:[NSMenuItem separatorItem]];
+    if(databaseController.library != nil) {
+        
+        NSMenu *artistMenu = [[[NSMenu alloc] initWithTitle:@"Library"] autorelease];
+        
+        NSArray *descriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES]];
+        NSArray *artists = [databaseController.library.artists sortedArrayUsingDescriptors:descriptors];
+        
+        for(SBArtist *artist in artists) {
+            item = [artistMenu addItemWithTitle:artist.itemName action:nil keyEquivalent:@""];
+            NSMenu *albumMenu = [[[NSMenu alloc] initWithTitle:artist.itemName] autorelease];
+            [item setSubmenu:albumMenu];
+            
+            NSArray *albums = [artist.albums sortedArrayUsingDescriptors:descriptors];
+            for(SBAlbum *album in albums) {
+                item = [albumMenu addItemWithTitle:album.itemName action:nil keyEquivalent:@""];
+                NSMenu *trackMenu = [[[NSMenu alloc] initWithTitle:album.itemName] autorelease];
+                [item setSubmenu:trackMenu];
+                
+                NSArray *descriptors2 = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"trackNumber" ascending:YES]];
+                NSArray *tracks = [album.tracks sortedArrayUsingDescriptors:descriptors2];
+                
+                for(SBTrack *track in tracks) {
+                    NSString *trackTitle = [NSString stringWithFormat:@"%@. %@ (%@)", track.trackNumber, track.itemName, track.durationString];
+                    item = [trackMenu addItemWithTitle:trackTitle action:@selector(playTrackForMenuItem:) keyEquivalent:@""];
+                    [item setRepresentedObject:track];
+                }
+            }
+        }
+        
+        item = [menu addItemWithTitle:@"Library" action:nil keyEquivalent:@""];
+        [item setSubmenu:artistMenu];
+    }
+    
+    // database window item
+    [menu addItem:[NSMenuItem separatorItem]];
+    [menu addItemWithTitle:@"Database Window" action:@selector(zoomDatabaseWindow:) keyEquivalent:@""];
+}
+
+- (void)menuDidClose:(NSMenu *)menu {
+    [statusItem setImage:[NSImage imageNamed:@"icon-mini"]];
 }
 
 
@@ -69,13 +206,53 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self activateStatusMenu];
     
     preferencesController = [[SBPreferencesController alloc] initWithManagedObjectContext:[self managedObjectContext]];
     databaseController = [[SBDatabaseController alloc] initWithManagedObjectContext:[self managedObjectContext]];
     
     [self zoomDatabaseWindow:nil];
+    
+    // register hot key
+    NSInteger code = [[NSUserDefaults standardUserDefaults] integerForKey:@"PlayerKeyCode"];
+    NSUInteger flags = [[NSUserDefaults standardUserDefaults] integerForKey:@"PlayerKeyFlags"];
+    [self registeredHotKeyWithCode:code andFlags:flags];
+    
+    // observe hot key changes
+    [[NSUserDefaults standardUserDefaults] addObserver:self 
+                                            forKeyPath:@"PlayerKeyCode" 
+                                               options:NSKeyValueObservingOptionNew 
+                                               context:nil];
+    
+    [[NSUserDefaults standardUserDefaults] addObserver:self 
+                                            forKeyPath:@"PlayerKeyFlags" 
+                                               options:NSKeyValueObservingOptionNew 
+                                               context:nil];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    if([NSUserDefaults standardUserDefaults] == object && [keyPath isEqualToString:@"PlayerKeyCode"]) {
+        
+        NSInteger newKeyCode = [[change valueForKey:NSKeyValueChangeNewKey] integerValue];
+        NSUInteger currentFlags = [[NSUserDefaults standardUserDefaults] integerForKey:@"PlayerKeyFlags"];
+        
+        // register new key
+        if(newKeyCode > 0 && currentFlags > 0) {
+            [self registeredHotKeyWithCode:newKeyCode andFlags:currentFlags];
+        }
+            
+    } else if([NSUserDefaults standardUserDefaults] == object && [keyPath isEqualToString:@"PlayerKeyFlags"]) {
+                
+        NSUInteger newFlags = [[change valueForKey:NSKeyValueChangeNewKey] integerValue];
+        NSInteger currentCode = [[NSUserDefaults standardUserDefaults] integerForKey:@"PlayerKeyCode"];
+        
+        // register new key
+        if(currentCode > 0 && newFlags > 0) {
+            [self registeredHotKeyWithCode:currentCode andFlags:newFlags];
+        }
+    }
+}
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
         
@@ -283,7 +460,26 @@
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.read-write.fr/"]];
 }
 
-
+- (IBAction)playTrackForMenuItem:(id)sender {
+    SBTrack *track = [sender representedObject];
+    if(track) {
+        // stop current playing tracks
+        [[SBPlayer sharedInstance] stop];
+        
+        NSArray *descriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"trackNumber" ascending:YES]];
+        NSArray *tracks = [track.album.tracks sortedArrayUsingDescriptors:descriptors];
+        
+        // add track to player
+        if([[NSUserDefaults standardUserDefaults] integerForKey:@"playerBehavior"] == 1) {
+            [[SBPlayer sharedInstance] addTrackArray:tracks replace:YES];
+            // play track
+            [[SBPlayer sharedInstance] playTrack:track];
+        } else {
+            [[SBPlayer sharedInstance] addTrackArray:tracks replace:NO];
+            [[SBPlayer sharedInstance] playTrack:track];
+        }
+    }
+}
 
 
 

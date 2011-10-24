@@ -10,8 +10,9 @@
 
 @class SBPreferencesController;
 @class SBDatabaseController;
+@class DDHotKeyCenter;
 
-@interface SBAppDelegate : NSObject <NSApplicationDelegate> {
+@interface SBAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate> {
 @private
     NSPersistentStoreCoordinator *__persistentStoreCoordinator;
     NSManagedObjectModel *__managedObjectModel;
@@ -21,12 +22,17 @@
     SBDatabaseController *databaseController;
     
     NSMutableArray *tmpPaths;
+    DDHotKeyCenter *hotKeyCenter;
+    NSStatusItem *statusItem;
+    
+    IBOutlet NSMenu *statusMenu;
 }
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (retain, readwrite) NSMutableArray *tmpPaths;
+@property (retain, readwrite) DDHotKeyCenter *hotKeyCenter;
 
 + (id)sharedInstance;
 
@@ -45,5 +51,6 @@
 - (IBAction)nextTrack:(id)sender;
 - (IBAction)previousTrack:(id)sender;
 - (IBAction)showWebsite:(id)sender;
+- (IBAction)playTrackForMenuItem:(id)sender;
 
 @end

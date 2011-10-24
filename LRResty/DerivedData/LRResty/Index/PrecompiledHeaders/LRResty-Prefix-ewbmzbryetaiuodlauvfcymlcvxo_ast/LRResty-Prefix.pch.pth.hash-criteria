@@ -1,0 +1,31 @@
+Contents of /Users/nark/Development/Me/Cocoa/Submariner/Submariner/LRResty/LRResty/LRResty-Prefix.pch
+3.0 (tags/Apple/clang-211.10.1) (based on LLVM 3.0svn)
+i386-apple-darwin11.2.0
+-x
+objective-c
+-arch
+i386
+-fmessage-length=0
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-category=id
+-fdiagnostics-parseable-fixits
+-std=gnu99
+-fpascal-strings
+-Os
+-isysroot
+/Developer/SDKs/MacOSX10.6.sdk
+-fasm-blocks
+-mmacosx-version-min=10.6
+-gdwarf-2
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-iquote
+-iquote
+-I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/LRResty/DerivedData/LRResty/Build/Products/Release/include
+-F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/LRResty/DerivedData/LRResty/Build/Products/Release
+-ferror-limit=10
+-working-directory=/Users/nark/Development/Me/Cocoa/Submariner/Submariner/LRResty
+-Xclang
+-detailed-preprocessing-record
+SDK_PRODUCT_BUILD_VERSION=10K549

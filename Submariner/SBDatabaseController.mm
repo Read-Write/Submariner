@@ -82,6 +82,7 @@
 @synthesize resourceSortDescriptors;
 @synthesize addServerPlaylistController;
 @synthesize currentView;
+@synthesize library;
 
 
 #pragma mark -
@@ -940,13 +941,10 @@
     if(currentTrack != nil) {
         
         NSString *trackInfos = [NSString stringWithFormat:@"%@ - %@", currentTrack.artistString, currentTrack.albumString];
-        
-        //NSPredicate *pred = [NSPredicate predicateWithFormat:@"(id == %@)", currentTrack.coverID];
         SBCover *cover = currentTrack.album.cover;
-        
         NSImage *coverImage = nil;
         
-        if(cover) {
+        if(cover && cover.imagePath) {
             coverImage = [[[NSImage alloc] initWithContentsOfFile:cover.imagePath] autorelease];
         } else {
             coverImage = [NSImage imageNamed:@"NoArtwork"];
@@ -967,6 +965,7 @@
         if(![currentTrack.isPlaying boolValue])
             [playPauseButton setState:NSOffState];
         else [playPauseButton setState:NSOnState];
+        
     } else {
         [trackTitleTextField setStringValue:@""];
         [trackInfosTextField setStringValue:@""];

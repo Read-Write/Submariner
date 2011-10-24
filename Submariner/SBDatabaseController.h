@@ -76,6 +76,7 @@
 @property (readwrite, retain) NSArray *resourceSortDescriptors;
 @property (readwrite, retain) IBOutlet SBAnimatedView *currentView;
 @property (readwrite, retain) IBOutlet SBAddServerPlaylistController *addServerPlaylistController;
+@property (readwrite, retain) SBLibrary *library;
 
 - (void)setCurrentView:(SBAnimatedView *)newView;
 - (BOOL)openImportAlert:(NSWindow *)sender files:(NSArray *)files;

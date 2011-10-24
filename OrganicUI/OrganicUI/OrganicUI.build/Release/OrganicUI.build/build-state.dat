@@ -1,0 +1,843 @@
+TOrganicUI
+v4
+r1
+cCheck dependencies
+cSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Current A
+cSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources Versions/Current/Resources
+cSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI
+cSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headers Versions/Current/Headers
+cProcessInfoPlistFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist
+cProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI normal x86_64
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI normal i386
+cCreateUniversalBinary /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI normal "x86_64 i386"
+cGenerateDSYMFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI
+cCpHeader Classes/OrganicUI.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+cCpHeader Classes/ORController.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h
+cCpHeader Classes/NSColor+CGColor.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+cCpHeader Classes/ORTitleBar.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+cCpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+cCpHeader Classes/ORWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+cCpHeader Classes/ORNavigator.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+cCpHeader Classes/ORGameWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+cCpHeader Classes/CATextLayer+autosize.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+cCpHeader Classes/ORTransition.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+cCopyStringsFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+cTouch /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework
+
+N/Developer/SDKs/MacOSX10.7.sdk
+c000000004E7AD70B00000000000000EE
+t1316673291
+s238
+
+N/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004E7AD7020000000000007B2C
+t1316673282
+s31532
+
+N/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004E7AD7020000000000002470
+t1316673282
+s9328
+
+N/System/Library/Frameworks/Quartz.framework/Quartz
+c000000004EA51D5A0000000000006560
+t1319443802
+s25952
+
+N/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004EA5212700000000004374E0
+t1319444775
+s4420832
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.h
+c000000004D1662540000000000000136
+t1293312596
+s310
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m
+c000000004D1662540000000000000B7F
+t1293312596
+s2943
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.h
+c000000004D16625400000000000001B7
+t1293312596
+s439
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m
+c000000004D1662540000000000000D5A
+t1293312596
+s3418
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.h
+c000000004D166254000000000000010D
+t1293312596
+s269
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m
+c000000004D1662540000000000000242
+t1293312596
+s578
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.h
+c000000004D1662540000000000000180
+t1293312596
+s384
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m
+c000000004D16625400000000000003A7
+t1293312596
+s935
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.h
+c000000004D16625400000000000000CA
+t1293312596
+s202
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m
+c000000004D16625400000000000000EF
+t1293312596
+s239
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.h
+c000000004D16625400000000000002AF
+t1293312596
+s687
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m
+c000000004D166254000000000000107B
+t1293312596
+s4219
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.h
+c000000004D1662540000000000000296
+t1293312596
+s662
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m
+c000000004D16625400000000000017DB
+t1293312596
+s6107
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.h
+c000000004D1662540000000000000236
+t1293312596
+s566
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m
+c000000004D16625400000000000004CE
+t1293312596
+s1230
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.h
+c000000004D166254000000000000034B
+t1293312596
+s843
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m
+c000000004D1662540000000000000D06
+t1293312596
+s3334
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/OrganicUI.h
+c000000004D1662540000000000000142
+t1293312596
+s322
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Prefix.pch
+c000000004D1662540000000000000095
+t1293312596
+s149
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI.LinkFileList
+c000000004EA52CA40000000000000556
+t1319447716
+s1366
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI.LinkFileList
+c000000004EA52CA40000000000000568
+t1319447716
+s1384
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headers
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUI
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Current
+t2
+s0
+
+N/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/en.lproj/InfoPlist.strings
+c000000004D166254000000000000002D
+t1293312596
+s45
+
+N/var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth
+t2
+s0
+
+N/var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth
+t2
+s0
+
+NOrganicUI-Info.plist
+c000000004D16625400000000000003FF
+t1293312596
+s1023
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m
+r0
+
+CBuild AST from /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies336d9f246455b441^a1d8ca246455b441^---0#1#0#--18"Check dependencies36"6EEC18DF-E03E-4F1D-8D57-021EA328B732-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.458011
+e341140518.549601
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.mc36575266455b441^74b28c266455b441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m0000000000000000^2584"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o Classes/CATextLayer+autosize.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/CATextLayer+autosize.o36"8B1DFBCC-81E9-4756-8545-77C57F510A4E-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.336020
+e341140518.397344
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m7d2356266455b441^f1b765266455b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m0000000000000000^2604"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o Classes/NSBezierPath+JDAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSBezierPath+JDAdditions.o36"57E44A7F-6380-4AF7-B2C3-4A45DDF27339-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.212344
+e341140518.315188
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m897d36266455b441^d5af50266455b441^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m0000000000000000^2559"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o Classes/NSColor+CGColor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/NSColor+CGColor.o36"DD74FCCC-C7FA-4761-9590-E830C3CCB7D1-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.286757
+e341140518.421827
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m498549266455b441^a8fc6b266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m0000000000000000^2544"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o Classes/ORController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORController.o36"EC811627-E3A2-401A-AB93-A49CF69277B3-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.423122
+e341140518.460688
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m2e716c266455b441^ccee75266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m0000000000000000^2544"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o Classes/ORGameWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORGameWindow.o36"4C847F3E-3583-4434-859A-3FDF830F7654-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.409668
+e341140518.521116
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m11ff68266455b441^996785266455b441^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m0000000000000000^2539"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o Classes/ORNavigator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORNavigator.o36"A981E3FA-888C-4A0D-A791-8756A84F09DC-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.286758
+e341140518.408320
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m278549266455b441^018768266455b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m0000000000000000^2534"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o Classes/ORTitleBar.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTitleBar.o36"05A3DFAA-E9FD-4E84-9BC6-99BEED030D52-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.461958
+e341140518.560396
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m205f76266455b441^3a778f266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m0000000000000000^2544"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o Classes/ORTransition.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORTransition.o36"D5A5C2F4-3A9F-427F-97CA-DBBA06B2E6FB-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.316512
+e341140518.455659
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.mb32751266455b441^44a674266455b441^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m0000000000000000^2524"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o Classes/ORWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/ORWindow.o36"452F56FF-B4EC-497E-BD4A-226AC16BACBE-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.176068
+e341140518.285463
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m2b332d266455b441^9b1d49266455b441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m0000000000000000^2596"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o Classes/CATextLayer+autosize.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/CATextLayer+autosize.o36"7DF90F60-7E04-4B17-B192-C617EFBC4619-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.062925
+e341140518.210963
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m9b3910266455b441^470136266455b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m0000000000000000^2616"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o Classes/NSBezierPath+JDAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSBezierPath+JDAdditions.o36"3FC71B57-046E-48DA-BB28-96A6C93925DD-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140517.869988
+e341140518.174638
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m02d6de256455b441^f2b42c266455b441^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m0000000000000000^2571"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o Classes/NSColor+CGColor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/NSColor+CGColor.o36"B9E5A405-D74C-4395-B3F7-64F5B3CFB51C-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140517.869994
+e341140518.061653
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m1fd7de256455b441^58c90f266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m0000000000000000^2556"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o Classes/ORController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORController.o36"D7A0BB11-3A24-4F39-BF7B-E6B4FFC07941-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.155133
+e341140518.202542
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m92ea27266455b441^9fe733266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m0000000000000000^2556"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o Classes/ORGameWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORGameWindow.o36"54007D76-EFD6-4A7C-B40A-3F7E18E38C32-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.112104
+e341140518.285665
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m3fc61c266455b441^661649266455b441^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m0000000000000000^2551"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o Classes/ORNavigator.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORNavigator.o36"C6FC37DF-6C2B-4E17-8A2E-FB6DC38EA38F-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140517.869983
+e341140518.153746
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.mb7cfde256455b441^1d5b27266455b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m0000000000000000^2546"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o Classes/ORTitleBar.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTitleBar.o36"AE5D6361-77A9-407B-9064-D9F2FCA0E450-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.203824
+e341140518.334710
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.mb54e34266455b441^29af55266455b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m0000000000000000^2556"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o Classes/ORTransition.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORTransition.o36"CC1B84F7-29E1-4A31-B1CE-D87813D12D8A-
+
+CCompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140518.011452
+e341140518.110726
+r1
+xCompileC
+xOrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m6f0e03266455b441^21591c266455b441^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m0000000000000000^2536"CompileC OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o Classes/ORWindow.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -include /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch -MMD -MT dependencies -MF /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.d -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.m -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/ORWindow.o36"A6F478BC-83C1-413A-9FB9-EB822588F2DE-
+
+CCopyStringsFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+s341140518.758574
+e341140518.762267
+r1
+xCopyStringsFile
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings
+xen.lproj/InfoPlist.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Copy en.lproj/InfoPlist.stringsd53dc2266455b441^8524c3266455b441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/en.lproj/InfoPlist.strings0000000000000000^454"CopyStringsFile OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/en.lproj -- en.lproj/InfoPlist.strings36"39C5A63C-DA8E-416D-BEEB-B7272C7DB3D5-
+
+CCpHeader Classes/CATextLayer+autosize.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+s341140518.745830
+e341140518.748589
+r1
+xCpHeader
+xClasses/CATextLayer+autosize.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h4cfbbe266455b441^51a4bf266455b441^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h00f43c1ddeffdf42^543"CpHeader Classes/CATextLayer+autosize.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/CATextLayer+autosize.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/CATextLayer+autosize.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"C9D458F3-5738-4DC9-B31B-0750ED557F86-
+
+CCpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+s341140518.741299
+e341140518.745762
+r1
+xCpHeader
+xClasses/NSBezierPath+JDAdditions.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h39d2bd266455b441^92ebbe266455b441^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h00f43c1ddeffdf42^555"CpHeader Classes/NSBezierPath+JDAdditions.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSBezierPath+JDAdditions.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSBezierPath+JDAdditions.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"C45A6899-756F-4B1D-84C5-8E6C4617863A-
+
+CCpHeader Classes/NSColor+CGColor.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+s341140518.737381
+e341140518.742029
+r1
+xCpHeader
+xClasses/NSColor+CGColor.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.ha2d2bc266455b441^34f6bd266455b441^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h00f43c1ddeffdf42^528"CpHeader Classes/NSColor+CGColor.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/NSColor+CGColor.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/NSColor+CGColor.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"8E9587AF-A82E-4D2A-A022-517D30F31802-
+
+CCpHeader Classes/ORController.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h
+s341140518.737364
+e341140518.740764
+r1
+xCpHeader
+xClasses/ORController.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.hbbd0bc266455b441^0aa3bd266455b441^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h00f43c1ddeffdf42^519"CpHeader Classes/ORController.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORController.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORController.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"B91813C3-8247-4DE8-BADB-3ED1C98E9A6B-
+
+CCpHeader Classes/ORGameWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+s341140518.743159
+e341140518.746384
+r1
+xCpHeader
+xClasses/ORGameWindow.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h304cbe266455b441^2314bf266455b441^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h00f43c1ddeffdf42^519"CpHeader Classes/ORGameWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORGameWindow.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORGameWindow.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"CC699EE1-95F8-4620-B081-0D63574E96E0-
+
+CCpHeader Classes/ORNavigator.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+s341140518.743153
+e341140518.747507
+r1
+xCpHeader
+xClasses/ORNavigator.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h164ebe266455b441^e25cbf266455b441^---0#0#0#-19%DVTDocumentLocation2@151"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h00f43c1ddeffdf42^516"CpHeader Classes/ORNavigator.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORNavigator.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORNavigator.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"CFB07433-1455-4426-96A7-6B709D7AB88F-
+
+CCpHeader Classes/ORTitleBar.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+s341140518.737615
+e341140518.743036
+r1
+xCpHeader
+xClasses/ORTitleBar.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h87e0bc266455b441^3238be266455b441^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h00f43c1ddeffdf42^513"CpHeader Classes/ORTitleBar.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTitleBar.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTitleBar.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"7BC19E9F-4439-4FAE-862C-6B2AE3253687-
+
+CCpHeader Classes/ORTransition.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+s341140518.746994
+e341140518.750059
+r1
+xCpHeader
+xClasses/ORTransition.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.hd847bf266455b441^b804c0266455b441^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h00f43c1ddeffdf42^519"CpHeader Classes/ORTransition.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORTransition.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORTransition.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"279E5151-5191-4BCE-BF21-0B2AA67D5CD8-
+
+CCpHeader Classes/ORWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+s341140518.741304
+e341140518.744579
+r1
+xCpHeader
+xClasses/ORWindow.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h18d2bd266455b441^4d9ebe266455b441^---0#0#0#-19%DVTDocumentLocation2@148"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h00f43c1ddeffdf42^507"CpHeader Classes/ORWindow.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/ORWindow.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/ORWindow.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"ED27B334-E2F9-48AF-AF2F-2E0CCA05B50B-
+
+CCpHeader Classes/OrganicUI.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+s341140518.737359
+e341140518.740062
+r1
+xCpHeader
+xClasses/OrganicUI.h
+xOrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h0fd1bc266455b441^5c75bd266455b441^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h00f43c1ddeffdf42^510"CpHeader Classes/OrganicUI.h OrganicUI/Release/OrganicUI.framework/Versions/A/Headers/OrganicUI.h    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/Classes/OrganicUI.h /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Headers36"07592D4B-F216-4773-9F67-05452466D50B-
+
+CCreateUniversalBinary /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI normal "x86_64 i386"
+s341140518.695358
+e341140518.700787
+r1
+xCreateUniversalBinary
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI
+xnormal
+xx86_64 i386
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Create universal binary /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI3d0fb2266455b441^8466b3266455b441^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI00f43c1ddeffdf42^624"CreateUniversalBinary OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI normal "x86_64 i386"    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /usr/bin/lipo -create /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI -output /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI36"A8046FD9-E578-4742-8FC7-37A52D6B89F5-
+
+CGenerateDSYMFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI
+s341140518.707139
+e341140518.728698
+r1
+xGenerateDSYMFile
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Generating /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYMb613b5266455b441^058cba266455b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM00f43c1ddeffdf42^458"GenerateDSYMFile OrganicUI/Release/OrganicUI.framework.dSYM OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /Developer/usr/bin/dsymutil /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/OrganicUI -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework.dSYM36"EED6E027-5D63-4A6C-A984-0BFD336AF0EE-
+
+CLd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI normal i386
+s341140518.568005
+e341140518.688975
+r1
+xLd
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI
+xnormal
+xi386
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection149"Link /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI317b91266455b441^5760b0266455b441^---0#0#0#--1048"Ld OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI normal i386    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/clang -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.7.sdk -L/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -filelist /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI.LinkFileList -install_name "@executable_path/../Frameworks/OrganicUI.framework/Versions/A/OrganicUI" -mmacosx-version-min=10.6 -framework Cocoa -framework Quartz -framework QuartzCore -framework ApplicationServices -single_module -compatibility_version 1 -current_version 1 -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/i386/OrganicUI36"71E7498C-F95C-4381-9D9D-F81EE034D52B-
+
+CLd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI normal x86_64
+s341140518.398656
+e341140518.568649
+r1
+xLd
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI
+xnormal
+xx86_64
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Link /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI1c2666266455b441^a39391266455b441^---0#0#0#--1058"Ld OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI normal x86_64    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/clang -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.7.sdk -L/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -filelist /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI.LinkFileList -install_name "@executable_path/../Frameworks/OrganicUI.framework/Versions/A/OrganicUI" -mmacosx-version-min=10.6 -framework Cocoa -framework Quartz -framework QuartzCore -framework ApplicationServices -single_module -compatibility_version 1 -current_version 1 -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/Objects-normal/x86_64/OrganicUI36"91B280A6-ECC8-400E-A136-0DD383DB3808-
+
+CProcessInfoPlistFile /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist
+s341140516.830168
+e341140516.833394
+r1
+xProcessInfoPlistFile
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist
+xOrganicUI-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process OrganicUI-Info.plistc897d4246455b441^1d59d5246455b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Info.plist0000000000000000^410"ProcessInfoPlistFile OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist OrganicUI-Info.plist    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    builtin-infoPlistUtility OrganicUI-Info.plist -expandbuildsettings -platform macosx -o /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/A/Resources/Info.plist36"400AFE99-60ED-4F1D-B39B-DB32715B2261-
+
+CProcessPCH /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/DerivedData/OrganicUI/Index/PrecompiledHeaders/OrganicUI-Prefix-bfqwheochafzxecamdxrxovfnmrm_ast/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/DerivedData/OrganicUI/Index/PrecompiledHeaders/OrganicUI-Prefix-gfyjxlilpbqedkdevbsajohzahfn_ast/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140516.842761
+e341140518.009963
+r1
+xProcessPCH
+x/var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth
+xOrganicUI-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile OrganicUI-Prefix.pche9d6d7246455b441^bb9802266455b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Prefix.pch0000000000000000^2487"ProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/i386 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Prefix.pch -o /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-agbrxzbdwmhfhhauswenoxeoqxsc/OrganicUI-Prefix.pch.d36"76FBFF10-9EA4-47D9-983E-4271DAEB29C5-
+
+CProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s341140516.842759
+e341140517.862252
+r1
+xProcessPCH
+x/var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth
+xOrganicUI-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile OrganicUI-Prefix.pch2cd7d7246455b441^6abcdc256455b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Prefix.pch0000000000000000^2493"ProcessPCH /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth OrganicUI-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-generated-files.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-own-target-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-all-target-headers.hmap -iquote /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/OrganicUI-project-headers.hmap -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/include -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources/x86_64 -I/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/OrganicUI.build/Release/OrganicUI.build/DerivedSources -F/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI-Prefix.pch -o /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/lv/5jfmycfj75d5bj2v30qg35640000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OrganicUI-Prefix-emcxxxortgmxdqbmftnldcrfkfds/OrganicUI-Prefix.pch.d36"1253CCE3-6AB0-4C05-9722-8A30710D692D-
+
+CSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headers Versions/Current/Headers
+s341140516.817108
+e341140516.822103
+r1
+xSymLink
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headers
+xVersions/Current/Headers
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Process /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headerse63ed1246455b441^4775d2246455b441^---0#0#0#--303"SymLink OrganicUI/Release/OrganicUI.framework/Headers Versions/Current/Headers    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /bin/ln -sf Versions/Current/Headers /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Headers36"30D18CE8-2622-4074-AC7E-E2A2F7E2D867-
+
+CSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI
+s341140516.805575
+e341140516.813291
+r1
+xSymLink
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUI
+xVersions/Current/OrganicUI
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Process /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUIf549ce246455b441^5d34d0246455b441^---0#0#0#--311"SymLink OrganicUI/Release/OrganicUI.framework/OrganicUI Versions/Current/OrganicUI    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /bin/ln -sf Versions/Current/OrganicUI /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/OrganicUI36"6C08CD66-8C78-4CEF-ACFF-0620AC8DF191-
+
+CSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources Versions/Current/Resources
+s341140516.805570
+e341140516.812404
+r1
+xSymLink
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources
+xVersions/Current/Resources
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Process /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources9548ce246455b441^d102d0246455b441^---0#0#0#--311"SymLink OrganicUI/Release/OrganicUI.framework/Resources Versions/Current/Resources    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /bin/ln -sf Versions/Current/Resources /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Resources36"1C744081-C539-473C-B475-F9A342A59CD3-
+
+CSymLink /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Current A
+s341140516.805558
+e341140516.810671
+r1
+xSymLink
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Current
+xA
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Process /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Currentbb47ce246455b441^488bcf246455b441^---0#0#0#--275"SymLink OrganicUI/Release/OrganicUI.framework/Versions/Current A    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /bin/ln -sf A /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework/Versions/Current36"7A79AABE-2C8D-429D-9773-B2B722752C0D-
+
+CTouch /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework
+s341140518.770375
+e341140518.775334
+r1
+xTouch
+x/Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Touch /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework2c46c5266455b441^8d7cc6266455b441^---0#0#0#--241"Touch OrganicUI/Release/OrganicUI.framework    cd /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI    /usr/bin/touch -c /Users/nark/Development/Me/Cocoa/Submariner/Submariner/OrganicUI/OrganicUI/Release/OrganicUI.framework36"E3E0AD0E-2C5F-4CBD-A754-9818C8A2342F-
+

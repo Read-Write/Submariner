@@ -198,7 +198,7 @@
 		8566A5FE12BD5C92004FA3C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = N/A;
 			};
 			buildConfigurationList = 8566A60112BD5C92004FA3C1 /* Build configuration list for PBXProject "OrganicUI" */;
