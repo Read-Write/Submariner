@@ -1,14 +1,16 @@
 Release Note :
 
 Version 1.1 :
-- Add zoom setting for album browser views.
+- Add Mini-Player Menu, callable via a customizable hot-key shortcut.
 - Add Max Bit Rate setting (with few limitations).
 - Add Max Cover Size setting.
-- Improve authentification by supporting password encoding.
-- Improve Tracklist which becomes a Mini-Player.
+- Add zoom setting for album browser views.
+- Improve authentication by supporting password encoding.
 - Improve global design, navigation and frame persistence.
 - Improve player progress bar stability and design.
-- Fix bug in "Import Audio Files" feature when "Link" option is choosed.
+- Improve Track-list design.
+- Fix bug in "Import Audio Files" feature when "Link" option is chosen.
+- Fix special character bug in server password.
 - Fix memory leaks around REST API
 
 Version 1.0 :

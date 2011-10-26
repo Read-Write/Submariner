@@ -525,7 +525,6 @@
 - (void)scopeBar:(MGScopeBar *)theScopeBar selectedStateChanged:(BOOL)selected forItem:(NSString *)identifier inGroup:(int)groupNumber {
     
     [albumsBrowserView setSelectionIndexes:nil byExtendingSelection:NO];
-    NSLog(@"selectedStateChanged");
     
     if([identifier isEqualToString:@"RandomItem"]) {
         [self.server getAlbumListForType:SBSubsonicRequestGetAlbumListRandom];

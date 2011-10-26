@@ -22,6 +22,8 @@
 //
 
 #import "AudioStreamer.h"
+#import "SBPlayer.h"
+
 #if TARGET_OS_IPHONE			
 #import <CFNetwork/CFNetwork.h>
 #endif
@@ -460,6 +462,8 @@ void ASReadStreamCallBack
 
 		[self presentAlertWithTitle:NSLocalizedStringFromTable(@"File Error", @"Errors", nil)
 							message:NSLocalizedStringFromTable(@"Unable to configure network read stream.", @"Errors", nil)];
+        
+        [[SBPlayer sharedInstance] next];
 	}
 }
 

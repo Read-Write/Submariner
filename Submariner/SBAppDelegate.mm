@@ -122,10 +122,20 @@
     
     NSMenuItem *item = nil;
     
+    // currently playing track
+    if([[SBPlayer sharedInstance] currentTrack] != nil) {
+        SBTrack *track = [[SBPlayer sharedInstance] currentTrack];
+        NSString *trackTitle = [NSString stringWithFormat:@"%@. %@ (%@)", track.trackNumber, track.itemName, track.durationString];
+        NSString *currentTrackString = [NSString stringWithFormat:@"Playing : %@", trackTitle];
+        
+        [menu addItemWithTitle:currentTrackString action:nil keyEquivalent:@""];
+        [menu addItem:[NSMenuItem separatorItem]];
+    }
+    
     // play/pause item
     SBPlayer *player = [SBPlayer sharedInstance];
     
-    if(player.isPlaying) {
+    if([[SBPlayer sharedInstance] currentTrack] && !player.isPaused) {
         item = [menu addItemWithTitle:@"Pause" action:@selector(playPause:) keyEquivalent:@""];
         [item setImage:[NSImage imageNamed:@"Pause-mini"]];
     } else {
@@ -141,18 +151,6 @@
     item = [menu addItemWithTitle:@"Next" action:@selector(nextTrack:) keyEquivalent:@""];
     [item setImage:[NSImage imageNamed:@"Forward-mini"]];
     
-    // separator if needed
-    if([[SBPlayer sharedInstance] playlist] && [[[SBPlayer sharedInstance] playlist] count] > 0)
-        [menu addItem:[NSMenuItem separatorItem]];
-    
-    // current tracklist
-    for(SBTrack *track in [[SBPlayer sharedInstance] playlist]) {
-        NSString *trackTitle = [NSString stringWithFormat:@"%@. %@ (%@)", track.trackNumber, track.itemName, track.durationString];
-        item = [[NSMenuItem alloc] initWithTitle:trackTitle action:@selector(playTrackForMenuItem:) keyEquivalent:@""];
-        [item setRepresentedObject:track];
-        [menu addItem:item];
-        [item release];
-    }
     
     // library
     [menu addItem:[NSMenuItem separatorItem]];
@@ -187,6 +185,26 @@
         
         item = [menu addItemWithTitle:@"Library" action:nil keyEquivalent:@""];
         [item setSubmenu:artistMenu];
+    }
+    
+    // separator if needed
+    if([[SBPlayer sharedInstance] playlist] && [[[SBPlayer sharedInstance] playlist] count] > 0)
+        [menu addItem:[NSMenuItem separatorItem]];
+    
+    // current tracklist
+    for(SBTrack *track in [[SBPlayer sharedInstance] playlist]) {
+        NSString *trackTitle = [NSString stringWithFormat:@"%@. %@ (%@)", track.trackNumber, track.itemName, track.durationString];
+
+        item = [[NSMenuItem alloc] initWithTitle:trackTitle action:@selector(playTrackForMenuItem:) keyEquivalent:@""];
+        [item setRepresentedObject:track];
+        
+        if([track.isPlaying boolValue])
+            [item setImage:[NSImage imageNamed:@"playing-mini"]];
+        else 
+            [item setImage:nil];
+        
+        [menu addItem:item];
+        [item release];
     }
     
     // database window item
