@@ -243,58 +243,6 @@
 		4CFCE4471402582400D35770 /* SBMusicSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCE4461402582400D35770 /* SBMusicSearchController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4CED8E3E144D724D00332417 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8566A60C12BD5C92004FA3C1;
-			remoteInfo = OrganicUI;
-		};
-		4CEF82E11448F86E005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3ACE19513A12D3100E18687;
-			remoteInfo = "LRResty-StaticLib";
-		};
-		4CEF82E31448F86E005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3BB537613A13DC90007A07F;
-			remoteInfo = "Unit Tests";
-		};
-		4CEF82E51448F86E005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3BB537713A13DC90007A07F;
-			remoteInfo = "Acceptance Tests";
-		};
-		4CEF82E71448F86E005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3BB537813A13DC90007A07F;
-			remoteInfo = ExamplesRunner;
-		};
-		4CEF82E91448F86E005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4C12624414194A530073042C;
-			remoteInfo = LRResty;
-		};
-		4CEF82EB1448F882005E28EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A3ACE1A513A12DB200E18687;
-			remoteInfo = LRResty;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		4CFB3E99139D10E0008DC01A /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -561,7 +509,7 @@
 		4C9DE9A91451749D00632936 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4C9DE9B41451760200632936 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyCenter.h; path = ../DDHotKey/DDHotKeyCenter.h; sourceTree = "<group>"; };
 		4C9DE9B51451760200632936 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyCenter.m; path = ../DDHotKey/DDHotKeyCenter.m; sourceTree = "<group>"; };
-		4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = ShortcutRecorder/DerivedData/ShortcutRecorder/Build/Products/Debug/ShortcutRecorder.framework; sourceTree = "<group>"; };
+		4C9DE9D81451879E00632936 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShortcutRecorder.framework; sourceTree = "<group>"; };
 		4CAA0E29145571F600574FDD /* icon-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mini.png"; sourceTree = "<group>"; };
 		4CAA0E43145599E100574FDD /* Forward-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-mini.png"; sourceTree = "<group>"; };
 		4CAA0E44145599E100574FDD /* Pause-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause-mini.png"; sourceTree = "<group>"; };
@@ -624,13 +572,11 @@
 		4CED8E1D144CE2A400332417 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hex.h"; sourceTree = "<group>"; };
 		4CED8E1E144CE2A400332417 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
 		4CED8E20144D6CDC00332417 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
-		4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OrganicUI.xcodeproj; path = OrganicUI/OrganicUI.xcodeproj; sourceTree = "<group>"; };
 		4CED8E4A144D773C00332417 /* SBMovieWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMovieWindowController.h; sourceTree = "<group>"; };
 		4CED8E4B144D773C00332417 /* SBMovieWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMovieWindowController.m; sourceTree = "<group>"; };
 		4CED8F47144E289700332417 /* MovieWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieWindow.xib; sourceTree = "<group>"; };
 		4CED9B4813BDD1BF00003152 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LRResty.xcodeproj; path = LRResty/LRResty.xcodeproj; sourceTree = "<group>"; };
-		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = LRResty/DerivedData/LRResty/Build/Products/Release/LRResty.framework; sourceTree = "<group>"; };
+		4CEF83231448FB76005E28EE /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRResty.framework; sourceTree = "<group>"; };
 		4CEF83351449B649005E28EE /* SBArtistTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBArtistTableView.h; sourceTree = "<group>"; };
 		4CEF83361449B649005E28EE /* SBArtistTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBArtistTableView.m; sourceTree = "<group>"; };
 		4CFAFC29139EF08800E82B57 /* SBServerHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBServerHomeController.h; sourceTree = "<group>"; };
@@ -731,7 +677,6 @@
 			isa = PBXGroup;
 			children = (
 				4C87ED69139CD8BE0064DE2E /* Submariner */,
-				4CEF82D41448F839005E28EE /* Subprojects */,
 				4C87ED62139CD8BE0064DE2E /* Frameworks */,
 				4C87ED60139CD8BE0064DE2E /* Products */,
 			);
@@ -1192,35 +1137,6 @@
 			name = "Shadowed Text Cell";
 			sourceTree = "<group>";
 		};
-		4CED8E38144D724D00332417 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CED8E3F144D724D00332417 /* OrganicUI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4CEF82D41448F839005E28EE /* Subprojects */ = {
-			isa = PBXGroup;
-			children = (
-				4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */,
-				4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */,
-			);
-			name = Subprojects;
-			sourceTree = "<group>";
-		};
-		4CEF82D61448F86E005E28EE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CEF82E21448F86E005E28EE /* libLRResty.a */,
-				4CEF82E41448F86E005E28EE /* Unit Tests.octest */,
-				4CEF82E61448F86E005E28EE /* Acceptance Tests.octest */,
-				4CEF82E81448F86E005E28EE /* ExamplesRunner.app */,
-				4CEF82EA1448F86E005E28EE /* LRResty.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		4CEF83261449059A005E28EE /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -1336,7 +1252,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4CEF82EC1448F882005E28EE /* PBXTargetDependency */,
 			);
 			name = Submariner;
 			productName = Submariner;
@@ -1362,67 +1277,12 @@
 			mainGroup = 4C87ED54139CD8BE0064DE2E;
 			productRefGroup = 4C87ED60139CD8BE0064DE2E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4CEF82D61448F86E005E28EE /* Products */;
-					ProjectRef = 4CEF82D51448F86E005E28EE /* LRResty.xcodeproj */;
-				},
-				{
-					ProductGroup = 4CED8E38144D724D00332417 /* Products */;
-					ProjectRef = 4CED8E37144D724D00332417 /* OrganicUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4C87ED5E139CD8BE0064DE2E /* Submariner */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4CED8E3F144D724D00332417 /* OrganicUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OrganicUI.framework;
-			remoteRef = 4CED8E3E144D724D00332417 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CEF82E21448F86E005E28EE /* libLRResty.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libLRResty.a;
-			remoteRef = 4CEF82E11448F86E005E28EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CEF82E41448F86E005E28EE /* Unit Tests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Unit Tests.octest";
-			remoteRef = 4CEF82E31448F86E005E28EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CEF82E61448F86E005E28EE /* Acceptance Tests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Acceptance Tests.octest";
-			remoteRef = 4CEF82E51448F86E005E28EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CEF82E81448F86E005E28EE /* ExamplesRunner.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ExamplesRunner.app;
-			remoteRef = 4CEF82E71448F86E005E28EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CEF82EA1448F86E005E28EE /* LRResty.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LRResty.framework;
-			remoteRef = 4CEF82E91448F86E005E28EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C87ED5D139CD8BE0064DE2E /* Resources */ = {
@@ -1662,14 +1522,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4CEF82EC1448F882005E28EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LRResty;
-			targetProxy = 4CEF82EB1448F882005E28EE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4C87ED6C139CD8BE0064DE2E /* InfoPlist.strings */ = {
