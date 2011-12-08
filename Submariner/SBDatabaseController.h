@@ -10,7 +10,7 @@
 #import <Quartz/Quartz.h>
 #import "SBWindowController.h"
 #import "SBSourceList.h"
-
+#import "RWStreamingSlider.h"
 
 @class SBMainSplitViewDelegate;
 @class SBSplitView;
@@ -52,7 +52,7 @@
     IBOutlet NSTextField *trackInfosTextField;
     IBOutlet NSTextField *durationTextField;
     IBOutlet NSTextField *progressTextField;
-    IBOutlet NSSlider *progressSlider;
+    IBOutlet RWStreamingSlider *progressSlider;
     IBOutlet NSImageView *onlineImageView;
     IBOutlet NSImageView *coverImageView;
     IBOutlet NSButton *playPauseButton;

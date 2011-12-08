@@ -25,6 +25,7 @@
 #import "SBSubsonicDownloadOperation.h"
 #import "SBPlayer.h"
 #import "SBTableView.h"
+#import "RWStreamingSliderCell.h"
 
 #import "SBWindow.h"
 #import "SBSplitView.h"
@@ -620,6 +621,7 @@
         NSString *currentTimeString = [[SBPlayer sharedInstance] currentTimeString];
         NSString *remainingTimeString = [[SBPlayer sharedInstance] remainingTimeString];
         double progress = [[SBPlayer sharedInstance] progress];
+        double buffered = [[SBPlayer sharedInstance] percentLoaded];
         
         if(currentTimeString)
             [progressTextField setStringValue:currentTimeString];
@@ -629,12 +631,15 @@
         
         if(progress > 0)
             [progressSlider setDoubleValue:progress];
+        
+        [(RWStreamingSliderCell *)progressSlider.cell setBufferValue:buffered*100];
     
     } else {
         [progressSlider setEnabled:NO];
         [progressTextField setStringValue:@"00:00"];
         [durationTextField setStringValue:@"-00:00"];
         [progressSlider setDoubleValue:0];
+
     }
     
 }

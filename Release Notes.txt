@@ -1,6 +1,7 @@
 Release Note :
 
 Version 1.1 :
+- Rewrite cache-streaming engine to improve stability and support movie streaming.
 - Add Mini-Player Menu, callable via a customizable hot-key shortcut.
 - Add Max Bit Rate setting (with few limitations).
 - Add Max Cover Size setting.

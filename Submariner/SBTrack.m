@@ -56,6 +56,15 @@
 }
 
 - (NSURL *)streamURL {
+    
+    if([self.isLocal boolValue]) {
+        return [NSURL fileURLWithPath:self.path];
+        
+    } else if(self.localTrack != nil) {
+        return [NSURL fileURLWithPath:self.localTrack.path];
+        
+    }
+    
     NSMutableString *params = nil;
     NSURL *finalURL = nil;
     
@@ -211,13 +220,17 @@
     if([self.contentType rangeOfString:@"octet-stream"].location != NSNotFound)
         ret = YES;
     
+    if(self.contentType == nil)
+        ret = NO;
+    
     return ret;
 }
 
 - (NSDictionary *)movieAttributes {
+    NSLog(@"URL : %@", [self streamURL]);
     return [NSDictionary dictionaryWithObjectsAndKeys:
             [self streamURL], QTMovieURLAttribute,
-            [NSNumber numberWithBool:YES], QTMovieOpenForPlaybackAttribute,
+            [NSNumber numberWithBool:NO], QTMovieOpenForPlaybackAttribute,
             nil];
 }
 

@@ -30,14 +30,14 @@ enum SBPlayerRepeatMode {
 @class AudioStreamer;
 
 
+
 @interface SBPlayer : NSObject <NSSoundDelegate> {
 @private
-    AudioStreamer *remotePlayer;
-    NSSound       *localPlayer;
     QTMovie       *moviePlayer;
     
     NSMutableArray *playlist;
     SBTrack *currentTrack;
+    NSString *tmpLocation;
     
     SBPlayerRepeatMode repeatMode; // the player repeat mode
     BOOL isShuffle;
@@ -56,11 +56,14 @@ enum SBPlayerRepeatMode {
 
 + (id)sharedInstance;
 
+// manage player tracklist
 - (void)addTrack:(SBTrack *)track replace:(BOOL)replace;
 - (void)addTrackArray:(NSArray *)array replace:(BOOL)replace;
 - (void)removeTrack:(SBTrack *)track;
 - (void)removeTrackArray:(NSArray *)tracks;
+- (void)clear;
 
+// player controls
 - (void)playTrack:(SBTrack *)track;
 - (void)playPause;
 - (void)next;
@@ -68,11 +71,12 @@ enum SBPlayerRepeatMode {
 - (void)seek:(double)time;
 - (void)setVolume:(float)volume; // 0.0 - 1.0
 - (void)stop; // unplay all tracks
-- (void)clear;
 
+// player data
 - (NSString *)currentTimeString;
 - (NSString *)remainingTimeString;
 - (double)progress;
 - (float)volume; // 0.0 - 1.0
+- (double)percentLoaded;
 
 @end
