@@ -1710,7 +1710,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FRAMEWORK_DIR=${SRCROOT}/SFBAudioEngine/Frameworks/\n\n# if the directory doesn't exists, create it\nif [ ! -d \"$FRAMEWORK_DIR\" ]; then\n    mkdir $FRAMEWORK_DIR;\nfi\n\n# unzip frameworks in the fraemework directory\nunzip ${SRCROOT}/Frameworks.zip -d ${SRCROOT}/SFBAudioEngine/\n\n";
+			shellScript = "FRAMEWORK_DIR=${SRCROOT}/SFBAudioEngine/Frameworks/\n\n# if the directory doesn't exists, create it\nif [ ! -d \"$FRAMEWORK_DIR\" ]; then\n    mkdir $FRAMEWORK_DIR;\n\n    # unzip frameworks in the fraemework directory\n    unzip ${SRCROOT}/Frameworks.zip -d ${SRCROOT}/SFBAudioEngine/\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

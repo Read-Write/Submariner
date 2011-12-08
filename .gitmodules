@@ -4,3 +4,6 @@
 [submodule "ShortcutRecorder"]
 	path = ShortcutRecorder
 	url = git://github.com/darwin/shortcutrecorder.git
+[submodule "DDHotKey"]
+	path = DDHotKey
+	url = git://github.com/davedelong/DDHotKey.git
