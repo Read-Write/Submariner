@@ -1,0 +1,6 @@
+[submodule "SFBAudioEngine"]
+	path = SFBAudioEngine
+	url = git://github.com/sbooth/SFBAudioEngine.git
+[submodule "ShortcutRecorder"]
+	path = ShortcutRecorder
+	url = git://github.com/darwin/shortcutrecorder.git

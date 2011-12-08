@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		4C15611D1490D30800819EF6 /* Unzip Audio Frameworks */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4C15611E1490D30800819EF6 /* Build configuration list for PBXAggregateTarget "Unzip Audio Frameworks" */;
+			buildPhases = (
+				4C1561211490D30C00819EF6 /* Unzip and Copy */,
+			);
+			dependencies = (
+			);
+			name = "Unzip Audio Frameworks";
+			productName = "Unzip Audio Frameworks";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		4C0096A513AEAE5F0014F331 /* NSGradient+SourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0096A413AEAE5F0014F331 /* NSGradient+SourceList.m */; };
 		4C1A69B613A6AC4F0054A3EF /* NSWindow-Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A69B513A6AC4F0054A3EF /* NSWindow-Zoom.m */; };
@@ -246,6 +260,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C1561221490D48000819EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C87ED56139CD8BE0064DE2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C15611D1490D30800819EF6;
+			remoteInfo = "Unzip Audio Frameworks";
+		};
 		4C7A3EA4148F0830009C6EE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4C7A3E98148F0830009C6EE6 /* LRResty.xcodeproj */;
@@ -1431,6 +1452,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4C1561231490D48000819EF6 /* PBXTargetDependency */,
 				4CD55EBD1490CE37002E4774 /* PBXTargetDependency */,
 				4C7A3EC3148F0855009C6EE6 /* PBXTargetDependency */,
 				4C7A3EC5148F0855009C6EE6 /* PBXTargetDependency */,
@@ -1476,6 +1498,7 @@
 			projectRoot = "";
 			targets = (
 				4C87ED5E139CD8BE0064DE2E /* Submariner */,
+				4C15611D1490D30800819EF6 /* Unzip Audio Frameworks */,
 			);
 		};
 /* End PBXProject section */
@@ -1674,6 +1697,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C1561211490D30C00819EF6 /* Unzip and Copy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unzip and Copy";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_DIR=${SRCROOT}/SFBAudioEngine/Frameworks/\n\n# if the directory doesn't exists, create it\nif [ ! -d \"$FRAMEWORK_DIR\" ]; then\n    mkdir $FRAMEWORK_DIR;\nfi\n\n# unzip frameworks in the fraemework directory\nunzip ${SRCROOT}/Frameworks.zip -d ${SRCROOT}/SFBAudioEngine/\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C87ED5B139CD8BE0064DE2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1821,6 +1861,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C1561231490D48000819EF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C15611D1490D30800819EF6 /* Unzip Audio Frameworks */;
+			targetProxy = 4C1561221490D48000819EF6 /* PBXContainerItemProxy */;
+		};
 		4C7A3EC3148F0855009C6EE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SFBAudioEngine.framework;
@@ -1866,6 +1911,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C15611F1490D30800819EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4C1561201490D30800819EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4C87ED7E139CD8BE0064DE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1969,6 +2028,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C15611E1490D30800819EF6 /* Build configuration list for PBXAggregateTarget "Unzip Audio Frameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C15611F1490D30800819EF6 /* Debug */,
+				4C1561201490D30800819EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4C87ED59139CD8BE0064DE2E /* Build configuration list for PBXProject "Submariner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
