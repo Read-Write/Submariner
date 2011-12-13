@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <QTKit/QTKit.h>
 
+#if __cplusplus
+#include <SFBAudioEngine/AudioPlayer.h>
+#endif
 
 // notifications
 extern NSString *SBPlayerPlaylistUpdatedNotification;
-
+extern NSString *SBPlayerMovieToPlayNotification;
 
 
 
@@ -27,13 +30,12 @@ enum SBPlayerRepeatMode {
 
 
 @class SBTrack;
-@class AudioStreamer;
-
 
 
 @interface SBPlayer : NSObject <NSSoundDelegate> {
 @private
-    QTMovie       *moviePlayer;
+    QTMovie       *remotePlayer;
+    void          *localPlayer;
     
     NSMutableArray *playlist;
     SBTrack *currentTrack;
@@ -76,7 +78,7 @@ enum SBPlayerRepeatMode {
 - (NSString *)currentTimeString;
 - (NSString *)remainingTimeString;
 - (double)progress;
-- (float)volume; // 0.0 - 1.0
 - (double)percentLoaded;
+- (float)volume; // 0.0 - 1.0
 
 @end

@@ -15,6 +15,11 @@
 
 
 
+@interface SBMusicTopbarController ()
+- (void)topbarItemPressed:(NSDictionary *)item;
+@end
+
+
 @implementation SBMusicTopbarController
 
 + (NSString *)nibName {
@@ -69,6 +74,54 @@
 
 - (void)segmentedControl:(ANSegmentedControl *)control selectionDidChange:(NSInteger)index {
     NSLog(@"segmentedControl:selectionDidChange:");
+}
+
+- (NSArray *)itemsArrayForTopbarView:(SBTopbarView *)topbar {
+    NSMutableArray *results = [NSMutableArray array];
+    
+    NSInteger i = 0;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"Library"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:YES] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"Library"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"Library"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"Library"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    return results;
+}
+
+- (void)topbarItemPressed:(NSDictionary *)item {
+    
 }
 
 @end

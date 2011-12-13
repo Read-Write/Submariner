@@ -91,7 +91,7 @@
 - (void)setBasicAuthUsername:(NSString *)username password:(NSString *)password useCredentialSystem:(BOOL)useCredential;
 {
   if (useCredential) {
-    credential = [[NSURLCredential credentialWithUser:username password:password persistence:NSURLCredentialPersistenceNone] retain];
+    credential = [[NSURLCredential credentialWithUser:username password:password persistence:NSURLCredentialPersistenceForSession] retain];
   } else {
     NSData *credentialData = [[NSString stringWithFormat:@"%@:%@", username, password] dataUsingEncoding:NSUTF8StringEncoding];
     [self addHeader:@"Authorization" value:[NSString stringWithFormat:@"Basic %@", [credentialData base64EncodedString]]];

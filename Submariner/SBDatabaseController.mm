@@ -14,6 +14,7 @@
 #import "SBMusicController.h"
 #import "SBMusicTopbarController.h"
 #import "SBTracklistController.h"
+#import "SBMovieViewController.h"
 #import "SBPlaylistController.h"
 #import "SBServerTopbarController.h"
 #import "SBDownloadsController.h"
@@ -43,7 +44,8 @@
 #import "NSManagedObjectContext+Fetch.h"
 #import "NSOutlineView+Expand.h"
 #import "NSOperationQueue+Shared.h"
-
+#import "NSView+CHLayout.h"
+#import "CHLayoutConstraint.h"
 
 
 
@@ -71,6 +73,7 @@
 - (void)subsonicPlaylistsUpdatedNotification:(NSNotification *)notification;
 - (void)subsonicPlaylistsCreatedNotification:(NSNotification *)notification;
 - (void)playerPlaylistUpdatedNotification:(NSNotification *)notification;
+- (void)playerHaveMovieToPlayNotification:(NSNotification *)notification;
 
 @end
 
@@ -115,6 +118,7 @@
         tracklistController = [[SBTracklistController alloc] initWithManagedObjectContext:self.managedObjectContext];
         playlistController = [[SBPlaylistController alloc] initWithManagedObjectContext:self.managedObjectContext];
         serverTopbarController = [[SBServerTopbarController alloc] initWithManagedObjectContext:self.managedObjectContext];
+        movieViewController = [[SBMovieViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
         
         [tracklistController setDatabaseController:self];
     }
@@ -125,8 +129,7 @@
 {
     // remove queue operations observer
     [[NSOperationQueue sharedServerQueue] removeObserver:self forKeyPath:@"operationCount"];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:SBSubsonicPlaylistUpdatedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:SBPlayerPlaylistUpdatedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     // release all object references
     [musicController release];
@@ -137,8 +140,10 @@
     [serverTopbarController release];
     [resourceSortDescriptors release];
     [mainSplitViewDelegate release];
+    [movieViewController release];
     [library release];
     [progressUpdateTimer release];
+    [flipController release];
     
     [super dealloc];
 }
@@ -228,6 +233,11 @@
                                              selector:@selector(playerPlaylistUpdatedNotification:)
                                                  name:SBPlayerPlaylistUpdatedNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerHaveMovieToPlayNotification:)
+                                                 name:SBPlayerMovieToPlayNotification
+                                               object:nil];
 
     // setup main box subviews animation 
     [self setCurrentView:(SBAnimatedView *)[musicController view]];
@@ -260,6 +270,11 @@
                           forKeyPath:@"content" 
                              options:NSKeyValueObservingOptionNew
                              context:nil];
+    
+
+    [hostView setWantsLayer:YES];
+
+    flipController = [[MCViewFlipController alloc] initWithHostView:hostView frontView:coverImageView backView:tracklistController.view];
 }
 
 
@@ -590,6 +605,10 @@
     }
 }
 
+- (IBAction)flip:(id)sender {
+    [flipController flip:sender];
+}
+
 
 - (IBAction)openHomePage:(id)sender {
     NSInteger selectedRow = [sourceList selectedRow];
@@ -866,6 +885,11 @@
         [serverTopbarController setServer:(SBServer *)resource];  
         [serverTopbarController setViewControllerAtIndex:[(SBServer *)resource selectedTabIndex]];
 
+    } else if([resource isKindOfClass:[QTMovie class]]) {
+        
+        //[topbarBox setContentView:nil];
+        [self setCurrentView:(SBAnimatedView *)[movieViewController view]];
+        [movieViewController setMovie:(QTMovie *)resource];
     }
 }
 
@@ -980,6 +1004,9 @@
     }
 }
 
+- (void)playerHaveMovieToPlayNotification:(NSNotification *)notification {
+    [self displayViewControllerForResource:[notification object]];
+}
 
 
 
@@ -1217,7 +1244,7 @@
     if([[item representedObject] isKindOfClass:[SBSection class]]) {
         return 26.0f;
     }
-    return 25.0f;
+    return 22.0f;
 }
 
 - (BOOL)sourceList:(SBSourceList*)aSourceList shouldSelectItem:(id)item {

@@ -8,6 +8,8 @@
 
 #include <libkern/OSAtomic.h>
 #import <LRResty/LRResty.h>
+#import <SFBAudioEngine/AudioPlayer.h>
+#import <SFBAudioEngine/AudioDecoder.h>
 
 #import "SBAppDelegate.h"
 #import "SBMovieWindowController.h"
@@ -24,10 +26,12 @@
 #import "NSString+Time.h"
 
 
+#define LOCAL_PLAYER (static_cast<AudioPlayer *>(localPlayer))
+
 
 // notifications
 NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotification";
-
+NSString *SBPlayerMovieToPlayNotification = @"SBPlayerPlaylistUpdatedNotification";
 
 
 
@@ -40,8 +44,10 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 @interface SBPlayer (Private)
 
-- (void)playMovieWithURL:(NSURL *)url;
+- (void)playRemoteWithURL:(NSURL *)url;
+- (void)playLocalWithURL:(NSURL *)url;
 - (void)unplayAllTracks;
+- (void)decodingStarted:(const AudioDecoder *)decoder;
 - (SBTrack *)getRandomTrackExceptingTrack:(SBTrack *)_track;
 - (SBTrack *)nextTrack;
 - (SBTrack *)prevTrack;
@@ -49,6 +55,24 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 @end
 
 
+
+// local player C++ callbacks
+static SBPlayer *staticSelf = nil;
+
+static void decodingStarted(void *context, const AudioDecoder *decoder)
+{
+	[(SBPlayer *)context decodingStarted:decoder];
+}
+
+// This is called from the realtime rendering thread and as such MUST NOT BLOCK!!
+static void renderingFinished(void *context, const AudioDecoder *decoder)
+{
+    NSLog(@"renderingFinished");
+    if(staticSelf) {
+        //[staticSelf stop];
+        [staticSelf next];
+    }
+}
 
 
 @implementation SBPlayer
@@ -82,11 +106,15 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 - (id)init {
     self = [super init];
     if (self) {
+        localPlayer = new AudioPlayer();
+        
         playlist = [[NSMutableArray alloc] init];
         isShuffle = NO;
         isCaching = NO;
         
         repeatMode = SBPlayerRepeatNo;
+        
+        staticSelf = [self retain];
     }
     return self;
 }
@@ -95,10 +123,13 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     // remove remote player observers
     [self stop];
     
-    [moviePlayer release];
+    delete LOCAL_PLAYER, localPlayer = NULL;
+    
+    [remotePlayer release];
     [currentTrack release];
     [playlist release];
     [tmpLocation release];
+    [staticSelf release];
     [super dealloc];
 }
 
@@ -186,8 +217,26 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         isCaching = NO;
     }
     
-    // play the song
-    [self playMovieWithURL:[self.currentTrack streamURL]];
+    
+    
+    // play the song remotely (QTMovie from QTKit framework) or locally (AudioPlayer from SFBAudioEngine framework)
+    if(self.currentTrack.isVideo) {
+        if(self.currentTrack.localTrack != nil) {
+            [self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
+        } else {
+            [self playRemoteWithURL:[self.currentTrack streamURL]];
+        }
+    } else {
+        if([self.currentTrack.isLocal boolValue]) { // should add video exception here
+            [self playLocalWithURL:[self.currentTrack streamURL]];
+        } else {
+            if(self.currentTrack.localTrack != nil) {
+                [self playLocalWithURL:[self.currentTrack.localTrack streamURL]];
+            } else {
+                [self playRemoteWithURL:[self.currentTrack streamURL]];
+            }
+        }   
+    }
     
     // setup player for playing
     [self.currentTrack setIsPlaying:[NSNumber numberWithBool:YES]];
@@ -197,20 +246,20 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 }
 
 
-- (void)playMovieWithURL:(NSURL *)url {
+- (void)playRemoteWithURL:(NSURL *)url {
     NSLog(@"playMovieWithURL");
     
     NSError *error = nil;
     
-    moviePlayer = [[QTMovie alloc] initWithURL:url error:&error];
+    remotePlayer = [[QTMovie alloc] initWithURL:url error:&error];
 
-	if (!moviePlayer || error)
-		NSLog(@"Couldn't init movie: %@", error);
+	if (!remotePlayer || error)
+		NSLog(@"Couldn't init player : %@", error);
     
 	else {
         
-        [moviePlayer setDelegate:self];
-        [moviePlayer setVolume:[self volume]];
+        [remotePlayer setDelegate:self];
+        [remotePlayer setVolume:[self volume]];
         
         NSLog(@"url : %@", url);
         if([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
@@ -218,19 +267,52 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
             [[NSNotificationCenter defaultCenter] addObserver:self 
                                                      selector:@selector(loadStateDidChange:) 
                                                          name:QTMovieLoadStateDidChangeNotification 
-                                                       object:moviePlayer];
+                                                       object:remotePlayer];
         } else {
-            [moviePlayer performSelector:@selector(play) withObject:nil afterDelay:0.2f];
+            [remotePlayer performSelector:@selector(play) withObject:nil afterDelay:0.2f];
+        }
+        
+        if(self.currentTrack.isVideo) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:SBPlayerMovieToPlayNotification 
+                                                                object:remotePlayer];
+            
         }
     }
 }
 
+- (void)playLocalWithURL:(NSURL *)url {
+    NSLog(@"playLocalWithURL");
+    
+    AudioDecoder *decoder = AudioDecoder::CreateDecoderForURL(reinterpret_cast<CFURLRef>(url));
+	if(NULL != decoder) {
+        
+        LOCAL_PLAYER->SetVolume([self volume]);
+        
+        // Register for rendering started/finished notifications so the UI can be updated properly
+        decoder->SetDecodingStartedCallback(decodingStarted, self);
+        decoder->SetRenderingFinishedCallback(renderingFinished, self);
+        
+        if(decoder->Open() && LOCAL_PLAYER->Enqueue(decoder)) {
+            //[[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL:url];
+        }else {
+            delete decoder;
+        }
+    } else {
+        NSLog(@"Couldn't decode file");
+    }
+}
+
+
 - (void)playPause {
     
-    if((moviePlayer != nil) && ([moviePlayer rate] != 0)) {
-        [moviePlayer stop];
+    if((remotePlayer != nil) && ([remotePlayer rate] != 0)) {
+        [remotePlayer stop];
     } else {
-        [moviePlayer play];
+        [remotePlayer play];
+    }
+    
+    if(LOCAL_PLAYER && LOCAL_PLAYER->GetPlayingURL() != NULL) {
+        LOCAL_PLAYER->PlayPause();
     }
 }
 
@@ -238,9 +320,10 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     SBTrack *next = [self nextTrack];
     if(next != nil) {
         @synchronized(self) {
-            //[self stop];
             [self playTrack:next];
         }
+    } else { 
+        [self stop];
     }
 }
 
@@ -259,20 +342,37 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
     
     [[NSUserDefaults standardUserDefaults] setFloat:volume forKey:@"playerVolume"];
     
-    if(moviePlayer)
-        [moviePlayer setVolume:volume];
+    if(remotePlayer)
+        [remotePlayer setVolume:volume];
+    
+    LOCAL_PLAYER->SetVolume(volume);
 }
 
 
 - (void)seek:(double)time {
     
-    NSTimeInterval duration;
-    QTGetTimeInterval([moviePlayer duration], &duration);    
-    double newSeekTime = (time / 100.0) * duration;     
-    QTTime qtTime = QTMakeTimeWithTimeInterval(newSeekTime);
+    if(remotePlayer != nil) {
+        NSTimeInterval duration;
+        QTGetTimeInterval([remotePlayer duration], &duration);    
+        double newSeekTime = (time / 100.0) * duration;     
+        QTTime qtTime = QTMakeTimeWithTimeInterval(newSeekTime);
+        
+        [remotePlayer setCurrentTime:qtTime];
+    }
     
-    [moviePlayer setCurrentTime:qtTime];
-
+    if(LOCAL_PLAYER && LOCAL_PLAYER->IsPlaying()) {
+        SInt64 totalFrames;
+        if(LOCAL_PLAYER->SupportsSeeking()) {
+            if(LOCAL_PLAYER->GetTotalFrames(totalFrames)) {
+                //NSLog(@"seek");
+                SInt64 desiredFrame = static_cast<SInt64>((time / 100.0) * totalFrames);
+                LOCAL_PLAYER->SeekToFrame(desiredFrame);
+            }   
+        } else {
+            NSLog(@"WARNING : no seek support for this file");
+        }
+    }
+    
     if(isCaching) {
         isCaching = NO;
     }
@@ -282,11 +382,21 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 - (void)stop {
 
     @synchronized(self) {
-        // stop movie player
-        [moviePlayer stop];
+        // stop players
+        if(remotePlayer) {
+            [remotePlayer stop];
+            [remotePlayer release];
+            remotePlayer = nil;
+        }
+        
+        if(LOCAL_PLAYER->IsPlaying()) {
+            LOCAL_PLAYER->Stop();
+            LOCAL_PLAYER->ClearQueuedDecoders();
+        }
         
         // unplay current track
         [self.currentTrack setIsPlaying:[NSNumber numberWithBool:NO]];
+        self.currentTrack  = nil;
         
         // unplay all
         [self unplayAllTracks];
@@ -311,12 +421,22 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 - (NSString *)currentTimeString {
     
-    if(moviePlayer != nil)
+    if(remotePlayer != nil)
     {
         NSTimeInterval currentTime; 
-        QTGetTimeInterval([moviePlayer currentTime], &currentTime);
+        QTGetTimeInterval([remotePlayer currentTime], &currentTime);
         
         return [NSString stringWithTime:currentTime];
+    }
+    
+    if(LOCAL_PLAYER->IsPlaying())
+    {
+        SInt64 currentFrame, totalFrames;
+        CFTimeInterval currentTime, totalTime;
+        
+        if(LOCAL_PLAYER->GetPlaybackPositionAndTime(currentFrame, totalFrames, currentTime, totalTime)) {
+            return [NSString stringWithTime:currentTime];
+        }
     }
     
     return nil;
@@ -324,35 +444,47 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 - (NSString *)remainingTimeString {
     
-    
-    if(moviePlayer != nil)
+    if(remotePlayer != nil)
     {
         NSTimeInterval currentTime; 
         NSTimeInterval duration;
         
-        QTGetTimeInterval([moviePlayer duration], &duration);
-        QTGetTimeInterval([moviePlayer currentTime], &currentTime);
+        QTGetTimeInterval([remotePlayer duration], &duration);
+        QTGetTimeInterval([remotePlayer currentTime], &currentTime);
         
         NSTimeInterval remainingTime = duration-currentTime;
         return [NSString stringWithTime:-remainingTime];
     }
+    
+    if(LOCAL_PLAYER->IsPlaying())
+    {
+        SInt64 currentFrame, totalFrames;
+        CFTimeInterval currentTime, totalTime;
+        
+        if(LOCAL_PLAYER->GetPlaybackPositionAndTime(currentFrame, totalFrames, currentTime, totalTime)) {
+            return [NSString stringWithTime:(-1 * (totalTime - currentTime))];
+        }
+    }
+    
     return nil;
 }
 
 - (double)progress {
     
-    if(moviePlayer != nil)
+    if(remotePlayer != nil)
     {
         // typedef struct { long long timeValue; long timeScale; long flags; } QTTime
-        QTTime qtCurrentTime = [moviePlayer currentTime];
-        QTTime qtDuration    = [moviePlayer duration];
-        
+        QTTime qtCurrentTime = [remotePlayer currentTime];
+        QTTime qtDuration    = [remotePlayer duration];
+
         long long currentTime = qtCurrentTime.timeValue;
         long long duration = qtDuration.timeValue;
         
+        
         if(duration > 0) {
             double progress = ((double)currentTime) / ((double)duration) * 100; // make percent
-            //NSLog(@"progress : %f", progress);
+            //double bitrate = [[[remotePlayer movieAttributes] valueForKey:QTMovieDataSizeAttribute] doubleValue]/duration * 10;
+            //NSLog(@"bitrate : %f", bitrate);
             
             if(progress == 100) { // movie is at end
                 [self next];
@@ -363,9 +495,28 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
         } else {
             return 0;
         }
-    } else {
-        return 0;
     }
+    
+    if(LOCAL_PLAYER->IsPlaying())
+    {
+        SInt64 currentFrame, totalFrames;
+        CFTimeInterval currentTime, totalTime;
+        
+        if(LOCAL_PLAYER->GetPlaybackPositionAndTime(currentFrame, totalFrames, currentTime, totalTime)) {
+            double fractionComplete = static_cast<double>(currentFrame) / static_cast<double>(totalFrames) * 100;
+            
+//            NSLog(@"fractionComplete : %f", fractionComplete);
+//            if(fractionComplete > 99.9) { // movie is at end
+//                [self playPause];
+//                [self next];
+//            }
+            
+            return fractionComplete;
+        } else {
+            return 0;
+        }
+    }
+    
     return 0;
 }
 
@@ -375,13 +526,23 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 }
 
 - (double)percentLoaded {
-    NSTimeInterval tMaxLoaded;
-    NSTimeInterval tDuration;
+    double percentLoaded = 0;
     
-    QTGetTimeInterval([moviePlayer duration], &tDuration);
-    QTGetTimeInterval([moviePlayer maxTimeLoaded], &tMaxLoaded);
+    if(remotePlayer != nil) {
+        NSTimeInterval tMaxLoaded;
+        NSTimeInterval tDuration;
+        
+        QTGetTimeInterval([remotePlayer duration], &tDuration);
+        QTGetTimeInterval([remotePlayer maxTimeLoaded], &tMaxLoaded);
+        
+        percentLoaded = (double) tMaxLoaded/tDuration;
+    }
     
-    return (double) tMaxLoaded/tDuration;
+    if(LOCAL_PLAYER->IsPlaying()) {
+        percentLoaded = 1;
+    }
+    
+    return percentLoaded;
 }
 
 
@@ -392,66 +553,62 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 
 - (void)loadStateDidChange:(NSNotification *)notification {
     NSLog(@"loadStateDidChange");
+    NSError *error = nil;
     
     // First make sure that this notification is for our movie.
-    if([notification object] == moviePlayer)
+    if([notification object] == remotePlayer)
     {
-        QTMovieLoadState state = [[moviePlayer attributeForKey:QTMovieLoadStateAttribute] integerValue];
+        QTMovieLoadState state = [[remotePlayer attributeForKey:QTMovieLoadStateAttribute] integerValue];
         
-        if([moviePlayer rate] == 0)
-        {   
-            if (state >= QTMovieLoadStateLoading) {
-                NSLog(@"QTMovieLoadStateLoading");
+        
+        if (state >= QTMovieLoadStateComplete) { // 100000L
+            NSLog(@"QTMovieLoadStateComplete");
+            
+            if([[NSUserDefaults standardUserDefaults] boolForKey:@"enableCacheStreaming"] == YES) 
+            {
+                NSDictionary* attr2 = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       [NSNumber numberWithBool:YES], QTMovieFlatten,
+                                       //[NSNumber numberWithBool:YES], QTMovieExport,
+                                       //[NSNumber numberWithLong:kQTFileType], QTMovieExportType,
+                                       [NSNumber numberWithLong:kAppleManufacturer], QTMovieExportManufacturer,
+                                       nil];
                 
-            } else if (state >= QTMovieLoadStateLoaded) {
-                NSLog(@"QTMovieLoadStateLoaded");
+                [remotePlayer writeToFile:tmpLocation withAttributes:attr2 error:&error];                        
                 
-            } else if (state >= QTMovieLoadStatePlayable) {
-                NSLog(@"QTMovieLoadStatePlayable");
-                [moviePlayer play];
+                NSManagedObjectContext *moc = self.currentTrack.managedObjectContext;
+                SBLibrary *library = [moc fetchEntityNammed:@"Library" withPredicate:nil error:nil];
                 
-            } else if (state == -1) {
-                NSLog(@"QTMovieLoadStateError : %@", [notification userInfo]);
+                // import audio file
+                SBImportOperation *op = [[SBImportOperation alloc] initWithManagedObjectContext:moc];
+                [op setFilePaths:[NSArray arrayWithObject:tmpLocation]];
+                [op setLibraryID:[library objectID]];
+                [op setRemoteTrackID:[self.currentTrack objectID]];
+                [op setCopy:YES];
+                [op setRemove:YES];
                 
-                [self stop];
-                
-                NSError *error = [moviePlayer attributeForKey:QTMovieLoadStateErrorAttribute];
-                if(error) [NSApp presentError:error];
+                [[NSOperationQueue sharedDownloadQueue] addOperation:op];
                 
             }
             
-        } else {
+        } else if (state >= QTMovieLoadStatePlayable) { // 10000L
+            NSLog(@"QTMovieLoadStatePlayable");
             
-            if (state >= QTMovieLoadStateComplete) {
-                NSLog(@"QTMovieLoadStateComplete");
-                NSData *data = moviePlayer.movieFormatRepresentation; // <-- data for cache streaming video !!! 
-                
-                if(isCaching) // is it really usefull ?
-                {
-                    if([[NSUserDefaults standardUserDefaults] boolForKey:@"enableCacheStreaming"] == YES) 
-                    {
-                        [data writeToFile:tmpLocation atomically:YES];
-                        
-                        NSManagedObjectContext *moc = self.currentTrack.managedObjectContext;
-                        SBLibrary *library = [moc fetchEntityNammed:@"Library" withPredicate:nil error:nil];
-                        
-                        // import audio file
-                        SBImportOperation *op = [[SBImportOperation alloc] initWithManagedObjectContext:moc];
-                        [op setFilePaths:[NSArray arrayWithObject:tmpLocation]];
-                        [op setLibraryID:[library objectID]];
-                        [op setRemoteTrackID:[self.currentTrack objectID]];
-                        [op setCopy:YES];
-                        [op setRemove:YES];
-                        
-                        [[NSOperationQueue sharedDownloadQueue] addOperation:op];
-                    }
-                }
-                
-            } else if (state >= QTMovieLoadStateError) {
-                NSLog(@"QTMovieLoadStateError : %@", [notification userInfo]);
-                NSError *error = [moviePlayer attributeForKey:QTMovieLoadStateErrorAttribute];
-                if(error) [NSApp presentError:error];
-            } 
+            [remotePlayer play];
+            
+        } else if (state >= QTMovieLoadStateLoaded) { // 2000L
+            NSLog(@"QTMovieLoadStateLoaded");
+            
+        } else if (state >= QTMovieLoadStateLoading) { // 1000L
+            NSLog(@"QTMovieLoadStateLoading");
+            
+        } else if (state == -1) { // -1L
+            NSLog(@"QTMovieLoadStateError : %@", [notification userInfo]);
+            
+            [self stop];
+            
+            NSError *error = [remotePlayer attributeForKey:QTMovieLoadStateErrorAttribute];
+            if(error) [NSApp presentError:error];
+            
         }
     }
 }
@@ -459,21 +616,20 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
 - (void)movieDidEnd:(NSNotification *)notification {
     NSLog(@"movieDidEnd");
     
-    if([notification object] == moviePlayer) //if the player is our player
+    if([notification object] == remotePlayer) //if the player is our player
     {
-        if([moviePlayer rate] > 0) // really playing
+        if([remotePlayer rate] > 0) // really playing
         {   
             
         }
     }
 }
 
-- (BOOL)movie:(QTMovie *)movieshouldContinueOperation :(NSString *)op withPhase:(QTMovieOperationPhase)phase atPercent:(NSNumber *)percent withAttributes:(NSDictionary *)attributes {
-    
-    NSLog(@"movieshouldContinueOperation");
-    return YES;
+- (void) decodingStarted:(const AudioDecoder *)decoder
+{
+    #pragma unused(decoder)
+	LOCAL_PLAYER->Play();
 }
-
 
 
 
@@ -553,12 +709,12 @@ NSString *SBPlayerPlaylistUpdatedNotification = @"SBPlayerPlaylistUpdatedNotific
             if(index == 0)
                 if(repeatMode == SBPlayerRepeatAll)
                     return [self.playlist lastObject];
-            
-            if(index != -1)
+                        if(index != -1)
                 return [self.playlist objectAtIndex:index-1];
         } else {
             // if repeat one, get the piority
             if(repeatMode == SBPlayerRepeatOne)
+
                 return self.currentTrack;
             
             return [self getRandomTrackExceptingTrack:self.currentTrack];

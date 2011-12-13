@@ -168,6 +168,7 @@
                                                                                                               server:[self.server objectID]
                                                                                                                  xml:[response responseData]];
             
+            [[NSOperationQueue sharedServerQueue] cancelAllOperations];
             [[NSOperationQueue sharedServerQueue] addOperation:operation];
             [operation release];
         } else if (response.status >= 400 && response.status < 504) {

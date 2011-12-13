@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11C73</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1617</string>
+		<int key="IBDocument.SystemTarget">1060</int>
+		<string key="IBDocument.SystemVersion">11C74</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
 		<string key="IBDocument.AppKitVersion">1138.23</string>
 		<string key="IBDocument.HIToolboxVersion">567.00</string>
 		<dictionary class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="com.apple.InterfaceBuilder.CocoaPlugin">1617</string>
-			<string key="com.apple.imagekit.ibplugin">518</string>
+			<string key="com.apple.InterfaceBuilder.CocoaPlugin">1938</string>
+			<string key="com.apple.imagekit.ibplugin">822</string>
 		</dictionary>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSScroller</string>
@@ -31,7 +31,10 @@
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string>com.apple.imagekit.ibplugin</string>
 		</array>
-		<dictionary class="NSMutableDictionary" key="IBDocument.Metadata"/>
+		<object class="NSMutableDictionary" key="IBDocument.Metadata">
+			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
+			<integer value="1" key="NS.object.0"/>
+		</object>
 		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<object class="NSCustomObject" id="1001">
 				<string key="NSClassName">SBServerLibraryController</string>
@@ -287,7 +290,7 @@
 										<reference key="NSSuperview" ref="65139739"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="184761215"/>
-										<string key="NSClassName">SBBottomMiddleBorderView</string>
+										<string key="NSClassName">SBControlBarView</string>
 									</object>
 								</array>
 								<string key="NSFrameSize">{175, 398}</string>
@@ -474,7 +477,7 @@
 																			<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 																			<string>NeXT TIFF v4.0 pasteboard type</string>
 																		</set>
-																		<string key="NSFrameSize">{429, 2534}</string>
+																		<string key="NSFrameSize">{444, 2534}</string>
 																		<reference key="NSSuperview" ref="12498951"/>
 																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="200851014"/>
@@ -494,8 +497,8 @@
 																		<reference key="delegate"/>
 																	</object>
 																</array>
-																<string key="NSFrameSize">{429, 158}</string>
-																<string key="NSBounds">{{0, 2376}, {429, 158}}</string>
+																<string key="NSFrameSize">{444, 158}</string>
+																<string key="NSBounds">{{0, 2376}, {444, 158}}</string>
 																<reference key="NSSuperview" ref="270722091"/>
 																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="926879789"/>
@@ -565,7 +568,7 @@
 																	<object class="NSTableView" id="799063863">
 																		<reference key="NSNextResponder" ref="733925124"/>
 																		<int key="NSvFlags">4352</int>
-																		<string key="NSFrameSize">{663, 209}</string>
+																		<string key="NSFrameSize">{663, 224}</string>
 																		<reference key="NSSuperview" ref="733925124"/>
 																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="284173063"/>
@@ -576,15 +579,13 @@
 																			<string key="NSFrameSize">{663, 17}</string>
 																			<reference key="NSSuperview" ref="412886084"/>
 																			<reference key="NSWindow"/>
-																			<reference key="NSNextKeyView" ref="694517233"/>
+																			<reference key="NSNextKeyView" ref="733925124"/>
 																			<reference key="NSTableView" ref="799063863"/>
 																		</object>
-																		<object class="_NSCornerView" key="NSCornerView" id="694517233">
-																			<reference key="NSNextResponder" ref="185435563"/>
+																		<object class="_NSCornerView" key="NSCornerView">
+																			<nil key="NSNextResponder"/>
 																			<int key="NSvFlags">-2147483392</int>
 																			<string key="NSFrame">{{224, 0}, {16, 17}}</string>
-																			<reference key="NSSuperview" ref="185435563"/>
-																			<reference key="NSWindow"/>
 																			<reference key="NSNextKeyView" ref="733925124"/>
 																		</object>
 																		<array class="NSMutableArray" key="NSTableColumns">
@@ -869,7 +870,7 @@
 																		<int key="NSTableViewGroupRowStyle">1</int>
 																	</object>
 																</array>
-																<string key="NSFrame">{{0, 17}, {446, 209}}</string>
+																<string key="NSFrame">{{0, 17}, {446, 224}}</string>
 																<reference key="NSSuperview" ref="185435563"/>
 																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="799063863"/>
@@ -915,7 +916,6 @@
 																<reference key="NSBGColor" ref="80923920"/>
 																<int key="NScvFlags">4</int>
 															</object>
-															<reference ref="694517233"/>
 														</array>
 														<string key="NSFrame">{{-2, -1}, {446, 241}}</string>
 														<reference key="NSSuperview" ref="206442979"/>
@@ -926,7 +926,6 @@
 														<reference key="NSHScroller" ref="597122053"/>
 														<reference key="NSContentView" ref="733925124"/>
 														<reference key="NSHeaderClipView" ref="412886084"/>
-														<reference key="NSCornerView" ref="694517233"/>
 														<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 													</object>
 												</array>
@@ -1018,6 +1017,267 @@
 					<int key="connectionID">126</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">artistController</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="86546332"/>
+					</object>
+					<int key="connectionID">133</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">artistsController</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="86546332"/>
+					</object>
+					<int key="connectionID">134</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tracksTableView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="799063863"/>
+					</object>
+					<int key="connectionID">143</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tracksController</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="780584921"/>
+					</object>
+					<int key="connectionID">147</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">albumsController</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="117267028"/>
+					</object>
+					<int key="connectionID">148</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">albumsBrowserView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="926879789"/>
+					</object>
+					<int key="connectionID">149</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">filterArtist:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="184761215"/>
+					</object>
+					<int key="connectionID">162</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">artistSplitView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="687911444"/>
+					</object>
+					<int key="connectionID">164</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">artistsTableView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="26899387"/>
+					</object>
+					<int key="connectionID">191</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="184761215"/>
+						<reference key="destination" ref="926879789"/>
+					</object>
+					<int key="connectionID">174</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="270722091"/>
+						<reference key="destination" ref="799063863"/>
+					</object>
+					<int key="connectionID">171</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">content: arrangedObjects</string>
+						<reference key="source" ref="926879789"/>
+						<reference key="destination" ref="117267028"/>
+						<object class="NSNibBindingConnector" key="connector" id="340577040">
+							<reference key="NSSource" ref="926879789"/>
+							<reference key="NSDestination" ref="117267028"/>
+							<string key="NSLabel">content: arrangedObjects</string>
+							<string key="NSBinding">content</string>
+							<string key="NSKeyPath">arrangedObjects</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">140</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="926879789"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">142</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">selectionIndexes: selectionIndexes</string>
+						<reference key="source" ref="926879789"/>
+						<reference key="destination" ref="117267028"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="926879789"/>
+							<reference key="NSDestination" ref="117267028"/>
+							<string key="NSLabel">selectionIndexes: selectionIndexes</string>
+							<string key="NSBinding">selectionIndexes</string>
+							<string key="NSKeyPath">selectionIndexes</string>
+							<reference key="NSPreviousConnector" ref="340577040"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">169</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="799063863"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">160</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dataSource</string>
+						<reference key="source" ref="799063863"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">161</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.playingImage</string>
+						<reference key="source" ref="1001373347"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="1001373347"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.playingImage</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.playingImage</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">163</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.genre</string>
+						<reference key="source" ref="463854013"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="463854013"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.genre</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.genre</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">154</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.album.itemName</string>
+						<reference key="source" ref="937369583"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="937369583"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.album.itemName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.album.itemName</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">156</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.album.artist.itemName</string>
+						<reference key="source" ref="533511864"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="533511864"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.album.artist.itemName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.album.artist.itemName</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">152</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.durationString</string>
+						<reference key="source" ref="670295993"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="670295993"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.durationString</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.durationString</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">151</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.itemName</string>
+						<reference key="source" ref="64476775"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="64476775"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.itemName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.itemName</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">150</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.trackNumber</string>
+						<reference key="source" ref="718946427"/>
+						<reference key="destination" ref="780584921"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="718946427"/>
+							<reference key="NSDestination" ref="780584921"/>
+							<string key="NSLabel">value: arrangedObjects.trackNumber</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.trackNumber</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSConditionallySetsEditable</string>
+								<boolean value="NO" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">155</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">managedObjectContext: managedObjectContext</string>
 						<reference key="source" ref="86546332"/>
@@ -1048,22 +1308,6 @@
 						</object>
 					</object>
 					<int key="connectionID">130</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">artistController</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="86546332"/>
-					</object>
-					<int key="connectionID">133</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">artistsController</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="86546332"/>
-					</object>
-					<int key="connectionID">134</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1099,22 +1343,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">content: arrangedObjects</string>
-						<reference key="source" ref="926879789"/>
-						<reference key="destination" ref="117267028"/>
-						<object class="NSNibBindingConnector" key="connector" id="340577040">
-							<reference key="NSSource" ref="926879789"/>
-							<reference key="NSDestination" ref="117267028"/>
-							<string key="NSLabel">content: arrangedObjects</string>
-							<string key="NSBinding">content</string>
-							<string key="NSKeyPath">arrangedObjects</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">140</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">contentSet: selection.albums</string>
 						<reference key="source" ref="117267028"/>
 						<reference key="destination" ref="86546332"/>
@@ -1132,22 +1360,6 @@
 						</object>
 					</object>
 					<int key="connectionID">141</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="926879789"/>
-						<reference key="destination" ref="1001"/>
-					</object>
-					<int key="connectionID">142</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">tracksTableView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="799063863"/>
-					</object>
-					<int key="connectionID">143</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1182,130 +1394,6 @@
 					<int key="connectionID">146</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">tracksController</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="780584921"/>
-					</object>
-					<int key="connectionID">147</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">albumsController</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="117267028"/>
-					</object>
-					<int key="connectionID">148</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">albumsBrowserView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="926879789"/>
-					</object>
-					<int key="connectionID">149</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.itemName</string>
-						<reference key="source" ref="64476775"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="64476775"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.itemName</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.itemName</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">150</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.durationString</string>
-						<reference key="source" ref="670295993"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="670295993"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.durationString</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.durationString</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">151</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.album.artist.itemName</string>
-						<reference key="source" ref="533511864"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="533511864"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.album.artist.itemName</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.album.artist.itemName</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">152</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.genre</string>
-						<reference key="source" ref="463854013"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="463854013"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.genre</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.genre</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">154</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.trackNumber</string>
-						<reference key="source" ref="718946427"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="718946427"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.trackNumber</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.trackNumber</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSConditionallySetsEditable</string>
-								<boolean value="NO" key="NS.object.0"/>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">155</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.album.itemName</string>
-						<reference key="source" ref="937369583"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="937369583"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.album.itemName</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.album.itemName</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">156</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">sortDescriptors: trackSortDescriptor</string>
 						<reference key="source" ref="780584921"/>
@@ -1320,54 +1408,6 @@
 						</object>
 					</object>
 					<int key="connectionID">157</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="799063863"/>
-						<reference key="destination" ref="1001"/>
-					</object>
-					<int key="connectionID">160</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">dataSource</string>
-						<reference key="source" ref="799063863"/>
-						<reference key="destination" ref="1001"/>
-					</object>
-					<int key="connectionID">161</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">filterArtist:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="184761215"/>
-					</object>
-					<int key="connectionID">162</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.playingImage</string>
-						<reference key="source" ref="1001373347"/>
-						<reference key="destination" ref="780584921"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="1001373347"/>
-							<reference key="NSDestination" ref="780584921"/>
-							<string key="NSLabel">value: arrangedObjects.playingImage</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.playingImage</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">163</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">artistSplitView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="687911444"/>
-					</object>
-					<int key="connectionID">164</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1387,39 +1427,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">selectionIndexes: selectionIndexes</string>
-						<reference key="source" ref="926879789"/>
-						<reference key="destination" ref="117267028"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="926879789"/>
-							<reference key="NSDestination" ref="117267028"/>
-							<string key="NSLabel">selectionIndexes: selectionIndexes</string>
-							<string key="NSBinding">selectionIndexes</string>
-							<string key="NSKeyPath">selectionIndexes</string>
-							<reference key="NSPreviousConnector" ref="340577040"/>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">169</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">nextKeyView</string>
-						<reference key="source" ref="270722091"/>
-						<reference key="destination" ref="799063863"/>
-					</object>
-					<int key="connectionID">171</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">nextKeyView</string>
-						<reference key="source" ref="184761215"/>
-						<reference key="destination" ref="926879789"/>
-					</object>
-					<int key="connectionID">174</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.rating</string>
 						<reference key="source" ref="459249208"/>
 						<reference key="destination" ref="780584921"/>
@@ -1433,6 +1440,14 @@
 						</object>
 					</object>
 					<int key="connectionID">178</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="26899387"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">190</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1449,22 +1464,6 @@
 						</object>
 					</object>
 					<int key="connectionID">189</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="26899387"/>
-						<reference key="destination" ref="1001"/>
-					</object>
-					<int key="connectionID">190</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">artistsTableView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="26899387"/>
-					</object>
-					<int key="connectionID">191</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1952,11 +1951,11 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">SBBottomMiddleBorderView</string>
+					<string key="className">SBControlBarView</string>
 					<string key="superclassName">NSView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SBBottomMiddleBorderView.h</string>
+						<string key="minorKey">./Classes/SBControlBarView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -2099,6 +2098,10 @@
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
+			<real value="1060" key="NS.object.0"/>
+		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>

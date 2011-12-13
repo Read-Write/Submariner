@@ -73,7 +73,7 @@
 //}
 
 - (NSColor *)dividerColor {
-    return [NSColor darkGrayColor];
+    return [NSColor grayColor];
 }
 
 
@@ -90,15 +90,15 @@
 - (void)drawDividerInRect:(NSRect)aRect {
     [super drawDividerInRect:aRect];
     
-    if([self isVertical]) {
-        NSRect lightRect = NSMakeRect(aRect.origin.x+1, aRect.origin.y-1, 0.5, aRect.size.height+1);
-        [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
-        NSFrameRect(lightRect);
-    } else {
-        NSRect lightRect = NSMakeRect(aRect.origin.x, aRect.origin.y+1, aRect.size.width, 0.5);
-        [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
-        NSFrameRect(lightRect);
-    }
+//    if([self isVertical]) {
+//        NSRect lightRect = NSMakeRect(aRect.origin.x+1, aRect.origin.y-1, 0.5, aRect.size.height+1);
+//        [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
+//        NSFrameRect(lightRect);
+//    } else {
+//        NSRect lightRect = NSMakeRect(aRect.origin.x, aRect.origin.y+1, aRect.size.width, 0.5);
+//        [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
+//        NSFrameRect(lightRect);
+//    }
 }
 
 

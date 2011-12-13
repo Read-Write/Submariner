@@ -1,7 +1,8 @@
 Release Note :
 
 Version 1.1 :
-- Rewrite cache-streaming engine to improve stability and support movie streaming.
+- Add Lossless support for local files.
+- Add movie-streaming abilities using codec supported by your system (QuickTime)
 - Add Mini-Player Menu, callable via a customizable hot-key shortcut.
 - Add Max Bit Rate setting (with few limitations).
 - Add Max Cover Size setting.
@@ -10,6 +11,8 @@ Version 1.1 :
 - Improve global design, navigation and frame persistence.
 - Improve player progress bar stability and design.
 - Improve Track-list design.
+- Improve cache-streaming engine stability.
+- Improve general speed, around 20% faster.
 - Fix bug in "Import Audio Files" feature when "Link" option is chosen.
 - Fix special character bug in server password.
 - Fix memory leaks around REST API

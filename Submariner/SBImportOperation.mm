@@ -9,10 +9,14 @@
 #import "SBImportOperation.h"
 #import <CoreServices/CoreServices.h>
 #import <QTKit/QTKit.h>
-#import <taglib/taglib.h>
-#import <taglib/fileref.h>
-#import <taglib/tag.h>
-#import <taglib/tstring.h>
+
+#import <SFBAudioEngine/AudioDecoder.h>
+#import <SFBAudioEngine/AudioMetadata.h>
+
+//#import <taglib/taglib.h>
+//#import <taglib/fileref.h>
+//#import <taglib/tag.h>
+//#import <taglib/tstring.h>
 
 #import "SBAppDelegate.h"
 
@@ -28,7 +32,7 @@
 
 
 
-using namespace TagLib;
+//using namespace TagLib;
 
 
 
@@ -91,7 +95,8 @@ using namespace TagLib;
             NSString *titleString       = nil;
             NSString *artistString      = nil;  
             NSString *albumString       = nil;   
-            NSString *genreString       = nil;   
+            NSString *genreString       = nil;  
+            NSString *contentType       = nil;   
             NSNumber *trackNumber       = nil;   
             NSNumber *durationNumber    = nil;
             NSNumber *bitRateNumber     = nil;
@@ -107,40 +112,80 @@ using namespace TagLib;
             NSString *albumPath = nil;
             NSString *trackPath = nil;
             
-            // use of taglib
-            TagLib::FileRef audioFile([path UTF8String]);  
-            QTMovie *audioSound = [[QTMovie alloc] initWithFile:path error:nil];
+            // use SFBAudioEngine
+            CFURLRef fileURL = CFURLCreateFromFileSystemRepresentation(kCFAllocatorDefault, 
+                                                                       reinterpret_cast<const UInt8 *>([path UTF8String]), 
+                                                                       strlen([path UTF8String]), 
+                                                                       FALSE);
             
-            // get file duration
-            NSTimeInterval durationInterval = nil;
-            QTGetTimeInterval([audioSound duration], &durationInterval);
+            AudioMetadata *metadata =  AudioMetadata::CreateMetadataForURL(fileURL);
+            CFRelease(fileURL), fileURL = NULL;
             
-            // if this is a local file importation
-            if(!remoteTrackID) {
-                // get file metadata
-                titleString       = [NSString stringWithUTF8String:audioFile.tag()->title().toCString()];
-                artistString      = [NSString stringWithUTF8String:audioFile.tag()->artist().toCString()];
-                albumString       = [NSString stringWithUTF8String:audioFile.tag()->album().toCString()];
-                genreString       = [NSString stringWithUTF8String:audioFile.tag()->genre().toCString()];
-                trackNumber       = [NSNumber numberWithUnsignedInt:audioFile.tag()->track()];
-                durationNumber    = [NSNumber numberWithDouble:durationInterval];
-                bitRateNumber     = [NSNumber numberWithFloat:[audioSound rate]];
-                coverData         = nil;
-            
-            // if this is a cache or download data importation
-            } else {
-                // use remote track metadata
-                SBTrack *remoteTrack = (SBTrack *)[[self threadedContext] objectWithID:remoteTrackID];
-                
-                titleString       = remoteTrack.itemName;
-                artistString      = remoteTrack.artistString;
-                albumString       = remoteTrack.albumString;
-                genreString       = remoteTrack.genre;
-                trackNumber       = remoteTrack.trackNumber;
-                durationNumber    = remoteTrack.duration;
-                bitRateNumber     = remoteTrack.bitRate;
-                coverData         = nil;
+            if(NULL != metadata) {
+                if(!remoteTrackID) {
+                    
+                    // get file metadata
+                    titleString       = (NSString *)metadata->GetTitle(); 
+                    artistString      = (NSString *)metadata->GetArtist();
+                    albumString       = (NSString *)metadata->GetAlbumTitle();
+                    genreString       = (NSString *)metadata->GetGenre();
+                    trackNumber       = (NSNumber *)metadata->GetTrackNumber();
+                    durationNumber    = (NSNumber *)metadata->GetDuration();
+                    bitRateNumber     = (NSNumber *)metadata->GetBitrate();
+                    coverData         = (NSData   *)metadata->GetFrontCoverArt();
+                    
+                    // if this is a cache or download data importation
+                } else {
+                    // use remote track metadata
+                    SBTrack *remoteTrack = (SBTrack *)[[self threadedContext] objectWithID:remoteTrackID];
+                    
+                    titleString       = remoteTrack.itemName;
+                    artistString      = remoteTrack.artistString;
+                    albumString       = remoteTrack.albumString;
+                    genreString       = remoteTrack.genre;
+                    trackNumber       = remoteTrack.trackNumber;
+                    durationNumber    = remoteTrack.duration;
+                    bitRateNumber     = remoteTrack.bitRate;
+                    contentType       = remoteTrack.contentType;
+                    coverData         = (NSData   *)metadata->GetFrontCoverArt();
+                }
             }
+            
+            
+            // use of taglib
+//            TagLib::FileRef audioFile([path UTF8String]);  
+//            QTMovie *audioSound = [[QTMovie alloc] initWithFile:path error:nil];
+//            
+//            // get file duration
+//            NSTimeInterval durationInterval = nil;
+//            QTGetTimeInterval([audioSound duration], &durationInterval);
+//            
+//            // if this is a local file importation
+//            if(!remoteTrackID) {
+//                // get file metadata
+//                titleString       = [NSString stringWithUTF8String:audioFile.tag()->title().toCString()];
+//                artistString      = [NSString stringWithUTF8String:audioFile.tag()->artist().toCString()];
+//                albumString       = [NSString stringWithUTF8String:audioFile.tag()->album().toCString()];
+//                genreString       = [NSString stringWithUTF8String:audioFile.tag()->genre().toCString()];
+//                trackNumber       = [NSNumber numberWithUnsignedInt:audioFile.tag()->track()];
+//                durationNumber    = [NSNumber numberWithDouble:durationInterval];
+//                bitRateNumber     = [NSNumber numberWithFloat:[audioSound rate]];
+//                coverData         = nil;
+//            
+//            // if this is a cache or download data importation
+//            } else {
+//                // use remote track metadata
+//                SBTrack *remoteTrack = (SBTrack *)[[self threadedContext] objectWithID:remoteTrackID];
+//                
+//                titleString       = remoteTrack.itemName;
+//                artistString      = remoteTrack.artistString;
+//                albumString       = remoteTrack.albumString;
+//                genreString       = remoteTrack.genre;
+//                trackNumber       = remoteTrack.trackNumber;
+//                durationNumber    = remoteTrack.duration;
+//                bitRateNumber     = remoteTrack.bitRate;
+//                coverData         = nil;
+//            }
             
             // create artist object if needed
             if(!artistString || [artistString isEqualToString:@""])
@@ -188,6 +233,9 @@ using namespace TagLib;
                 
                 if(genreString)
                     [newTrack setGenre:genreString];
+                
+                if(contentType)
+                    [newTrack setContentType:contentType];
             }
             
             if(![newAlbum.tracks containsObject:newTrack]) {

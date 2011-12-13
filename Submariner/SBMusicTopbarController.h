@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "SBViewController.h"
 #import "ANSegmentedControl.h"
-
+#import "SBTopbarView.h"
 
 @class SBDatabaseController;
 @class SBMusicController;

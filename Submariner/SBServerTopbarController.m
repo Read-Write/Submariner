@@ -146,7 +146,7 @@
             [databaseController setCurrentView:(SBAnimatedView *)[serverLibraryController view]];
         } break;
     }
-    [viewSegmentedControl setSelectedSegment:index];
+    [topbarView setSelectedIndex:index];
     [self.server setSelectedTabIndex:index];
 }
 
@@ -197,5 +197,65 @@
     [server getServerPlaylists];
 }
 
+
+
+
+
+- (NSArray *)itemsArrayForTopbarView:(SBTopbarView *)topbar {
+    NSMutableArray *results = [NSMutableArray array];
+    
+    NSInteger i = 0;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"ServerIndex"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:YES] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"ServerHome"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"Podcast"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"NSRevealFreestandingTemplate"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"Indentifier %d", i] forKey:kSBTopbarItemIdentifier];
+    [dict setValue:[NSImage imageNamed:@"users"] forKey:kSBTopbarItemImage];
+    [dict setValue:[NSValue valueWithPointer:@selector(topbarItemPressed:)] forKey:kSBTopbarItemAction];
+    [dict setValue:[NSNumber numberWithBool:NO] forKey:kSBTopbarItemSelected];
+    [results addObject:dict];
+    
+    i++;
+    
+    return results;
+}
+
+- (void)topbarView:(SBTopbarView *)topbar didSelectItemAtIndex:(NSInteger)index {
+    [self setViewControllerAtIndex:index];
+}
 
 @end

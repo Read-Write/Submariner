@@ -11,6 +11,7 @@
 #import "SBWindowController.h"
 #import "SBSourceList.h"
 #import "RWStreamingSlider.h"
+#import "MCViewFlipController.h"
 
 @class SBMainSplitViewDelegate;
 @class SBSplitView;
@@ -26,6 +27,7 @@
 @class SBLibrary;
 @class SBAnimatedView;
 @class SBSpinningProgressIndicator;
+@class SBMovieViewController;
 @class MAAttachedWindow;
 
 
@@ -35,6 +37,7 @@
 @interface SBDatabaseController : SBWindowController <NSWindowDelegate, SBSourceListDelegate, SBSourceListDataSource> {
 @private
     IBOutlet NSView *titleView;
+    IBOutlet NSView *hostView;
     IBOutlet SBSplitView *mainSplitView;
     IBOutlet SBSplitView *titleSplitView;   
     IBOutlet NSSplitView *coverSplitView;
@@ -63,7 +66,9 @@
     SBTracklistController *tracklistController;
     SBPlaylistController *playlistController;
     SBServerTopbarController *serverTopbarController;
+    SBMovieViewController *movieViewController;
     SBMainSplitViewDelegate *mainSplitViewDelegate;
+    MCViewFlipController *flipController;
     NSArray *resourceSortDescriptors;
     SBLibrary *library;
     
@@ -102,5 +107,6 @@
 - (IBAction)openHomePage:(id)sender;
 - (IBAction)shuffle:(id)sender;
 - (IBAction)repeat:(id)sender;
+- (IBAction)flip:(id)sender;
 
 @end

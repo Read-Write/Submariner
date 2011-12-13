@@ -18,7 +18,7 @@
 #define BADGE_MARGIN							5.0			//The spacing between the badge and the cell for that row
 #define ROW_RIGHT_MARGIN						10.0			//The spacing between the right edge of the badge and the edge of the table column
 #define ICON_SPACING							2.0			//The spacing between the icon and it's adjacent cell
-#define DISCLOSURE_TRIANGLE_SPACE				10.0		//The indentation reserved for disclosure triangles for non-group items
+#define DISCLOSURE_TRIANGLE_SPACE				5.0		//The indentation reserved for disclosure triangles for non-group items
 
 //Drawing constants
 #define BADGE_BACKGROUND_COLOR					[NSColor colorWithCalibratedRed:(152/255.0) green:(168/255.0) blue:(202/255.0) alpha:1]
@@ -477,35 +477,35 @@ NSString * const PXSLDeleteKeyPressedOnRowsNotification = @"PXSourceListDeleteKe
             id parentItem = [item parentNode];
             
             // draw tinted background
-            [[NSColor colorWithPatternImage:[NSImage imageNamed:@"sourcelist-back-child"]] setFill];
-            NSRectFill(cellFrame);
-            
-            // draw bottom border
-            if([item isEqualTo:[[parentItem childNodes] objectAtIndex:[[parentItem childNodes] count]-1]]) {
-                
-//                NSRect shadowRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y+cellFrame.size.height-2, cellFrame.size.width, 2);
-//                NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor clearColor] 
-//                                                                     endingColor:[NSColor colorWithDeviceWhite:0.4 alpha:0.1]];
-//                [gradient drawInRect:shadowRect angle:90];
-                
-                NSRect edgeRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y+cellFrame.size.height, cellFrame.size.width, 1);
-                [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
-                NSFrameRect(edgeRect);
-                
-            }
-            
-            // draw top border
-            if([item isEqualTo:[[parentItem childNodes] objectAtIndex:0]] && [self isGroupItem:parentItem]) {
-                
-                NSRect shadowRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, 3);
-                NSGradient *gradient = [[[NSGradient alloc] initWithStartingColor:[NSColor clearColor] 
-                                                                     endingColor:[NSColor colorWithDeviceWhite:0.4 alpha:0.1]] autorelease];
-                [gradient drawInRect:shadowRect angle:-90];
-                
-                NSRect edgeRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, 1);
-                [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
-                NSFrameRect(edgeRect);
-            }
+//            [[NSColor colorWithPatternImage:[NSImage imageNamed:@"sourcelist-back-child"]] setFill];
+//            NSRectFill(cellFrame);
+//            
+//            // draw bottom border
+//            if([item isEqualTo:[[parentItem childNodes] objectAtIndex:[[parentItem childNodes] count]-1]]) {
+//                
+////                NSRect shadowRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y+cellFrame.size.height-2, cellFrame.size.width, 2);
+////                NSGradient *gradient = [[NSGradient alloc] initWithStartingColor:[NSColor clearColor] 
+////                                                                     endingColor:[NSColor colorWithDeviceWhite:0.4 alpha:0.1]];
+////                [gradient drawInRect:shadowRect angle:90];
+//                
+//                NSRect edgeRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y+cellFrame.size.height, cellFrame.size.width, 1);
+//                [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
+//                NSFrameRect(edgeRect);
+//                
+//            }
+//            
+//            // draw top border
+//            if([item isEqualTo:[[parentItem childNodes] objectAtIndex:0]] && [self isGroupItem:parentItem]) {
+//                
+//                NSRect shadowRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, 3);
+//                NSGradient *gradient = [[[NSGradient alloc] initWithStartingColor:[NSColor clearColor] 
+//                                                                     endingColor:[NSColor colorWithDeviceWhite:0.4 alpha:0.1]] autorelease];
+//                [gradient drawInRect:shadowRect angle:-90];
+//                
+//                NSRect edgeRect = NSMakeRect(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, 1);
+//                [[NSColor colorWithDeviceWhite:0.8 alpha:1.0] setFill];
+//                NSFrameRect(edgeRect);
+//            }
             
             [self setNeedsDisplay:YES];
         }

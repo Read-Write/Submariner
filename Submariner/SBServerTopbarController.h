@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SBServerViewController.h"
+#import "SBTopbarView.h"
 
 @class SBDatabaseController;
 @class SBServerLibraryController;
@@ -16,7 +17,7 @@
 @class SBServerUserViewController;
 @class SBServerSearchController;
 
-@interface SBServerTopbarController : SBServerViewController {
+@interface SBServerTopbarController : SBServerViewController <SBTopbarViewDelegate> {
 @private
     SBDatabaseController *databaseController;
     SBServerLibraryController *serverLibraryController;
@@ -26,6 +27,7 @@
     SBServerSearchController *serverSearchController;
     
     IBOutlet NSSegmentedControl *viewSegmentedControl;
+    IBOutlet SBTopbarView *topbarView;
     
 }
 
