@@ -39,7 +39,6 @@
 @implementation SBAppDelegate
 
 
-@synthesize tmpPaths;
 @synthesize hotKeyCenter;
 
 
@@ -67,7 +66,6 @@
 - (id)init {
     self = [super init];
     if (self) {
-        tmpPaths = [[NSMutableArray alloc] init];
         hotKeyCenter = [[DDHotKeyCenter alloc] init];
     }
     return self;
@@ -75,7 +73,6 @@
 
 
 - (void)dealloc {
-    [tmpPaths release];
     [hotKeyCenter release];
     [statusItem release];
     [super dealloc];
@@ -98,17 +95,6 @@
     [statusItem setHighlightMode:YES];
     [statusItem setMenu:statusMenu];
 }
-
-- (void)registeredHotKeyWithCode:(NSInteger)code andFlags:(NSUInteger)flags {
-    
-    [hotKeyCenter registerHotKeyWithKeyCode:code modifierFlags:flags task:^(NSEvent *) {
-        
-        [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
-        [statusItem popUpStatusItemMenu:[statusItem menu]];
-    }];
-    
-}
-
 
 
 #pragma mark -
@@ -218,6 +204,25 @@
 
 
 
+
+
+#pragma mark -
+#pragma mark DDHotKeyCenter Methods
+
+- (void)registeredHotKeyWithCode:(NSInteger)code andFlags:(NSUInteger)flags {
+    
+    [hotKeyCenter registerHotKeyWithKeyCode:code modifierFlags:flags task:^(NSEvent *) {
+        
+        [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+        [statusItem popUpStatusItemMenu:[statusItem menu]];
+    }];
+    
+}
+
+
+
+
+
 #pragma mark -
 #pragma mark NSApplicationDelegate
 
@@ -274,26 +279,16 @@
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
         
-    // unplay all tracks
+    // remove user defaults observers
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:@"PlayerKeyCode"];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:@"PlayerKeyFlags"];
+    
+    // unplay all tracks before quitting
     NSError *error = nil;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(isPlaying == YES)"];
     NSArray *tracks = [[self managedObjectContext] fetchEntitiesNammed:@"Track" withPredicate:predicate error:&error];
-    
     for(SBTrack *track in tracks) {
         [track setIsPlaying:[NSNumber numberWithBool:NO]];
-    }
-    
-    // clean tmp folders
-    for(NSString *tmpPath in tmpPaths) {
-        NSLog(@"tmpPath : %@", tmpPath);
-        @try {
-            if([[NSFileManager defaultManager] fileExistsAtPath:tmpPath]) {
-                [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:nil];
-            }
-        }
-        @catch (NSException *exception) {
-            NSLog(@"EXCEPTION : %@", exception);
-        }
     }
     
     // Save changes in the application's managed object context before the application terminates.
@@ -426,7 +421,8 @@
 - (IBAction)zoomDatabaseWindow:(id)sender {
     
     NSWindow *window = [databaseController window];
-//    
+    
+    // zoom the window, useless ?
 //    NSRect rect = NSMakeRect([window frame].origin.x+[window frame].size.width/2,
 //                             [window frame].origin.y+[window frame].size.height/2,
 //                             10,

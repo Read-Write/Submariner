@@ -8,6 +8,9 @@
 
 #import "SBCoverSplitView.h"
 
+
+#define MAX_HEIGHT 190
+
 @implementation SBCoverSplitView
 
 - (void)awakeFromNib {
@@ -31,7 +34,7 @@
  */
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMinimumPosition ofSubviewAt:(NSInteger)dividerIndex;
 {
-    return proposedMinimumPosition + 180;
+    return self.bounds.size.height - MAX_HEIGHT;
 }
 
 /*
@@ -39,7 +42,7 @@
  */
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMaximumPosition ofSubviewAt:(NSInteger)dividerIndex;
 {
-    return proposedMaximumPosition - 40;
+    return proposedMaximumPosition - handleView.bounds.size.height;
 }
 
 - (void)splitView:(NSSplitView *)splitView resizeSubviewsWithOldSize:(NSSize)oldSize {
@@ -52,11 +55,18 @@
     
     // resize top rect
     topRect.size.width = self.frame.size.width;
-    topRect.size.height = self.frame.size.height - self.frame.size.width;
-    
+    if(topRect.size.height < MAX_HEIGHT) {
+        topRect.size.height = self.frame.size.height - self.frame.size.width;
+    } else {
+        topRect.size.height = self.bounds.size.height - MAX_HEIGHT;
+    }
+        
     bottomRect.size.width = self.frame.size.width;
-    //bottomRect.size.height = bottomRect.size.width;
-    bottomRect.origin.y = self.frame.origin.y + self.dividerThickness + bottomRect.size.height - 40;
+    if(topRect.size.height < MAX_HEIGHT) {
+        bottomRect.origin.y = self.frame.origin.y + self.dividerThickness + bottomRect.size.height - handleView.bounds.size.height;
+    } else {
+        bottomRect.origin.y = MAX_HEIGHT;
+    }
     
     [topView setFrame:topRect];
     [bottomView setFrame:bottomRect];

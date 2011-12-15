@@ -17,7 +17,6 @@
 #import "SBTrack.h"
 #import "SBServer.h"
 #import "SBLibrary.h"
-#import "AudioStreamer.h"
 #import "SBImportOperation.h"
 
 #import "NSURL+Parameters.h"
@@ -51,6 +50,7 @@ NSString *SBPlayerMovieToPlayNotification = @"SBPlayerPlaylistUpdatedNotificatio
 - (SBTrack *)getRandomTrackExceptingTrack:(SBTrack *)_track;
 - (SBTrack *)nextTrack;
 - (SBTrack *)prevTrack;
+- (void)showVideoAlert;
 
 @end
 
@@ -67,7 +67,6 @@ static void decodingStarted(void *context, const AudioDecoder *decoder)
 // This is called from the realtime rendering thread and as such MUST NOT BLOCK!!
 static void renderingFinished(void *context, const AudioDecoder *decoder)
 {
-    NSLog(@"renderingFinished");
     if(staticSelf) {
         //[staticSelf stop];
         [staticSelf next];
@@ -187,9 +186,7 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
     
     // stop player
     [self stop];
-    
-    NSLog(@"isVideo : %@", [track isVideo] ? @"YES" : @"NO");
-    
+        
     // clean previous playing track
     if(self.currentTrack != nil) {
         [self.currentTrack setIsPlaying:[NSNumber numberWithBool:NO]];
@@ -218,20 +215,23 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
     }
     
     
-    
     // play the song remotely (QTMovie from QTKit framework) or locally (AudioPlayer from SFBAudioEngine framework)
     if(self.currentTrack.isVideo) {
-        if(self.currentTrack.localTrack != nil) {
-            [self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
-        } else {
-            [self playRemoteWithURL:[self.currentTrack streamURL]];
-        }
+        [self showVideoAlert];
+        
+//        if(self.currentTrack.localTrack != nil) {
+//            [self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
+//        } else {
+//            [self playRemoteWithURL:[self.currentTrack streamURL]];
+//        }
     } else {
         if([self.currentTrack.isLocal boolValue]) { // should add video exception here
-            [self playLocalWithURL:[self.currentTrack streamURL]];
+            //[self playLocalWithURL:[self.currentTrack streamURL]];
+            [self playRemoteWithURL:[self.currentTrack streamURL]];
         } else {
             if(self.currentTrack.localTrack != nil) {
-                [self playLocalWithURL:[self.currentTrack.localTrack streamURL]];
+                //[self playLocalWithURL:[self.currentTrack.localTrack streamURL]];
+                [self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
             } else {
                 [self playRemoteWithURL:[self.currentTrack streamURL]];
             }
@@ -246,11 +246,8 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 }
 
 
-- (void)playRemoteWithURL:(NSURL *)url {
-    NSLog(@"playMovieWithURL");
-    
+- (void)playRemoteWithURL:(NSURL *)url {    
     NSError *error = nil;
-    
     remotePlayer = [[QTMovie alloc] initWithURL:url error:&error];
 
 	if (!remotePlayer || error)
@@ -261,7 +258,6 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
         [remotePlayer setDelegate:self];
         [remotePlayer setVolume:[self volume]];
         
-        NSLog(@"url : %@", url);
         if([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
             
             [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -281,7 +277,6 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 }
 
 - (void)playLocalWithURL:(NSURL *)url {
-    NSLog(@"playLocalWithURL");
     
     AudioDecoder *decoder = AudioDecoder::CreateDecoderForURL(reinterpret_cast<CFURLRef>(url));
 	if(NULL != decoder) {
@@ -552,7 +547,6 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 #pragma mark Remote Player Notification 
 
 - (void)loadStateDidChange:(NSNotification *)notification {
-    NSLog(@"loadStateDidChange");
     NSError *error = nil;
     
     // First make sure that this notification is for our movie.
@@ -562,7 +556,6 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
         
         
         if (state >= QTMovieLoadStateComplete) { // 100000L
-            NSLog(@"QTMovieLoadStateComplete");
             
             if([[NSUserDefaults standardUserDefaults] boolForKey:@"enableCacheStreaming"] == YES) 
             {
@@ -587,23 +580,16 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
                 [op setRemove:YES];
                 
                 [[NSOperationQueue sharedDownloadQueue] addOperation:op];
-                
             }
             
         } else if (state >= QTMovieLoadStatePlayable) { // 10000L
-            NSLog(@"QTMovieLoadStatePlayable");
-            
             [remotePlayer play];
             
         } else if (state >= QTMovieLoadStateLoaded) { // 2000L
-            NSLog(@"QTMovieLoadStateLoaded");
             
         } else if (state >= QTMovieLoadStateLoading) { // 1000L
-            NSLog(@"QTMovieLoadStateLoading");
             
         } else if (state == -1) { // -1L
-            NSLog(@"QTMovieLoadStateError : %@", [notification userInfo]);
-            
             [self stop];
             
             NSError *error = [remotePlayer attributeForKey:QTMovieLoadStateErrorAttribute];
@@ -614,7 +600,6 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 }
 
 - (void)movieDidEnd:(NSNotification *)notification {
-    NSLog(@"movieDidEnd");
     
     if([notification object] == remotePlayer) //if the player is our player
     {
@@ -732,6 +717,17 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
     for(SBTrack *track in tracks) {
         [track setIsPlaying:[NSNumber numberWithBool:NO]];
     }
+}
+
+
+- (void)showVideoAlert {
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Video streaming" 
+                                     defaultButton:@"OK" 
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@"This file appears to be a video file. Submariner is not able to streaming movie yet."];
+    
+    [alert runModal];
 }
 
 

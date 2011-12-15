@@ -111,6 +111,9 @@
             finalURL = [NSURL URLWithString:[[finalURL absoluteString] stringByReplacingOccurrencesOfString:@":/" withString:@"://"]];
     }
     
+    if(params)
+        [params release];
+    
     return finalURL;
 }
 
@@ -160,6 +163,9 @@
         if([[finalURL absoluteString] rangeOfString:@"://"].location == NSNotFound)
             finalURL = [NSURL URLWithString:[[finalURL absoluteString] stringByReplacingOccurrencesOfString:@":/" withString:@"://"]];
     }
+    
+    if(params)
+        [params release];
     
     return finalURL;
 }
