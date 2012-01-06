@@ -31,7 +31,6 @@
 #import "NSURL+Parameters.h"
 
 
-
 NSString *SBSubsonicConnectionFailedNotification        = @"SBSubsonicConnectionFailedNotification";
 NSString *SBSubsonicConnectionSucceededNotification     = @"SBSubsonicConnectionSucceededNotification";
 NSString *SBSubsonicIndexesUpdatedNotification          = @"SBSubsonicIndexesUpdatedNotification";
@@ -382,7 +381,7 @@ NSString *SBSubsonicPodcastsUpdatedNotification         = @"SBSubsonicPodcastsUp
                         [newAlbum setCover:newCover];
                     }
                     
-                    if(!newAlbum.cover.imagePath) {
+                    if(!newAlbum.cover.imagePath || ![[NSFileManager defaultManager] fileExistsAtPath:newAlbum.cover.imagePath]) {
                         [clientController getCoverWithID:[attributeDict valueForKey:@"coverArt"]];
                     }
                 }
@@ -901,6 +900,7 @@ NSString *SBSubsonicPodcastsUpdatedNotification         = @"SBSubsonicPodcastsUp
 
 - (SBAlbum *)createAlbumWithAttribute:(NSDictionary *)attributeDict {
     SBAlbum *newAlbum = [SBAlbum insertInManagedObjectContext:[self threadedContext]];
+    
     if([attributeDict valueForKey:@"id"])
         [newAlbum setId:[attributeDict valueForKey:@"id"]];
     
@@ -908,9 +908,12 @@ NSString *SBSubsonicPodcastsUpdatedNotification         = @"SBSubsonicPodcastsUp
         [newAlbum setItemName:[attributeDict valueForKey:@"title"]];
     
     // prepare cover
-    if(newAlbum.cover == nil)
+    if(newAlbum.cover == nil || newAlbum.cover.imagePath == nil || ![[NSFileManager defaultManager] fileExistsAtPath:newAlbum.cover.imagePath]) {
+        NSLog(@"no cover");
         newAlbum.cover = [self createCoverWithAttribute:attributeDict];
-    
+    } else {
+        NSLog(@"yes cover");
+    }
     [newAlbum setIsLocal:[NSNumber numberWithBool:NO]];
     
     return newAlbum;

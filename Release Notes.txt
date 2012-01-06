@@ -1,10 +1,8 @@
-Release Note :
+  Release Note :
 
 Version 1.1 :
 - Add Lossless support for local files.
-- Add movie-streaming abilities using codec supported by your system (QuickTime)
 - Add Mini-Player Menu, callable via a customizable hot-key shortcut.
-- Add Max Bit Rate setting (depreciated now).
 - Add Max Cover Size setting.
 - Add zoom setting for album browser views.
 - Improve authentication by supporting password encoding.

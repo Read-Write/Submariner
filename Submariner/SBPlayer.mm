@@ -23,6 +23,7 @@
 #import "NSManagedObjectContext+Fetch.h"
 #import "NSOperationQueue+Shared.h"
 #import "NSString+Time.h"
+#import "QTMovie+Async.h"
 
 
 #define LOCAL_PLAYER (static_cast<AudioPlayer *>(localPlayer))
@@ -248,8 +249,10 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 
 - (void)playRemoteWithURL:(NSURL *)url {    
     NSError *error = nil;
-    remotePlayer = [[QTMovie alloc] initWithURL:url error:&error];
+    //remotePlayer = [[QTMovie alloc] initWithURL:url error:&error];
 
+    remotePlayer = [[QTMovie movieWithURL:url error:&error] retain];
+    
 	if (!remotePlayer || error)
 		NSLog(@"Couldn't init player : %@", error);
     
@@ -257,6 +260,7 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
         
         [remotePlayer setDelegate:self];
         [remotePlayer setVolume:[self volume]];
+        [remotePlayer autoplay];
         
         if([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
             
@@ -264,9 +268,11 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
                                                      selector:@selector(loadStateDidChange:) 
                                                          name:QTMovieLoadStateDidChangeNotification 
                                                        object:remotePlayer];
-        } else {
-            [remotePlayer performSelector:@selector(play) withObject:nil afterDelay:0.2f];
         }
+        
+//        else {
+//            [remotePlayer performSelector:@selector(play) withObject:nil afterDelay:0.2f]; 
+//        }
         
         if(self.currentTrack.isVideo) {
             [[NSNotificationCenter defaultCenter] postNotificationName:SBPlayerMovieToPlayNotification 
@@ -583,7 +589,7 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
             }
             
         } else if (state >= QTMovieLoadStatePlayable) { // 10000L
-            [remotePlayer play];
+            //[remotePlayer play];
             
         } else if (state >= QTMovieLoadStateLoaded) { // 2000L
             
