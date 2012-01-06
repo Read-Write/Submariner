@@ -75,6 +75,7 @@
         SBLibrary *library = (SBLibrary *)[[self threadedContext] objectWithID:libraryID];
         
         for(NSString *path in self.filePaths) {
+            NSLog(@"path : %@", path);
             [audioFiles addObjectsFromArray:[self audioFilesAtPath:path]];
         }
         
@@ -84,9 +85,9 @@
         
         for(NSString *aPath in audioFiles) {
             
-            NSString *path = [[[NSURL temporaryFileURL] absoluteString] stringByAppendingPathExtension:@"mp3"];
-            //NSLog(@"temp path : %@", path);
+            NSString *path = [[[NSURL temporaryFileURL] absoluteString] stringByAppendingPathExtension:[aPath pathExtension]];
             [[NSFileManager defaultManager] copyItemAtPath:aPath toPath:path error:nil];
+            
             //NSDictionary *dict = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil];
             //NSLog(@"temp path size : %@", [dict valueForKey:NSFileSize]);
             
@@ -385,7 +386,7 @@
         CFStringRef fileUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension, NULL);
         
         // if the current file is an image
-        if (UTTypeConformsTo(fileUTI, kUTTypeAudio) && [[path pathExtension] isEqualToString:@"mp3"]) {
+        if (UTTypeConformsTo(fileUTI, kUTTypeAudio)) {
             [result addObject:path];
         }
     }

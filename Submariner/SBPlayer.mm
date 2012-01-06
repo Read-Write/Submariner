@@ -227,12 +227,12 @@ static void renderingFinished(void *context, const AudioDecoder *decoder)
 //        }
     } else {
         if([self.currentTrack.isLocal boolValue]) { // should add video exception here
-            //[self playLocalWithURL:[self.currentTrack streamURL]];
-            [self playRemoteWithURL:[self.currentTrack streamURL]];
+            [self playLocalWithURL:[self.currentTrack streamURL]];
+            //[self playRemoteWithURL:[self.currentTrack streamURL]];
         } else {
             if(self.currentTrack.localTrack != nil) {
-                //[self playLocalWithURL:[self.currentTrack.localTrack streamURL]];
-                [self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
+                [self playLocalWithURL:[self.currentTrack.localTrack streamURL]];
+                //[self playRemoteWithURL:[self.currentTrack.localTrack streamURL]];
             } else {
                 [self playRemoteWithURL:[self.currentTrack streamURL]];
             }

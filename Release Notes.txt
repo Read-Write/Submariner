@@ -1,7 +1,7 @@
   Release Note :
 
 Version 1.1 :
-- Add Lossless support for local files.
+- Add Lossless support for local player.
 - Add Mini-Player Menu, callable via a customizable hot-key shortcut.
 - Add Max Cover Size setting.
 - Add zoom setting for album browser views.
