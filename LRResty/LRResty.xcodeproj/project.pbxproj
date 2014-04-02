@@ -1459,7 +1459,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = LRResty;
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1478,7 +1478,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = LRResty;
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1536,7 +1536,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = ExamplesRunner;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1558,7 +1558,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = ExamplesRunner;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1591,7 +1591,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Acceptance Tests";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1622,7 +1622,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = "Acceptance Tests";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
@@ -1650,7 +1650,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1675,7 +1675,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -1708,7 +1708,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Unit Tests";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TEST_AFTER_BUILD = NO;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1740,7 +1740,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = "Unit Tests";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TEST_AFTER_BUILD = NO;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;

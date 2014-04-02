@@ -3,7 +3,7 @@
 //  DoubleSlider
 //
 //  Created by Rafaël Warnault on 16/10/11.
-//  Copyright 2011 OPALE. All rights reserved.
+//  Copyright 2011 Read-Write.fr. All rights reserved.
 //
 
 #import "RWStreamingSlider.h"

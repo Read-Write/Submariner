@@ -3,7 +3,7 @@
 //  DoubleSlider
 //
 //  Created by Rafaël Warnault on 16/10/11.
-//  Copyright 2011 OPALE. All rights reserved.
+//  Copyright 2011 Read-Write.fr. All rights reserved.
 //
 
 #import "RWStreamingSliderCell.h"
@@ -126,12 +126,12 @@
                                                 cornerRadius:bufferRect.size.height];
     }
         
-    [bufferPath setClip];
+    //[bufferPath setClip];
     [NSBezierPath clipRect:bufferRect];
         
     if([self bufferWidth] > 0.0f) {
         
-        [bufferPath setClip];
+        //[bufferPath setClip];
         [NSBezierPath clipRect:bufferRect];
         
         [bufferGradient drawInBezierPath:bufferPath angle:90];
@@ -139,7 +139,7 @@
     
     if([self floatValue] > 0.0f) {
         
-        [knobPath setClip];
+        //[knobPath setClip];
         [NSBezierPath clipRect:knobRect];
         
         [backGradient drawInBezierPath:knobPath angle:90];

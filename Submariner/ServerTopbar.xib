@@ -40,7 +40,7 @@
 					<object class="NSCustomView" id="1071067635">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrameSize">{205, 40}</string>
+						<string key="NSFrameSize">{246, 40}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="697409807"/>

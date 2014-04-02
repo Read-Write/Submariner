@@ -3,7 +3,7 @@
 //  Red
 //
 //  Created by Rafaël Warnault on 24/09/11.
-//  Copyright 2011 OPALE. All rights reserved.
+//  Copyright 2011 Read-Write.fr. All rights reserved.
 //
 
 #import "RDDarkTextFieldCell.h"

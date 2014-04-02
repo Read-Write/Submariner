@@ -3,7 +3,7 @@
 //  Submariner
 //
 //  Created by nark on 06/06/11.
-//  Copyright 2011 OPALE. All rights reserved.
+//  Copyright 2011 Read-Write.fr. All rights reserved.
 //
 
 #import "SBImportOperation.h"
@@ -87,9 +87,6 @@
             
             NSString *path = [[[NSURL temporaryFileURL] absoluteString] stringByAppendingPathExtension:[aPath pathExtension]];
             [[NSFileManager defaultManager] copyItemAtPath:aPath toPath:path error:nil];
-            
-            //NSDictionary *dict = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil];
-            //NSLog(@"temp path size : %@", [dict valueForKey:NSFileSize]);
             
             NSPredicate *predicate = nil;
             

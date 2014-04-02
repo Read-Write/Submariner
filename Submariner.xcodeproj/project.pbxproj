@@ -1488,7 +1488,7 @@
 				4C87ED5C139CD8BE0064DE2E /* Frameworks */,
 				4C87ED5D139CD8BE0064DE2E /* Resources */,
 				4CFB3E99139D10E0008DC01A /* Copy Frameworks */,
-				4C1352701499F66E00C7D4DC /* Run Script - Revision */,
+				4C8578B114B916970087D7D7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1739,20 +1739,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C1352701499F66E00C7D4DC /* Run Script - Revision */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script - Revision";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /usr/bin/ruby;
-			shellScript = "# Fail if not run from Xcode\nraise \"Must be run from Xcode\" unless ENV['XCODE_VERSION_ACTUAL']\n\ninfo_plist = \"#{ENV['BUILT_PRODUCTS_DIR']}/#{ENV['INFOPLIST_PATH']}\"\n\n# Get the current git revision hash\nrevision = `git rev-parse --short HEAD`.chomp!\n\n# Open Info.plist and set the CFBundleVersion value to the revision hash\nlines = IO.readlines(info_plist).join\nlines.gsub! /(<key>CFBundleVersion<\\/key>\\n\\t<string>).*?(<\\/string>)/, \"\\\\1#{revision}\\\\2\"\n\n# Overwrite the original Info.plist file with our updated version\nFile.open(info_plist, 'w') {|f| f.puts lines}\n\n# Report to the user\nputs \"CFBundleVersion in #{info_plist} set to '#{revision}'\"";
-		};
 		4C1561211490D30C00819EF6 /* Unzip and Copy */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1766,6 +1752,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "FRAMEWORK_DIR=${SRCROOT}/SFBAudioEngine/Frameworks/\n\n# if the directory doesn't exists, create it\nif [ ! -d \"$FRAMEWORK_DIR\" ]; then\n    mkdir $FRAMEWORK_DIR;\n\n    # unzip frameworks in the fraemework directory\n    unzip ${SRCROOT}/Frameworks.zip -d ${SRCROOT}/SFBAudioEngine/\nfi\n\n";
+		};
+		4C8578B114B916970087D7D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "codesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/dumb.framework/Versions/A/dumb\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/FLAC\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/mac.framework/Versions/A/mac\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/mp4v2.framework/Versions/A/mp4v2\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/mpcdec.framework/Versions/A/mpcdec\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/mpg123\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/sndfile.framework/Versions/A/sndfile\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/speex.framework/Versions/A/speex\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/taglib.framework/Versions/A/taglib\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/vorbis.framework/Versions/A/vorbis\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/Frameworks/wavpack.framework/Versions/A/wavpack\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/SFBAudioEngine.framework/Versions/A/SFBAudioEngine\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/LRResty.framework/Versions/A/LRResty\n\ncodesign -f -v -s \"3rd Party Mac Developer Application\" ${TARGET_BUILD_DIR}/Submariner.app/Contents/Frameworks/ShortcutRecorder.framework/Versions/A/ShortcutRecorder";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2009,7 +2008,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -2029,7 +2028,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -2055,11 +2054,12 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Submariner/Submariner-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Submariner/Submariner-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;
@@ -2087,11 +2087,12 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Submariner/Submariner-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Submariner/Submariner-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
 				STRIP_STYLE = all;
 				WRAPPER_EXTENSION = app;

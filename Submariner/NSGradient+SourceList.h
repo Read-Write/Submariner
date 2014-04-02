@@ -3,7 +3,7 @@
 //  Submariner
 //
 //  Created by Rafaël Warnault on 20/06/11.
-//  Copyright 2011 OPALE. All rights reserved.
+//  Copyright 2011 Read-Write.fr. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
