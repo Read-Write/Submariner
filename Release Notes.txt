@@ -16,4 +16,4 @@ Version 1.1 :
 - Fix memory leaks around REST API
 
 Version 1.0 :
-- Initial release.
+- Initial release. 
